@@ -1,0 +1,2400 @@
+{
+  "familyName": "Grug Hand",
+  "styleName": "Regular",
+  "weightClass": 400,
+  "unitsPerEm": 1000,
+  "ascent": 900,
+  "descent": 350,
+  "xHeight": 500,
+  "strokeWidth": 60.0,
+  "strokeLinecap": "butt",
+  "spaceWidth": 280,
+  "glyphCount": 246,
+  "uppercaseMappings": [
+    {
+      "character": "A",
+      "mappedTo": "a",
+      "codepoint": "U+0041",
+      "glyphName": "uni0061"
+    },
+    {
+      "character": "B",
+      "mappedTo": "b",
+      "codepoint": "U+0042",
+      "glyphName": "uni0062"
+    },
+    {
+      "character": "C",
+      "mappedTo": "c",
+      "codepoint": "U+0043",
+      "glyphName": "uni0063"
+    },
+    {
+      "character": "D",
+      "mappedTo": "d",
+      "codepoint": "U+0044",
+      "glyphName": "uni0064"
+    },
+    {
+      "character": "E",
+      "mappedTo": "e",
+      "codepoint": "U+0045",
+      "glyphName": "uni0065"
+    },
+    {
+      "character": "F",
+      "mappedTo": "f",
+      "codepoint": "U+0046",
+      "glyphName": "uni0066"
+    },
+    {
+      "character": "G",
+      "mappedTo": "g",
+      "codepoint": "U+0047",
+      "glyphName": "uni0067"
+    },
+    {
+      "character": "H",
+      "mappedTo": "h",
+      "codepoint": "U+0048",
+      "glyphName": "uni0068"
+    },
+    {
+      "character": "I",
+      "mappedTo": "i",
+      "codepoint": "U+0049",
+      "glyphName": "uni0069"
+    },
+    {
+      "character": "J",
+      "mappedTo": "j",
+      "codepoint": "U+004A",
+      "glyphName": "uni006A"
+    },
+    {
+      "character": "K",
+      "mappedTo": "k",
+      "codepoint": "U+004B",
+      "glyphName": "uni006B"
+    },
+    {
+      "character": "L",
+      "mappedTo": "l",
+      "codepoint": "U+004C",
+      "glyphName": "uni006C"
+    },
+    {
+      "character": "M",
+      "mappedTo": "m",
+      "codepoint": "U+004D",
+      "glyphName": "uni006D"
+    },
+    {
+      "character": "N",
+      "mappedTo": "n",
+      "codepoint": "U+004E",
+      "glyphName": "uni006E"
+    },
+    {
+      "character": "O",
+      "mappedTo": "o",
+      "codepoint": "U+004F",
+      "glyphName": "uni006F"
+    },
+    {
+      "character": "P",
+      "mappedTo": "p",
+      "codepoint": "U+0050",
+      "glyphName": "uni0070"
+    },
+    {
+      "character": "Q",
+      "mappedTo": "q",
+      "codepoint": "U+0051",
+      "glyphName": "uni0071"
+    },
+    {
+      "character": "R",
+      "mappedTo": "r",
+      "codepoint": "U+0052",
+      "glyphName": "uni0072"
+    },
+    {
+      "character": "S",
+      "mappedTo": "s",
+      "codepoint": "U+0053",
+      "glyphName": "uni0073"
+    },
+    {
+      "character": "T",
+      "mappedTo": "t",
+      "codepoint": "U+0054",
+      "glyphName": "uni0074"
+    },
+    {
+      "character": "U",
+      "mappedTo": "u",
+      "codepoint": "U+0055",
+      "glyphName": "uni0075"
+    },
+    {
+      "character": "V",
+      "mappedTo": "v",
+      "codepoint": "U+0056",
+      "glyphName": "uni0076"
+    },
+    {
+      "character": "W",
+      "mappedTo": "w",
+      "codepoint": "U+0057",
+      "glyphName": "uni0077"
+    },
+    {
+      "character": "X",
+      "mappedTo": "x",
+      "codepoint": "U+0058",
+      "glyphName": "uni0078"
+    },
+    {
+      "character": "Y",
+      "mappedTo": "y",
+      "codepoint": "U+0059",
+      "glyphName": "uni0079"
+    },
+    {
+      "character": "Z",
+      "mappedTo": "z",
+      "codepoint": "U+005A",
+      "glyphName": "uni007A"
+    }
+  ],
+  "features": [
+    "aalt",
+    "calt",
+    "salt",
+    "rand",
+    "ss01",
+    "ss02",
+    "ss03",
+    "ss04",
+    "ss05",
+    "ss06",
+    "ss07"
+  ],
+  "glyphs": [
+    {
+      "glyphName": "space",
+      "character": " ",
+      "variationIndex": 0,
+      "id": "5F20794F-BA73-4A63-AD61-15DC0F0845DD",
+      "codepoint": "U+0020",
+      "primary": true,
+      "advanceWidth": 280
+    },
+    {
+      "glyphName": "uni0021",
+      "character": "!",
+      "variationIndex": 0,
+      "id": "E38AF348-66F4-47E1-9232-2DD916D925F0",
+      "codepoint": "U+0021",
+      "primary": true,
+      "advanceWidth": 226
+    },
+    {
+      "glyphName": "uniE000_u0021_v01",
+      "character": "!",
+      "variationIndex": 1,
+      "id": "7CD57E98-7B70-4538-BA4E-FB41AEC9F7CE",
+      "codepoint": "U+E000",
+      "primary": false,
+      "advanceWidth": 248
+    },
+    {
+      "glyphName": "uniE001_u0021_v02",
+      "character": "!",
+      "variationIndex": 2,
+      "id": "C1A0F47B-AF1B-48B1-83A6-8A61BBDADE2F",
+      "codepoint": "U+E001",
+      "primary": false,
+      "advanceWidth": 210
+    },
+    {
+      "glyphName": "uni0022",
+      "character": "\"",
+      "variationIndex": 0,
+      "id": "974A9189-F63F-415B-92A4-E6286373A36F",
+      "codepoint": "U+0022",
+      "primary": true,
+      "advanceWidth": 323
+    },
+    {
+      "glyphName": "uniE002_u0022_v01",
+      "character": "\"",
+      "variationIndex": 1,
+      "id": "0845D0A4-B49C-423D-99F6-BF3620C968DE",
+      "codepoint": "U+E002",
+      "primary": false,
+      "advanceWidth": 257
+    },
+    {
+      "glyphName": "uniE003_u0022_v02",
+      "character": "\"",
+      "variationIndex": 2,
+      "id": "2F42C4FF-9088-4FD9-8F92-0BA23C42D0C0",
+      "codepoint": "U+E003",
+      "primary": false,
+      "advanceWidth": 313
+    },
+    {
+      "glyphName": "uni0027",
+      "character": "'",
+      "variationIndex": 0,
+      "id": "08D1A307-77C4-4A91-A79F-FE0B53D2D445",
+      "codepoint": "U+0027",
+      "primary": true,
+      "advanceWidth": 210
+    },
+    {
+      "glyphName": "uniE004_u0027_v01",
+      "character": "'",
+      "variationIndex": 1,
+      "id": "B4CF458B-557A-4058-8258-E51B3463EA15",
+      "codepoint": "U+E004",
+      "primary": false,
+      "advanceWidth": 218
+    },
+    {
+      "glyphName": "uniE005_u0027_v02",
+      "character": "'",
+      "variationIndex": 2,
+      "id": "82B6DD6D-2317-49A9-8DBC-14A576260E2C",
+      "codepoint": "U+E005",
+      "primary": false,
+      "advanceWidth": 220
+    },
+    {
+      "glyphName": "uni002C",
+      "character": ",",
+      "variationIndex": 0,
+      "id": "32DCFFFC-6271-4CEB-816E-0B603EEFCEE9",
+      "codepoint": "U+002C",
+      "primary": true,
+      "advanceWidth": 344
+    },
+    {
+      "glyphName": "uniE006_u002c_v01",
+      "character": ",",
+      "variationIndex": 1,
+      "id": "DDBE2DA3-E799-46BE-B00C-56A611E977B2",
+      "codepoint": "U+E006",
+      "primary": false,
+      "advanceWidth": 265
+    },
+    {
+      "glyphName": "uniE007_u002c_v02",
+      "character": ",",
+      "variationIndex": 2,
+      "id": "5E055C52-BAD6-46F6-BE9C-9A78ABBD17E1",
+      "codepoint": "U+E007",
+      "primary": false,
+      "advanceWidth": 185
+    },
+    {
+      "glyphName": "uni002D",
+      "character": "-",
+      "variationIndex": 0,
+      "id": "15983C29-4401-4C14-9DCF-73CD9D20F27C",
+      "codepoint": "U+002D",
+      "primary": true,
+      "advanceWidth": 554
+    },
+    {
+      "glyphName": "uniE008_u002d_v01",
+      "character": "-",
+      "variationIndex": 1,
+      "id": "DE021DBF-EE1D-465A-A311-7B2D8BAEDEF3",
+      "codepoint": "U+E008",
+      "primary": false,
+      "advanceWidth": 677
+    },
+    {
+      "glyphName": "uniE009_u002d_v02",
+      "character": "-",
+      "variationIndex": 2,
+      "id": "59BC6FBA-0EF7-4600-8ECC-A796FF3BEA88",
+      "codepoint": "U+E009",
+      "primary": false,
+      "advanceWidth": 670
+    },
+    {
+      "glyphName": "uni002E",
+      "character": ".",
+      "variationIndex": 0,
+      "id": "841FAA3B-843E-43BB-9215-9588C3B639D2",
+      "codepoint": "U+002E",
+      "primary": true,
+      "advanceWidth": 192
+    },
+    {
+      "glyphName": "uniE00A_u002e_v01",
+      "character": ".",
+      "variationIndex": 1,
+      "id": "75F1BAAA-E84F-4FFD-8917-1C0D8887179E",
+      "codepoint": "U+E00A",
+      "primary": false,
+      "advanceWidth": 239
+    },
+    {
+      "glyphName": "uniE00B_u002e_v02",
+      "character": ".",
+      "variationIndex": 2,
+      "id": "76BDAFE8-056A-4713-AB4D-76DD4D41B6BE",
+      "codepoint": "U+E00B",
+      "primary": false,
+      "advanceWidth": 223
+    },
+    {
+      "glyphName": "uni0030",
+      "character": "0",
+      "variationIndex": 0,
+      "id": "8E9ADE09-862B-49B3-AC1F-BCCAC813D65E",
+      "codepoint": "U+0030",
+      "primary": true,
+      "advanceWidth": 488
+    },
+    {
+      "glyphName": "uniE00C_0_v01",
+      "character": "0",
+      "variationIndex": 1,
+      "id": "0F5B84A8-C511-4B35-AA03-F9B5A39386AC",
+      "codepoint": "U+E00C",
+      "primary": false,
+      "advanceWidth": 471
+    },
+    {
+      "glyphName": "uniE00D_0_v02",
+      "character": "0",
+      "variationIndex": 2,
+      "id": "DC2FA330-032B-4922-A551-2CCF1892F867",
+      "codepoint": "U+E00D",
+      "primary": false,
+      "advanceWidth": 455
+    },
+    {
+      "glyphName": "uni0031",
+      "character": "1",
+      "variationIndex": 0,
+      "id": "1788F318-0B7D-43C2-8195-7D1FD45CF9EA",
+      "codepoint": "U+0031",
+      "primary": true,
+      "advanceWidth": 347
+    },
+    {
+      "glyphName": "uniE00E_1_v01",
+      "character": "1",
+      "variationIndex": 1,
+      "id": "A963664A-2B4B-4641-805B-B75F4E7FB0AC",
+      "codepoint": "U+E00E",
+      "primary": false,
+      "advanceWidth": 325
+    },
+    {
+      "glyphName": "uniE00F_1_v02",
+      "character": "1",
+      "variationIndex": 2,
+      "id": "217DAA8D-2945-4C54-93D3-35F0946EFD61",
+      "codepoint": "U+E00F",
+      "primary": false,
+      "advanceWidth": 413
+    },
+    {
+      "glyphName": "uniE010_1_v03",
+      "character": "1",
+      "variationIndex": 3,
+      "id": "0D148B72-7E8E-4412-BEF8-FCCA0DC31F3B",
+      "codepoint": "U+E010",
+      "primary": false,
+      "advanceWidth": 299
+    },
+    {
+      "glyphName": "uni0032",
+      "character": "2",
+      "variationIndex": 0,
+      "id": "45AE0D6F-752F-4728-AA29-A5910E0312D2",
+      "codepoint": "U+0032",
+      "primary": true,
+      "advanceWidth": 451
+    },
+    {
+      "glyphName": "uniE011_2_v01",
+      "character": "2",
+      "variationIndex": 1,
+      "id": "36895165-5A3F-4036-A714-CCF909195554",
+      "codepoint": "U+E011",
+      "primary": false,
+      "advanceWidth": 487
+    },
+    {
+      "glyphName": "uniE012_2_v02",
+      "character": "2",
+      "variationIndex": 2,
+      "id": "263B53AA-C835-4AB9-A2BD-894630833004",
+      "codepoint": "U+E012",
+      "primary": false,
+      "advanceWidth": 570
+    },
+    {
+      "glyphName": "uniE013_2_v03",
+      "character": "2",
+      "variationIndex": 3,
+      "id": "C093402B-170B-4647-A000-CCCA0009AD3A",
+      "codepoint": "U+E013",
+      "primary": false,
+      "advanceWidth": 481
+    },
+    {
+      "glyphName": "uni0033",
+      "character": "3",
+      "variationIndex": 0,
+      "id": "5CA9D690-020D-4810-A39E-E846A1479E3F",
+      "codepoint": "U+0033",
+      "primary": true,
+      "advanceWidth": 508
+    },
+    {
+      "glyphName": "uniE014_3_v01",
+      "character": "3",
+      "variationIndex": 1,
+      "id": "88A20B82-8F61-44E5-9507-F5AAADCC16FB",
+      "codepoint": "U+E014",
+      "primary": false,
+      "advanceWidth": 708
+    },
+    {
+      "glyphName": "uniE015_3_v02",
+      "character": "3",
+      "variationIndex": 2,
+      "id": "A2F0FFEC-26D5-4137-94DE-FD8CD1170459",
+      "codepoint": "U+E015",
+      "primary": false,
+      "advanceWidth": 571
+    },
+    {
+      "glyphName": "uniE016_3_v03",
+      "character": "3",
+      "variationIndex": 3,
+      "id": "5E35FD83-62B6-446A-8076-D61D48E526A1",
+      "codepoint": "U+E016",
+      "primary": false,
+      "advanceWidth": 519
+    },
+    {
+      "glyphName": "uni0034",
+      "character": "4",
+      "variationIndex": 0,
+      "id": "BBF97FB7-6928-4EB5-952B-26D69E9D7ABE",
+      "codepoint": "U+0034",
+      "primary": true,
+      "advanceWidth": 508
+    },
+    {
+      "glyphName": "uniE017_4_v01",
+      "character": "4",
+      "variationIndex": 1,
+      "id": "1672A46D-D243-4C2D-A169-0BCFB086B762",
+      "codepoint": "U+E017",
+      "primary": false,
+      "advanceWidth": 659
+    },
+    {
+      "glyphName": "uniE018_4_v02",
+      "character": "4",
+      "variationIndex": 2,
+      "id": "EB3CCE83-804E-435C-8978-243C687E7245",
+      "codepoint": "U+E018",
+      "primary": false,
+      "advanceWidth": 571
+    },
+    {
+      "glyphName": "uniE019_4_v03",
+      "character": "4",
+      "variationIndex": 3,
+      "id": "F4F656A6-EB0A-443A-B2E3-D7182AFAD4DF",
+      "codepoint": "U+E019",
+      "primary": false,
+      "advanceWidth": 446
+    },
+    {
+      "glyphName": "uni0035",
+      "character": "5",
+      "variationIndex": 0,
+      "id": "1F93F22A-8B8A-4612-83AC-F9301AFD18EB",
+      "codepoint": "U+0035",
+      "primary": true,
+      "advanceWidth": 524
+    },
+    {
+      "glyphName": "uniE01A_5_v01",
+      "character": "5",
+      "variationIndex": 1,
+      "id": "0DDC1C20-B097-4CF4-AAF2-A1AE073D0889",
+      "codepoint": "U+E01A",
+      "primary": false,
+      "advanceWidth": 519
+    },
+    {
+      "glyphName": "uniE01B_5_v02",
+      "character": "5",
+      "variationIndex": 2,
+      "id": "42D660EC-A878-4127-829F-20C5ABFBA9DD",
+      "codepoint": "U+E01B",
+      "primary": false,
+      "advanceWidth": 494
+    },
+    {
+      "glyphName": "uni0036",
+      "character": "6",
+      "variationIndex": 0,
+      "id": "1D91CD45-AF9A-465E-9D97-B0C95A3D61F3",
+      "codepoint": "U+0036",
+      "primary": true,
+      "advanceWidth": 508
+    },
+    {
+      "glyphName": "uniE01C_6_v01",
+      "character": "6",
+      "variationIndex": 1,
+      "id": "5DCA6EAF-2EA7-4F41-A470-3E22DCC75465",
+      "codepoint": "U+E01C",
+      "primary": false,
+      "advanceWidth": 471
+    },
+    {
+      "glyphName": "uniE01D_6_v02",
+      "character": "6",
+      "variationIndex": 2,
+      "id": "6FA233C0-E8E5-48FD-A409-05414AF28F54",
+      "codepoint": "U+E01D",
+      "primary": false,
+      "advanceWidth": 395
+    },
+    {
+      "glyphName": "uni0037",
+      "character": "7",
+      "variationIndex": 0,
+      "id": "FA8EF10E-A66B-49F0-B253-F3590287BCBE",
+      "codepoint": "U+0037",
+      "primary": true,
+      "advanceWidth": 518
+    },
+    {
+      "glyphName": "uniE01E_7_v01",
+      "character": "7",
+      "variationIndex": 1,
+      "id": "483C50A4-F57D-406C-B140-01135C5CC706",
+      "codepoint": "U+E01E",
+      "primary": false,
+      "advanceWidth": 576
+    },
+    {
+      "glyphName": "uniE01F_7_v02",
+      "character": "7",
+      "variationIndex": 2,
+      "id": "36A73023-EBC1-4E4D-8A3B-961E3E34F6ED",
+      "codepoint": "U+E01F",
+      "primary": false,
+      "advanceWidth": 474
+    },
+    {
+      "glyphName": "uniE020_7_v03",
+      "character": "7",
+      "variationIndex": 3,
+      "id": "ABF5DCD2-904F-4102-8176-EC557972D7D3",
+      "codepoint": "U+E020",
+      "primary": false,
+      "advanceWidth": 630
+    },
+    {
+      "glyphName": "uni0038",
+      "character": "8",
+      "variationIndex": 0,
+      "id": "1FE1F569-E7DB-454D-9F1C-0207E1841D5F",
+      "codepoint": "U+0038",
+      "primary": true,
+      "advanceWidth": 513
+    },
+    {
+      "glyphName": "uniE021_8_v02",
+      "character": "8",
+      "variationIndex": 2,
+      "id": "97D57649-7D18-416C-B403-10FD1FFB741B",
+      "codepoint": "U+E021",
+      "primary": false,
+      "advanceWidth": 456
+    },
+    {
+      "glyphName": "uniE022_8_v03",
+      "character": "8",
+      "variationIndex": 3,
+      "id": "73530411-8EE7-480A-A30B-CBCFE35D5284",
+      "codepoint": "U+E022",
+      "primary": false,
+      "advanceWidth": 462
+    },
+    {
+      "glyphName": "uniE023_8_v04",
+      "character": "8",
+      "variationIndex": 4,
+      "id": "EC3E135D-ACE6-45B8-B477-0112940BE757",
+      "codepoint": "U+E023",
+      "primary": false,
+      "advanceWidth": 424
+    },
+    {
+      "glyphName": "uniE024_8_v05",
+      "character": "8",
+      "variationIndex": 5,
+      "id": "93781135-8E26-4997-8D7C-CFDF7DB6C8F7",
+      "codepoint": "U+E024",
+      "primary": false,
+      "advanceWidth": 512
+    },
+    {
+      "glyphName": "uni0039",
+      "character": "9",
+      "variationIndex": 0,
+      "id": "0D953BEA-4CFC-4361-A55B-098EB908735B",
+      "codepoint": "U+0039",
+      "primary": true,
+      "advanceWidth": 529
+    },
+    {
+      "glyphName": "uniE025_9_v01",
+      "character": "9",
+      "variationIndex": 1,
+      "id": "52AB8E4B-B136-4944-9083-474411405893",
+      "codepoint": "U+E025",
+      "primary": false,
+      "advanceWidth": 486
+    },
+    {
+      "glyphName": "uniE026_9_v02",
+      "character": "9",
+      "variationIndex": 2,
+      "id": "B4E3FE59-F074-4E65-A943-6CEB91BD06FF",
+      "codepoint": "U+E026",
+      "primary": false,
+      "advanceWidth": 528
+    },
+    {
+      "glyphName": "uniE027_9_v03",
+      "character": "9",
+      "variationIndex": 3,
+      "id": "2B287222-395E-4E2A-910A-3E47511140D8",
+      "codepoint": "U+E027",
+      "primary": false,
+      "advanceWidth": 428
+    },
+    {
+      "glyphName": "uni003A",
+      "character": ":",
+      "variationIndex": 0,
+      "id": "C93C2D82-DB03-491F-AA49-C240708BAE8E",
+      "codepoint": "U+003A",
+      "primary": true,
+      "advanceWidth": 196
+    },
+    {
+      "glyphName": "uniE028_u003a_v01",
+      "character": ":",
+      "variationIndex": 1,
+      "id": "26681E6C-0340-42EF-A486-79A338D76A4F",
+      "codepoint": "U+E028",
+      "primary": false,
+      "advanceWidth": 208
+    },
+    {
+      "glyphName": "uniE029_u003a_v02",
+      "character": ":",
+      "variationIndex": 2,
+      "id": "7CE5D57C-A016-4E98-AE9C-AE3E0500C77A",
+      "codepoint": "U+E029",
+      "primary": false,
+      "advanceWidth": 215
+    },
+    {
+      "glyphName": "uni003D",
+      "character": "=",
+      "variationIndex": 0,
+      "id": "0A341EB9-5147-434E-839B-DDDA323ED069",
+      "codepoint": "U+003D",
+      "primary": true,
+      "advanceWidth": 707
+    },
+    {
+      "glyphName": "uniE02A_u003d_v01",
+      "character": "=",
+      "variationIndex": 1,
+      "id": "20BAE17F-DBEE-4DCC-B48F-043BBC7242B5",
+      "codepoint": "U+E02A",
+      "primary": false,
+      "advanceWidth": 780
+    },
+    {
+      "glyphName": "uniE02B_u003d_v02",
+      "character": "=",
+      "variationIndex": 2,
+      "id": "B28711FC-F1CC-420E-8BE7-3A64E96E8C9A",
+      "codepoint": "U+E02B",
+      "primary": false,
+      "advanceWidth": 754
+    },
+    {
+      "glyphName": "uniE02C_u003d_v03",
+      "character": "=",
+      "variationIndex": 3,
+      "id": "440C20DF-520F-49C8-B418-BD94BEB1F1B8",
+      "codepoint": "U+E02C",
+      "primary": false,
+      "advanceWidth": 774
+    },
+    {
+      "glyphName": "uni003F",
+      "character": "?",
+      "variationIndex": 0,
+      "id": "104485E7-615E-4798-B25F-F4F88E8147EA",
+      "codepoint": "U+003F",
+      "primary": true,
+      "advanceWidth": 436
+    },
+    {
+      "glyphName": "uniE02D_u003f_v01",
+      "character": "?",
+      "variationIndex": 1,
+      "id": "F94E7730-BBE6-4983-8289-94D7D1D813CB",
+      "codepoint": "U+E02D",
+      "primary": false,
+      "advanceWidth": 438
+    },
+    {
+      "glyphName": "uniE02E_u003f_v02",
+      "character": "?",
+      "variationIndex": 2,
+      "id": "E2748DA5-1381-429A-B10C-F4EAA6E1063F",
+      "codepoint": "U+E02E",
+      "primary": false,
+      "advanceWidth": 510
+    },
+    {
+      "glyphName": "uni0061",
+      "character": "a",
+      "variationIndex": 0,
+      "id": "54A46540-7DB9-40FB-9B7E-90963218279F",
+      "codepoint": "U+0061",
+      "primary": true,
+      "advanceWidth": 475
+    },
+    {
+      "glyphName": "uniE02F_a_v01",
+      "character": "a",
+      "variationIndex": 1,
+      "id": "0A8067BF-2699-42F3-AF4C-F26D41EB1E0A",
+      "codepoint": "U+E02F",
+      "primary": false,
+      "advanceWidth": 447
+    },
+    {
+      "glyphName": "uniE030_a_v02",
+      "character": "a",
+      "variationIndex": 2,
+      "id": "57E71E1D-E840-4F87-8628-BA8B1E68ECDB",
+      "codepoint": "U+E030",
+      "primary": false,
+      "advanceWidth": 468
+    },
+    {
+      "glyphName": "uniE031_a_v03",
+      "character": "a",
+      "variationIndex": 3,
+      "id": "570460E6-4609-422E-B78F-6048F73E8E6F",
+      "codepoint": "U+E031",
+      "primary": false,
+      "advanceWidth": 508
+    },
+    {
+      "glyphName": "uniE032_a_v04",
+      "character": "a",
+      "variationIndex": 4,
+      "id": "798E67E5-4C67-4EA7-89E7-B58FD35B1DBE",
+      "codepoint": "U+E032",
+      "primary": false,
+      "advanceWidth": 519
+    },
+    {
+      "glyphName": "uniE033_a_v05",
+      "character": "a",
+      "variationIndex": 5,
+      "id": "905EDF02-C7C5-4666-A3F7-6FC09955FDD1",
+      "codepoint": "U+E033",
+      "primary": false,
+      "advanceWidth": 484
+    },
+    {
+      "glyphName": "uni0062",
+      "character": "b",
+      "variationIndex": 0,
+      "id": "A363155C-4F3B-4FDF-8AC1-F0CDD9CDA806",
+      "codepoint": "U+0062",
+      "primary": true,
+      "advanceWidth": 490
+    },
+    {
+      "glyphName": "uniE034_b_v01",
+      "character": "b",
+      "variationIndex": 1,
+      "id": "7C8B646C-5971-4C4B-BB34-DC174C51E77F",
+      "codepoint": "U+E034",
+      "primary": false,
+      "advanceWidth": 512
+    },
+    {
+      "glyphName": "uniE035_b_v02",
+      "character": "b",
+      "variationIndex": 2,
+      "id": "620A901B-3043-43B3-BD85-A566F0DFBE66",
+      "codepoint": "U+E035",
+      "primary": false,
+      "advanceWidth": 494
+    },
+    {
+      "glyphName": "uniE036_b_v03",
+      "character": "b",
+      "variationIndex": 3,
+      "id": "3DF76178-5767-4D0B-8179-C158C4141B91",
+      "codepoint": "U+E036",
+      "primary": false,
+      "advanceWidth": 576
+    },
+    {
+      "glyphName": "uni0063",
+      "character": "c",
+      "variationIndex": 0,
+      "id": "C5E0C082-F326-4FFD-8E1D-57E7F406E678",
+      "codepoint": "U+0063",
+      "primary": true,
+      "advanceWidth": 549
+    },
+    {
+      "glyphName": "uniE037_c_v01",
+      "character": "c",
+      "variationIndex": 1,
+      "id": "DCED8451-02D2-4D52-8858-C30DEAFF0FEB",
+      "codepoint": "U+E037",
+      "primary": false,
+      "advanceWidth": 497
+    },
+    {
+      "glyphName": "uniE038_c_v02",
+      "character": "c",
+      "variationIndex": 2,
+      "id": "335D05BB-B614-4FD6-9979-657FDAB74346",
+      "codepoint": "U+E038",
+      "primary": false,
+      "advanceWidth": 571
+    },
+    {
+      "glyphName": "uniE039_c_v03",
+      "character": "c",
+      "variationIndex": 3,
+      "id": "AF9C0621-8292-4811-A719-B9B426597BA5",
+      "codepoint": "U+E039",
+      "primary": false,
+      "advanceWidth": 497
+    },
+    {
+      "glyphName": "uni0064",
+      "character": "d",
+      "variationIndex": 0,
+      "id": "E54921EA-7C32-425B-96E8-3340AACC5F0E",
+      "codepoint": "U+0064",
+      "primary": true,
+      "advanceWidth": 393
+    },
+    {
+      "glyphName": "uniE03A_d_v01",
+      "character": "d",
+      "variationIndex": 1,
+      "id": "E93AE855-84C9-44F3-A620-A912C71CB04F",
+      "codepoint": "U+E03A",
+      "primary": false,
+      "advanceWidth": 405
+    },
+    {
+      "glyphName": "uniE03B_d_v02",
+      "character": "d",
+      "variationIndex": 2,
+      "id": "CF838250-161B-4B03-AF0F-2885AC0DC429",
+      "codepoint": "U+E03B",
+      "primary": false,
+      "advanceWidth": 542
+    },
+    {
+      "glyphName": "uniE03C_d_v03",
+      "character": "d",
+      "variationIndex": 3,
+      "id": "FC35DF8B-E09A-45EC-B5E1-C044E54BDB95",
+      "codepoint": "U+E03C",
+      "primary": false,
+      "advanceWidth": 444
+    },
+    {
+      "glyphName": "uniE03D_d_v04",
+      "character": "d",
+      "variationIndex": 4,
+      "id": "75526C13-F7FC-44DB-B8C6-F4F1D31B03DC",
+      "codepoint": "U+E03D",
+      "primary": false,
+      "advanceWidth": 490
+    },
+    {
+      "glyphName": "uniE03E_d_v05",
+      "character": "d",
+      "variationIndex": 5,
+      "id": "0F126E62-CD11-437D-8804-A38788969604",
+      "codepoint": "U+E03E",
+      "primary": false,
+      "advanceWidth": 462
+    },
+    {
+      "glyphName": "uni0065",
+      "character": "e",
+      "variationIndex": 0,
+      "id": "DE8AA710-F94D-4ECF-B908-327E53C59BF7",
+      "codepoint": "U+0065",
+      "primary": true,
+      "advanceWidth": 561
+    },
+    {
+      "glyphName": "uniE03F_e_v01",
+      "character": "e",
+      "variationIndex": 1,
+      "id": "84926EF4-2C3F-4B39-BB21-158CA86355DA",
+      "codepoint": "U+E03F",
+      "primary": false,
+      "advanceWidth": 483
+    },
+    {
+      "glyphName": "uniE040_e_v02",
+      "character": "e",
+      "variationIndex": 2,
+      "id": "C3C42CC5-AC91-4B25-A079-F4D186B8AF0D",
+      "codepoint": "U+E040",
+      "primary": false,
+      "advanceWidth": 494
+    },
+    {
+      "glyphName": "uniE041_e_v03",
+      "character": "e",
+      "variationIndex": 3,
+      "id": "D853CB51-41F9-4435-9B97-E08B2B3F2687",
+      "codepoint": "U+E041",
+      "primary": false,
+      "advanceWidth": 528
+    },
+    {
+      "glyphName": "uniE042_e_v04",
+      "character": "e",
+      "variationIndex": 4,
+      "id": "9C43C37C-284D-480D-A80B-B63CA6A7652C",
+      "codepoint": "U+E042",
+      "primary": false,
+      "advanceWidth": 500
+    },
+    {
+      "glyphName": "uniE043_e_v05",
+      "character": "e",
+      "variationIndex": 5,
+      "id": "EE86E48B-DC5E-4125-B164-A6044211EA4D",
+      "codepoint": "U+E043",
+      "primary": false,
+      "advanceWidth": 569
+    },
+    {
+      "glyphName": "uni0066",
+      "character": "f",
+      "variationIndex": 0,
+      "id": "C2F9A6BD-A996-46E6-AB6B-610EA9C9EB45",
+      "codepoint": "U+0066",
+      "primary": true,
+      "advanceWidth": 436
+    },
+    {
+      "glyphName": "uniE044_f_v01",
+      "character": "f",
+      "variationIndex": 1,
+      "id": "72658DFD-85F2-471C-858E-3D9D46025656",
+      "codepoint": "U+E044",
+      "primary": false,
+      "advanceWidth": 433
+    },
+    {
+      "glyphName": "uniE045_f_v02",
+      "character": "f",
+      "variationIndex": 2,
+      "id": "D9508CD2-E371-4665-90A0-2C7BB8FB4D68",
+      "codepoint": "U+E045",
+      "primary": false,
+      "advanceWidth": 390
+    },
+    {
+      "glyphName": "uni0067",
+      "character": "g",
+      "variationIndex": 0,
+      "id": "BB6F6459-4CBA-49A0-8E2D-2B5F98683548",
+      "codepoint": "U+0067",
+      "primary": true,
+      "advanceWidth": 569
+    },
+    {
+      "glyphName": "uniE046_g_v01",
+      "character": "g",
+      "variationIndex": 1,
+      "id": "20B60A8A-0BAD-4603-A333-9A07E990F0B2",
+      "codepoint": "U+E046",
+      "primary": false,
+      "advanceWidth": 465
+    },
+    {
+      "glyphName": "uniE047_g_v02",
+      "character": "g",
+      "variationIndex": 2,
+      "id": "57280A87-2B26-4B86-AD3C-FCD5BFA1A700",
+      "codepoint": "U+E047",
+      "primary": false,
+      "advanceWidth": 442
+    },
+    {
+      "glyphName": "uniE048_g_v03",
+      "character": "g",
+      "variationIndex": 3,
+      "id": "CA9BFB46-3927-4DE5-B021-98B7CD96D6D6",
+      "codepoint": "U+E048",
+      "primary": false,
+      "advanceWidth": 447
+    },
+    {
+      "glyphName": "uniE049_g_v04",
+      "character": "g",
+      "variationIndex": 4,
+      "id": "4EE5D4DA-224C-4055-925C-39EFC75B09BA",
+      "codepoint": "U+E049",
+      "primary": false,
+      "advanceWidth": 506
+    },
+    {
+      "glyphName": "uniE04A_g_v05",
+      "character": "g",
+      "variationIndex": 5,
+      "id": "8A4EA8BB-356E-453D-93FC-15BDC027ADF8",
+      "codepoint": "U+E04A",
+      "primary": false,
+      "advanceWidth": 544
+    },
+    {
+      "glyphName": "uni0068",
+      "character": "h",
+      "variationIndex": 0,
+      "id": "722F5CBC-0BBE-486D-B129-70153FE88B9B",
+      "codepoint": "U+0068",
+      "primary": true,
+      "advanceWidth": 383
+    },
+    {
+      "glyphName": "uniE04B_h_v01",
+      "character": "h",
+      "variationIndex": 1,
+      "id": "BEB6AE7F-04A1-4737-A29E-25DA0373BC75",
+      "codepoint": "U+E04B",
+      "primary": false,
+      "advanceWidth": 477
+    },
+    {
+      "glyphName": "uniE04C_h_v02",
+      "character": "h",
+      "variationIndex": 2,
+      "id": "97A4D0BB-6394-4486-A178-5585AF03BC06",
+      "codepoint": "U+E04C",
+      "primary": false,
+      "advanceWidth": 387
+    },
+    {
+      "glyphName": "uniE04D_h_v03",
+      "character": "h",
+      "variationIndex": 3,
+      "id": "AC3AF4B1-D661-4474-B441-DE44E7AF6B1E",
+      "codepoint": "U+E04D",
+      "primary": false,
+      "advanceWidth": 412
+    },
+    {
+      "glyphName": "uniE04E_h_v04",
+      "character": "h",
+      "variationIndex": 4,
+      "id": "AD5FDB61-4346-4E80-AD8A-C885A1F9FB36",
+      "codepoint": "U+E04E",
+      "primary": false,
+      "advanceWidth": 523
+    },
+    {
+      "glyphName": "uni0069",
+      "character": "i",
+      "variationIndex": 0,
+      "id": "D8E587A6-7BAD-46AC-9974-A3EDB3D51B2F",
+      "codepoint": "U+0069",
+      "primary": true,
+      "advanceWidth": 196
+    },
+    {
+      "glyphName": "uniE04F_i_v02",
+      "character": "i",
+      "variationIndex": 2,
+      "id": "D825B1C4-565E-4C80-8FA8-E7810F161C23",
+      "codepoint": "U+E04F",
+      "primary": false,
+      "advanceWidth": 212
+    },
+    {
+      "glyphName": "uniE050_i_v03",
+      "character": "i",
+      "variationIndex": 3,
+      "id": "BFD1B2C5-683F-4E43-AB8D-550732FDB565",
+      "codepoint": "U+E050",
+      "primary": false,
+      "advanceWidth": 194
+    },
+    {
+      "glyphName": "uniE051_i_v04",
+      "character": "i",
+      "variationIndex": 4,
+      "id": "2D7BFAC5-3E4C-4C79-A981-808B3BF55F08",
+      "codepoint": "U+E051",
+      "primary": false,
+      "advanceWidth": 182
+    },
+    {
+      "glyphName": "uniE052_i_v05",
+      "character": "i",
+      "variationIndex": 5,
+      "id": "FAF70788-86B2-48E1-B3D9-DFC1CF4B6A36",
+      "codepoint": "U+E052",
+      "primary": false,
+      "advanceWidth": 178
+    },
+    {
+      "glyphName": "uni006A",
+      "character": "j",
+      "variationIndex": 0,
+      "id": "AA9B4FD8-2981-4D96-BD01-7D9270C7AA25",
+      "codepoint": "U+006A",
+      "primary": true,
+      "advanceWidth": 448
+    },
+    {
+      "glyphName": "uniE053_j_v01",
+      "character": "j",
+      "variationIndex": 1,
+      "id": "492D2E98-FA6A-479D-B64F-8389C3013897",
+      "codepoint": "U+E053",
+      "primary": false,
+      "advanceWidth": 370
+    },
+    {
+      "glyphName": "uniE054_j_v02",
+      "character": "j",
+      "variationIndex": 2,
+      "id": "B791013B-39A3-4FF4-BFB2-93D9597D3F76",
+      "codepoint": "U+E054",
+      "primary": false,
+      "advanceWidth": 364
+    },
+    {
+      "glyphName": "uni006B",
+      "character": "k",
+      "variationIndex": 0,
+      "id": "B901B669-E895-442C-A5D7-DF2164C670B4",
+      "codepoint": "U+006B",
+      "primary": true,
+      "advanceWidth": 365
+    },
+    {
+      "glyphName": "uniE055_k_v01",
+      "character": "k",
+      "variationIndex": 1,
+      "id": "6C3AD00F-FE19-4CFD-B9DB-98537C77BC2D",
+      "codepoint": "U+E055",
+      "primary": false,
+      "advanceWidth": 449
+    },
+    {
+      "glyphName": "uniE056_k_v02",
+      "character": "k",
+      "variationIndex": 2,
+      "id": "255C7E01-97A6-4E95-AA26-A602E39AEDBF",
+      "codepoint": "U+E056",
+      "primary": false,
+      "advanceWidth": 416
+    },
+    {
+      "glyphName": "uniE057_k_v03",
+      "character": "k",
+      "variationIndex": 3,
+      "id": "D17CBA6C-358B-49C1-BD0A-909C910D1127",
+      "codepoint": "U+E057",
+      "primary": false,
+      "advanceWidth": 462
+    },
+    {
+      "glyphName": "uni006C",
+      "character": "l",
+      "variationIndex": 0,
+      "id": "E6D804A0-2B61-4315-B9BB-15B8ABD44D6E",
+      "codepoint": "U+006C",
+      "primary": true,
+      "advanceWidth": 148
+    },
+    {
+      "glyphName": "uniE058_l_v01",
+      "character": "l",
+      "variationIndex": 1,
+      "id": "6ED6F4A9-4063-46D1-98FC-28DA2D2D451A",
+      "codepoint": "U+E058",
+      "primary": false,
+      "advanceWidth": 132
+    },
+    {
+      "glyphName": "uniE059_l_v02",
+      "character": "l",
+      "variationIndex": 2,
+      "id": "A700F162-4C23-4FE7-9612-0F6D6F305365",
+      "codepoint": "U+E059",
+      "primary": false,
+      "advanceWidth": 126
+    },
+    {
+      "glyphName": "uniE05A_l_v04",
+      "character": "l",
+      "variationIndex": 4,
+      "id": "A817B23D-F23F-4126-AAE9-F726656AD62B",
+      "codepoint": "U+E05A",
+      "primary": false,
+      "advanceWidth": 227
+    },
+    {
+      "glyphName": "uniE05B_l_v05",
+      "character": "l",
+      "variationIndex": 5,
+      "id": "D9C750F6-62AF-4C97-A800-1901D5F24FC2",
+      "codepoint": "U+E05B",
+      "primary": false,
+      "advanceWidth": 148
+    },
+    {
+      "glyphName": "uni006D",
+      "character": "m",
+      "variationIndex": 0,
+      "id": "E7287BD2-7EDB-45D4-AC17-3769392EA435",
+      "codepoint": "U+006D",
+      "primary": true,
+      "advanceWidth": 557
+    },
+    {
+      "glyphName": "uniE05C_m_v01",
+      "character": "m",
+      "variationIndex": 1,
+      "id": "769FFA9B-523C-48CD-8FF9-3F36048F9D08",
+      "codepoint": "U+E05C",
+      "primary": false,
+      "advanceWidth": 688
+    },
+    {
+      "glyphName": "uniE05D_m_v02",
+      "character": "m",
+      "variationIndex": 2,
+      "id": "7428D705-C540-436E-BFC8-2D14CCC0ED79",
+      "codepoint": "U+E05D",
+      "primary": false,
+      "advanceWidth": 639
+    },
+    {
+      "glyphName": "uniE05E_m_v03",
+      "character": "m",
+      "variationIndex": 3,
+      "id": "C08245E1-52AD-4B97-A0B6-0D446A77F4AD",
+      "codepoint": "U+E05E",
+      "primary": false,
+      "advanceWidth": 682
+    },
+    {
+      "glyphName": "uniE05F_m_v04",
+      "character": "m",
+      "variationIndex": 4,
+      "id": "8A743613-E55C-4134-898C-C80FE540DE20",
+      "codepoint": "U+E05F",
+      "primary": false,
+      "advanceWidth": 679
+    },
+    {
+      "glyphName": "uni006E",
+      "character": "n",
+      "variationIndex": 0,
+      "id": "9317A625-9C68-471E-B6C3-4B9E497A82CC",
+      "codepoint": "U+006E",
+      "primary": true,
+      "advanceWidth": 380
+    },
+    {
+      "glyphName": "uniE060_n_v01",
+      "character": "n",
+      "variationIndex": 1,
+      "id": "AD59B5C0-4870-40BC-9682-389F0D8AB092",
+      "codepoint": "U+E060",
+      "primary": false,
+      "advanceWidth": 523
+    },
+    {
+      "glyphName": "uniE061_n_v02",
+      "character": "n",
+      "variationIndex": 2,
+      "id": "4D4642CF-7E35-42A7-9F31-0B292B84C0D1",
+      "codepoint": "U+E061",
+      "primary": false,
+      "advanceWidth": 402
+    },
+    {
+      "glyphName": "uniE062_n_v03",
+      "character": "n",
+      "variationIndex": 3,
+      "id": "74C80A4B-DA7B-4223-B1EA-981272F22D3B",
+      "codepoint": "U+E062",
+      "primary": false,
+      "advanceWidth": 553
+    },
+    {
+      "glyphName": "uniE063_n_v04",
+      "character": "n",
+      "variationIndex": 4,
+      "id": "207AF26C-EF1E-45A6-989F-DC8E2AD83B59",
+      "codepoint": "U+E063",
+      "primary": false,
+      "advanceWidth": 571
+    },
+    {
+      "glyphName": "uniE064_n_v05",
+      "character": "n",
+      "variationIndex": 5,
+      "id": "B5FED38A-10C6-45E6-9C92-1F2EF3C21688",
+      "codepoint": "U+E064",
+      "primary": false,
+      "advanceWidth": 553
+    },
+    {
+      "glyphName": "uni006F",
+      "character": "o",
+      "variationIndex": 0,
+      "id": "81C11167-85A0-4ACE-92E6-7BF7E9FD3A64",
+      "codepoint": "U+006F",
+      "primary": true,
+      "advanceWidth": 426
+    },
+    {
+      "glyphName": "uniE065_o_v01",
+      "character": "o",
+      "variationIndex": 1,
+      "id": "39FE1528-7D31-4B2E-90BE-CA317A7B0CF2",
+      "codepoint": "U+E065",
+      "primary": false,
+      "advanceWidth": 533
+    },
+    {
+      "glyphName": "uniE066_o_v02",
+      "character": "o",
+      "variationIndex": 2,
+      "id": "414D6074-0D1A-4543-A071-D80E8435415F",
+      "codepoint": "U+E066",
+      "primary": false,
+      "advanceWidth": 521
+    },
+    {
+      "glyphName": "uniE067_o_v03",
+      "character": "o",
+      "variationIndex": 3,
+      "id": "7819AE6F-9166-4385-8641-2F35F8D323CE",
+      "codepoint": "U+E067",
+      "primary": false,
+      "advanceWidth": 461
+    },
+    {
+      "glyphName": "uniE068_o_v04",
+      "character": "o",
+      "variationIndex": 4,
+      "id": "6BB23BBC-805A-4A38-AA3E-CF7F9794F488",
+      "codepoint": "U+E068",
+      "primary": false,
+      "advanceWidth": 478
+    },
+    {
+      "glyphName": "uni0070",
+      "character": "p",
+      "variationIndex": 0,
+      "id": "96095C1A-4C2A-416C-90BE-FBE7EEACF912",
+      "codepoint": "U+0070",
+      "primary": true,
+      "advanceWidth": 447
+    },
+    {
+      "glyphName": "uniE069_p_v01",
+      "character": "p",
+      "variationIndex": 1,
+      "id": "253FD644-8A83-490F-9150-71D6BD1DD26E",
+      "codepoint": "U+E069",
+      "primary": false,
+      "advanceWidth": 496
+    },
+    {
+      "glyphName": "uniE06A_p_v02",
+      "character": "p",
+      "variationIndex": 2,
+      "id": "59F1016C-917A-40A3-834A-DA74E6A6D33F",
+      "codepoint": "U+E06A",
+      "primary": false,
+      "advanceWidth": 552
+    },
+    {
+      "glyphName": "uniE06B_p_v03",
+      "character": "p",
+      "variationIndex": 3,
+      "id": "92ADA445-71D2-4D9D-91F6-6D375B9FC4A1",
+      "codepoint": "U+E06B",
+      "primary": false,
+      "advanceWidth": 518
+    },
+    {
+      "glyphName": "uni0071",
+      "character": "q",
+      "variationIndex": 0,
+      "id": "250017BE-BF52-48D0-A14B-93A5AD2BA7CD",
+      "codepoint": "U+0071",
+      "primary": true,
+      "advanceWidth": 428
+    },
+    {
+      "glyphName": "uniE06C_q_v01",
+      "character": "q",
+      "variationIndex": 1,
+      "id": "3E5CCAB4-1AA0-45CE-BAA2-2885ADCF7091",
+      "codepoint": "U+E06C",
+      "primary": false,
+      "advanceWidth": 429
+    },
+    {
+      "glyphName": "uniE06D_q_v02",
+      "character": "q",
+      "variationIndex": 2,
+      "id": "0E7BE12F-C44E-40D6-9479-5B1507997AA3",
+      "codepoint": "U+E06D",
+      "primary": false,
+      "advanceWidth": 435
+    },
+    {
+      "glyphName": "uni0072",
+      "character": "r",
+      "variationIndex": 0,
+      "id": "DB55B5E4-9447-4C36-92FB-D979FE9EDB9C",
+      "codepoint": "U+0072",
+      "primary": true,
+      "advanceWidth": 400
+    },
+    {
+      "glyphName": "uniE06E_r_v01",
+      "character": "r",
+      "variationIndex": 1,
+      "id": "1102DFD8-F941-43FA-887F-CF1B1E8D239C",
+      "codepoint": "U+E06E",
+      "primary": false,
+      "advanceWidth": 478
+    },
+    {
+      "glyphName": "uniE06F_r_v02",
+      "character": "r",
+      "variationIndex": 2,
+      "id": "0E0326B9-6B9C-4C48-812E-4E739EDED082",
+      "codepoint": "U+E06F",
+      "primary": false,
+      "advanceWidth": 456
+    },
+    {
+      "glyphName": "uniE070_r_v03",
+      "character": "r",
+      "variationIndex": 3,
+      "id": "0265EB31-E350-468C-9995-8BE72476FC8F",
+      "codepoint": "U+E070",
+      "primary": false,
+      "advanceWidth": 460
+    },
+    {
+      "glyphName": "uni0073",
+      "character": "s",
+      "variationIndex": 0,
+      "id": "711D5A1A-8E77-4961-B7CC-D8746A12A63E",
+      "codepoint": "U+0073",
+      "primary": true,
+      "advanceWidth": 474
+    },
+    {
+      "glyphName": "uniE071_s_v01",
+      "character": "s",
+      "variationIndex": 1,
+      "id": "F5C1E1EC-D3E3-4C49-8A4D-A2804B1CDF92",
+      "codepoint": "U+E071",
+      "primary": false,
+      "advanceWidth": 431
+    },
+    {
+      "glyphName": "uniE072_s_v02",
+      "character": "s",
+      "variationIndex": 2,
+      "id": "3B6D2357-1F64-4AC5-94AB-75EF3855B3AA",
+      "codepoint": "U+E072",
+      "primary": false,
+      "advanceWidth": 584
+    },
+    {
+      "glyphName": "uniE073_s_v03",
+      "character": "s",
+      "variationIndex": 3,
+      "id": "1A448719-BB61-4217-9DBB-A7C495F36008",
+      "codepoint": "U+E073",
+      "primary": false,
+      "advanceWidth": 443
+    },
+    {
+      "glyphName": "uni0074",
+      "character": "t",
+      "variationIndex": 0,
+      "id": "2891EB64-DE61-4E1F-B0B9-16A14C82D6C0",
+      "codepoint": "U+0074",
+      "primary": true,
+      "advanceWidth": 494
+    },
+    {
+      "glyphName": "uniE074_t_v01",
+      "character": "t",
+      "variationIndex": 1,
+      "id": "BE27EBC6-EA22-43C3-993F-EDC0C5C0ABD1",
+      "codepoint": "U+E074",
+      "primary": false,
+      "advanceWidth": 514
+    },
+    {
+      "glyphName": "uniE075_t_v02",
+      "character": "t",
+      "variationIndex": 2,
+      "id": "A6722F9E-FC12-431A-BD5B-FF4DD5E5940B",
+      "codepoint": "U+E075",
+      "primary": false,
+      "advanceWidth": 542
+    },
+    {
+      "glyphName": "uni0075",
+      "character": "u",
+      "variationIndex": 0,
+      "id": "E282B42B-7B09-4085-81AF-B58A56B47BC4",
+      "codepoint": "U+0075",
+      "primary": true,
+      "advanceWidth": 404
+    },
+    {
+      "glyphName": "uniE076_u_v01",
+      "character": "u",
+      "variationIndex": 1,
+      "id": "14A4B3AE-7FB8-4B43-B426-38B254D53B6F",
+      "codepoint": "U+E076",
+      "primary": false,
+      "advanceWidth": 497
+    },
+    {
+      "glyphName": "uniE077_u_v02",
+      "character": "u",
+      "variationIndex": 2,
+      "id": "EE092D56-E89F-466D-961A-DC74CCC06512",
+      "codepoint": "U+E077",
+      "primary": false,
+      "advanceWidth": 435
+    },
+    {
+      "glyphName": "uniE078_u_v03",
+      "character": "u",
+      "variationIndex": 3,
+      "id": "871F86B6-AEDA-4FD6-BF73-5CD984032747",
+      "codepoint": "U+E078",
+      "primary": false,
+      "advanceWidth": 502
+    },
+    {
+      "glyphName": "uni0076",
+      "character": "v",
+      "variationIndex": 0,
+      "id": "B0EB0034-5E73-469E-B886-0A6924D39D90",
+      "codepoint": "U+0076",
+      "primary": true,
+      "advanceWidth": 479
+    },
+    {
+      "glyphName": "uniE079_v_v01",
+      "character": "v",
+      "variationIndex": 1,
+      "id": "827D7F9A-3806-4A33-BF68-DCCECF50F819",
+      "codepoint": "U+E079",
+      "primary": false,
+      "advanceWidth": 530
+    },
+    {
+      "glyphName": "uniE07A_v_v02",
+      "character": "v",
+      "variationIndex": 2,
+      "id": "F9206E8B-C80B-4C7E-8843-6B9668FA8654",
+      "codepoint": "U+E07A",
+      "primary": false,
+      "advanceWidth": 557
+    },
+    {
+      "glyphName": "uni0077",
+      "character": "w",
+      "variationIndex": 1,
+      "id": "8A3FE949-22C6-4EB6-A9B0-4CA868DA4C04",
+      "codepoint": "U+0077",
+      "primary": true,
+      "advanceWidth": 664
+    },
+    {
+      "glyphName": "uniE07B_w_v02",
+      "character": "w",
+      "variationIndex": 2,
+      "id": "5A02DBA8-0CFE-4B7F-9106-A0FF1A981493",
+      "codepoint": "U+E07B",
+      "primary": false,
+      "advanceWidth": 592
+    },
+    {
+      "glyphName": "uniE07C_w_v03",
+      "character": "w",
+      "variationIndex": 3,
+      "id": "FA9A2075-6A3C-45DC-88D9-BB4DFF7CCB4E",
+      "codepoint": "U+E07C",
+      "primary": false,
+      "advanceWidth": 675
+    },
+    {
+      "glyphName": "uniE07D_w_v04",
+      "character": "w",
+      "variationIndex": 4,
+      "id": "70237637-9C9E-4A3E-B144-F816F4EAF08D",
+      "codepoint": "U+E07D",
+      "primary": false,
+      "advanceWidth": 670
+    },
+    {
+      "glyphName": "uniE07E_w_v05",
+      "character": "w",
+      "variationIndex": 5,
+      "id": "2206CBD2-C935-4E38-9FBB-D2E356E3AA81",
+      "codepoint": "U+E07E",
+      "primary": false,
+      "advanceWidth": 645
+    },
+    {
+      "glyphName": "uniE07F_w_v06",
+      "character": "w",
+      "variationIndex": 6,
+      "id": "1483142D-A237-4104-AC2E-A25481B840A8",
+      "codepoint": "U+E07F",
+      "primary": false,
+      "advanceWidth": 758
+    },
+    {
+      "glyphName": "uni0078",
+      "character": "x",
+      "variationIndex": 0,
+      "id": "8497C9EF-C32A-4C5B-A362-9534D9B02785",
+      "codepoint": "U+0078",
+      "primary": true,
+      "advanceWidth": 491
+    },
+    {
+      "glyphName": "uniE080_x_v01",
+      "character": "x",
+      "variationIndex": 1,
+      "id": "F685F668-FC83-4032-8EF9-2F8E056E783A",
+      "codepoint": "U+E080",
+      "primary": false,
+      "advanceWidth": 497
+    },
+    {
+      "glyphName": "uni0079",
+      "character": "y",
+      "variationIndex": 0,
+      "id": "AE16D334-2432-4CF1-9177-8E15280CD5C1",
+      "codepoint": "U+0079",
+      "primary": true,
+      "advanceWidth": 425
+    },
+    {
+      "glyphName": "uniE081_y_v02",
+      "character": "y",
+      "variationIndex": 2,
+      "id": "CA39A6D6-3091-42AE-B961-F68AB77F2769",
+      "codepoint": "U+E081",
+      "primary": false,
+      "advanceWidth": 492
+    },
+    {
+      "glyphName": "uniE082_y_v03",
+      "character": "y",
+      "variationIndex": 3,
+      "id": "5A1E6E81-B4AA-44F6-A183-2941CE479F1A",
+      "codepoint": "U+E082",
+      "primary": false,
+      "advanceWidth": 515
+    },
+    {
+      "glyphName": "uni007A",
+      "character": "z",
+      "variationIndex": 0,
+      "id": "488E7844-86A8-40E5-BB97-007D31414CE7",
+      "codepoint": "U+007A",
+      "primary": true,
+      "advanceWidth": 575
+    },
+    {
+      "glyphName": "uniE083_z_v01",
+      "character": "z",
+      "variationIndex": 1,
+      "id": "F13B05D5-8C11-4C88-9FE5-95776CE399BA",
+      "codepoint": "U+E083",
+      "primary": false,
+      "advanceWidth": 548
+    },
+    {
+      "glyphName": "uniE084_z_v02",
+      "character": "z",
+      "variationIndex": 2,
+      "id": "D2ADE927-7E0E-41DA-B776-B85E16E3971F",
+      "codepoint": "U+E084",
+      "primary": false,
+      "advanceWidth": 555
+    },
+    {
+      "glyphName": "uniE085_u002e_a_p_p_l_e_v01",
+      "character": ".apple",
+      "variationIndex": 1,
+      "id": "FB0E9BBA-7ED7-459F-BDD9-80B77C3BC8E1",
+      "codepoint": "U+E085",
+      "primary": true,
+      "advanceWidth": 1120
+    },
+    {
+      "glyphName": "uniE086_u002e_a_p_p_l_e_v03",
+      "character": ".apple",
+      "variationIndex": 3,
+      "id": "960BA987-87EC-4B33-9DF7-11D1671B4E38",
+      "codepoint": "U+E086",
+      "primary": false,
+      "advanceWidth": 1162
+    },
+    {
+      "glyphName": "uniE087_u002e_a_p_p_l_e_v04",
+      "character": ".apple",
+      "variationIndex": 4,
+      "id": "1F99C43B-3F8D-4FD8-A543-1F9C36755164",
+      "codepoint": "U+E087",
+      "primary": false,
+      "advanceWidth": 1117
+    },
+    {
+      "glyphName": "uniE088_u002e_a_r_r_o_w_b_o_t_t_o_m_t_r_a_i_l_i_n_g_v00",
+      "character": ".arrowBottomTrailing",
+      "variationIndex": 0,
+      "id": "CEC6DB23-D8E2-43E0-BEEB-BB65A222006E",
+      "codepoint": "U+E088",
+      "primary": true,
+      "advanceWidth": 716
+    },
+    {
+      "glyphName": "uniE089_u002e_a_r_r_o_w_t_o_p_l_e_a_d_i_n_g_v00",
+      "character": ".arrowTopLeading",
+      "variationIndex": 0,
+      "id": "D8C97DD0-EB7C-4940-879F-8C0569CF12DE",
+      "codepoint": "U+E089",
+      "primary": true,
+      "advanceWidth": 756
+    },
+    {
+      "glyphName": "uniE08A_u002e_b_a_t_t_e_r_y_v04",
+      "character": ".battery",
+      "variationIndex": 4,
+      "id": "D220778A-7162-47A5-97AD-2F80AE219FDD",
+      "codepoint": "U+E08A",
+      "primary": true,
+      "advanceWidth": 754
+    },
+    {
+      "glyphName": "uniE08B_u002e_b_u_t_t_o_n_v01",
+      "character": ".button",
+      "variationIndex": 1,
+      "id": "5785C93E-A759-421B-A8CF-84E2D1506C32",
+      "codepoint": "U+E08B",
+      "primary": true,
+      "advanceWidth": 733
+    },
+    {
+      "glyphName": "uniE08C_u002e_b_u_t_t_o_n_v02",
+      "character": ".button",
+      "variationIndex": 2,
+      "id": "DFA96F7C-C6A6-48F9-83CF-48F9B6D8EE7E",
+      "codepoint": "U+E08C",
+      "primary": false,
+      "advanceWidth": 789
+    },
+    {
+      "glyphName": "uniE08D_u002e_c_a_v_e_v00",
+      "character": ".cave",
+      "variationIndex": 0,
+      "id": "0E2D7A47-3E14-4ABE-BE9C-AE2D53BE82F7",
+      "codepoint": "U+E08D",
+      "primary": true,
+      "advanceWidth": 708
+    },
+    {
+      "glyphName": "uniE08E_u002e_c_o_l_o_r_f_i_l_l_v00",
+      "character": ".colorFill",
+      "variationIndex": 0,
+      "id": "D3857EE7-5F82-4446-B582-B15D5AF814B2",
+      "codepoint": "U+E08E",
+      "primary": true,
+      "advanceWidth": 806
+    },
+    {
+      "glyphName": "uniE08F_u002e_c_o_l_o_r_o_u_t_l_i_n_e_v00",
+      "character": ".colorOutline",
+      "variationIndex": 0,
+      "id": "DDA18AC0-70D8-4D16-8CFE-539523A0E292",
+      "codepoint": "U+E08F",
+      "primary": true,
+      "advanceWidth": 663
+    },
+    {
+      "glyphName": "uniE090_u002e_c_o_l_o_r_s_c_h_e_m_e_v00",
+      "character": ".colorScheme",
+      "variationIndex": 0,
+      "id": "5E612EE1-323B-4E33-A6DA-7539C8DB0698",
+      "codepoint": "U+E090",
+      "primary": true,
+      "advanceWidth": 681
+    },
+    {
+      "glyphName": "uniE091_u002e_c_u_s_t_o_m_c_o_l_o_r_v00",
+      "character": ".customColor",
+      "variationIndex": 0,
+      "id": "9349DD04-082C-47FE-8A61-8436C4436C21",
+      "codepoint": "U+E091",
+      "primary": true,
+      "advanceWidth": 657
+    },
+    {
+      "glyphName": "uniE092_u002e_d_a_r_k_c_o_l_o_r_v00",
+      "character": ".darkColor",
+      "variationIndex": 0,
+      "id": "528EB1C1-61AA-49A2-913C-4295DB0CFA1C",
+      "codepoint": "U+E092",
+      "primary": true,
+      "advanceWidth": 649
+    },
+    {
+      "glyphName": "uniE093_u002e_e_a_r_t_h_v00",
+      "character": ".earth",
+      "variationIndex": 0,
+      "id": "0CBB9ECF-2163-4283-B5AF-681C8FA146FD",
+      "codepoint": "U+E093",
+      "primary": true,
+      "advanceWidth": 752
+    },
+    {
+      "glyphName": "uniE094_u002e_f_i_r_e_v00",
+      "character": ".fire",
+      "variationIndex": 0,
+      "id": "14E9CB8E-7628-44A5-9873-BECD8C42FF6D",
+      "codepoint": "U+E094",
+      "primary": true,
+      "advanceWidth": 608
+    },
+    {
+      "glyphName": "uniE095_u002e_i_n_s_t_a_g_r_a_m_v00",
+      "character": ".instagram",
+      "variationIndex": 0,
+      "id": "33F67614-3963-4D62-9C6E-8DE73DBA1D94",
+      "codepoint": "U+E095",
+      "primary": true,
+      "advanceWidth": 641
+    },
+    {
+      "glyphName": "uniE096_u002e_l_a_u_r_e_l_l_e_f_t_v00",
+      "character": ".laurelleft",
+      "variationIndex": 0,
+      "id": "67C03FDD-237B-43AE-8FD5-E208E5631ABC",
+      "codepoint": "U+E096",
+      "primary": true,
+      "advanceWidth": 780
+    },
+    {
+      "glyphName": "uniE097_u002e_l_a_u_r_e_l_l_e_f_t_v01",
+      "character": ".laurelleft",
+      "variationIndex": 1,
+      "id": "CDA1024A-2B2C-4A7A-B6BC-A98645CE323C",
+      "codepoint": "U+E097",
+      "primary": false,
+      "advanceWidth": 770
+    },
+    {
+      "glyphName": "uniE098_u002e_l_a_u_r_e_l_r_i_g_h_t_v00",
+      "character": ".laurelright",
+      "variationIndex": 0,
+      "id": "015517ED-C7DF-4935-8C88-E70CFFBA4615",
+      "codepoint": "U+E098",
+      "primary": true,
+      "advanceWidth": 917
+    },
+    {
+      "glyphName": "uniE099_u002e_l_a_u_r_e_l_r_i_g_h_t_v01",
+      "character": ".laurelright",
+      "variationIndex": 1,
+      "id": "660989F4-8474-416F-ADE6-FAF7C27075E9",
+      "codepoint": "U+E099",
+      "primary": false,
+      "advanceWidth": 683
+    },
+    {
+      "glyphName": "uniE09A_u002e_l_i_g_h_t_c_o_l_o_r_v01",
+      "character": ".lightColor",
+      "variationIndex": 1,
+      "id": "CB2193C8-46D3-41DC-889F-A92F4CC19990",
+      "codepoint": "U+E09A",
+      "primary": true,
+      "advanceWidth": 839
+    },
+    {
+      "glyphName": "uniE09B_u002e_m_e_n_u_v00",
+      "character": ".menu",
+      "variationIndex": 0,
+      "id": "3EA792F7-AE17-44E4-AEA0-8835757F3AAF",
+      "codepoint": "U+E09B",
+      "primary": true,
+      "advanceWidth": 790
+    },
+    {
+      "glyphName": "uniE09C_u002e_m_o_o_n_v00",
+      "character": ".moon",
+      "variationIndex": 0,
+      "id": "2BBFBF27-76C7-4B6F-9A26-8AD0C9839D79",
+      "codepoint": "U+E09C",
+      "primary": true,
+      "advanceWidth": 587
+    },
+    {
+      "glyphName": "uniE09D_u002e_r_e_d_o_v01",
+      "character": ".redo",
+      "variationIndex": 1,
+      "id": "11A257F9-8078-4212-96F1-47346CFCF1E6",
+      "codepoint": "U+E09D",
+      "primary": true,
+      "advanceWidth": 798
+    },
+    {
+      "glyphName": "uniE09E_u002e_r_i_v_e_r_v00",
+      "character": ".river",
+      "variationIndex": 0,
+      "id": "4B5B83AA-A374-4CF0-BA6D-2356D5950042",
+      "codepoint": "U+E09E",
+      "primary": true,
+      "advanceWidth": 706
+    },
+    {
+      "glyphName": "uniE09F_u002e_s_e_e_d_v00",
+      "character": ".seed",
+      "variationIndex": 0,
+      "id": "DEFCF0CA-4E98-4B62-A0CD-990D8AEC7974",
+      "codepoint": "U+E09F",
+      "primary": true,
+      "advanceWidth": 457
+    },
+    {
+      "glyphName": "uniE0A0_u002e_s_e_l_e_c_t_e_d_v00",
+      "character": ".selected",
+      "variationIndex": 0,
+      "id": "937B1192-15BF-41AE-95A3-366010243D56",
+      "codepoint": "U+E0A0",
+      "primary": true,
+      "advanceWidth": 532
+    },
+    {
+      "glyphName": "uniE0A1_u002e_s_e_l_e_c_t_e_d_v02",
+      "character": ".selected",
+      "variationIndex": 2,
+      "id": "2558558D-337C-4563-8E7B-F5F1D1471D7F",
+      "codepoint": "U+E0A1",
+      "primary": false,
+      "advanceWidth": 628
+    },
+    {
+      "glyphName": "uniE0A2_u002e_s_e_l_e_c_t_e_d_v03",
+      "character": ".selected",
+      "variationIndex": 3,
+      "id": "F431ED6C-77F4-4555-9E37-E32E95B1BE10",
+      "codepoint": "U+E0A2",
+      "primary": false,
+      "advanceWidth": 560
+    },
+    {
+      "glyphName": "uniE0A3_u002e_s_e_l_e_c_t_e_d_v04",
+      "character": ".selected",
+      "variationIndex": 4,
+      "id": "5062FDD2-9B95-425D-8B0F-2266088444AB",
+      "codepoint": "U+E0A3",
+      "primary": false,
+      "advanceWidth": 625
+    },
+    {
+      "glyphName": "uniE0A4_u002e_s_e_l_e_c_t_e_d_v05",
+      "character": ".selected",
+      "variationIndex": 5,
+      "id": "287E09B0-FDC5-416C-A913-E5DDEBB7A2E7",
+      "codepoint": "U+E0A4",
+      "primary": false,
+      "advanceWidth": 576
+    },
+    {
+      "glyphName": "uniE0A5_u002e_s_e_l_e_c_t_e_d_v06",
+      "character": ".selected",
+      "variationIndex": 6,
+      "id": "AE9BCACE-EED4-49EC-8042-D25C04E3E409",
+      "codepoint": "U+E0A5",
+      "primary": false,
+      "advanceWidth": 594
+    },
+    {
+      "glyphName": "uniE0A6_u002e_s_e_l_e_c_t_e_d_v07",
+      "character": ".selected",
+      "variationIndex": 7,
+      "id": "B007C44A-CB57-4D9B-A48C-F9E319F3833E",
+      "codepoint": "U+E0A6",
+      "primary": false,
+      "advanceWidth": 512
+    },
+    {
+      "glyphName": "uniE0A7_u002e_s_e_l_e_c_t_e_d_v08",
+      "character": ".selected",
+      "variationIndex": 8,
+      "id": "738AB582-CBCE-4475-BEF1-65F3935A21A7",
+      "codepoint": "U+E0A7",
+      "primary": false,
+      "advanceWidth": 627
+    },
+    {
+      "glyphName": "uniE0A8_u002e_s_e_l_e_c_t_e_d_c_i_r_c_l_e_v00",
+      "character": ".selectedCircle",
+      "variationIndex": 0,
+      "id": "1E4B3DBF-A417-49CC-8B95-E156778E6565",
+      "codepoint": "U+E0A8",
+      "primary": true,
+      "advanceWidth": 754
+    },
+    {
+      "glyphName": "uniE0A9_u002e_s_e_t_t_i_n_g_s_v00",
+      "character": ".settings",
+      "variationIndex": 0,
+      "id": "EB29C23E-0657-47B3-93BE-EE5EC22D46B6",
+      "codepoint": "U+E0A9",
+      "primary": true,
+      "advanceWidth": 766
+    },
+    {
+      "glyphName": "uniE0AA_u002e_s_e_t_t_i_n_g_s_v01",
+      "character": ".settings",
+      "variationIndex": 1,
+      "id": "5D36EEDC-7394-4BC6-8464-419125D379EF",
+      "codepoint": "U+E0AA",
+      "primary": false,
+      "advanceWidth": 788
+    },
+    {
+      "glyphName": "uniE0AB_u002e_s_e_t_t_i_n_g_s_v02",
+      "character": ".settings",
+      "variationIndex": 2,
+      "id": "63BB8F36-5ED7-4901-B6BF-ADEE4E721B95",
+      "codepoint": "U+E0AB",
+      "primary": false,
+      "advanceWidth": 744
+    },
+    {
+      "glyphName": "uniE0AC_u002e_s_h_a_r_e_v00",
+      "character": ".share",
+      "variationIndex": 0,
+      "id": "4AD06DD3-2B54-44C7-A264-C60FDF0A12E0",
+      "codepoint": "U+E0AC",
+      "primary": true,
+      "advanceWidth": 675
+    },
+    {
+      "glyphName": "uniE0AD_u002e_s_h_a_r_e_v01",
+      "character": ".share",
+      "variationIndex": 1,
+      "id": "AC83BA31-3A81-475C-A474-67F79B0EE3D9",
+      "codepoint": "U+E0AD",
+      "primary": false,
+      "advanceWidth": 673
+    },
+    {
+      "glyphName": "uniE0AE_u002e_s_h_a_r_e_v02",
+      "character": ".share",
+      "variationIndex": 2,
+      "id": "61162F53-752D-466B-B25C-E95B7E08782F",
+      "codepoint": "U+E0AE",
+      "primary": false,
+      "advanceWidth": 683
+    },
+    {
+      "glyphName": "uniE0AF_u002e_s_h_a_r_e_v03",
+      "character": ".share",
+      "variationIndex": 3,
+      "id": "DAF664A0-589F-4D2C-A943-9ECE0EEF1B5D",
+      "codepoint": "U+E0AF",
+      "primary": false,
+      "advanceWidth": 643
+    },
+    {
+      "glyphName": "uniE0B0_u002e_s_h_a_r_e_v04",
+      "character": ".share",
+      "variationIndex": 4,
+      "id": "D67C1911-74B8-47B8-9ED1-B89C5DDD1FEC",
+      "codepoint": "U+E0B0",
+      "primary": false,
+      "advanceWidth": 684
+    },
+    {
+      "glyphName": "uniE0B1_u002e_s_h_i_r_t_v01",
+      "character": ".shirt",
+      "variationIndex": 1,
+      "id": "EBCD29CD-3BF6-4E4C-9EA1-34EE5B5F4962",
+      "codepoint": "U+E0B1",
+      "primary": true,
+      "advanceWidth": 837
+    },
+    {
+      "glyphName": "uniE0B2_u002e_s_k_y_v00",
+      "character": ".sky",
+      "variationIndex": 0,
+      "id": "52252A86-602C-4232-9BB6-13E7B70438B6",
+      "codepoint": "U+E0B2",
+      "primary": true,
+      "advanceWidth": 788
+    },
+    {
+      "glyphName": "uniE0B3_u002e_s_t_o_n_e_v00",
+      "character": ".stone",
+      "variationIndex": 0,
+      "id": "7C768591-9873-4969-B27A-652060733A2E",
+      "codepoint": "U+E0B3",
+      "primary": true,
+      "advanceWidth": 672
+    },
+    {
+      "glyphName": "uniE0B4_u002e_s_u_d_o_k_u_v00",
+      "character": ".sudoku",
+      "variationIndex": 0,
+      "id": "8B84292E-6F2E-4383-9CFC-0F3384C37E2C",
+      "codepoint": "U+E0B4",
+      "primary": true,
+      "advanceWidth": 742
+    },
+    {
+      "glyphName": "uniE0B5_u002e_s_u_d_o_k_u_v01",
+      "character": ".sudoku",
+      "variationIndex": 1,
+      "id": "DD625652-592C-4B75-9C8C-C2AB9C35D69C",
+      "codepoint": "U+E0B5",
+      "primary": false,
+      "advanceWidth": 752
+    },
+    {
+      "glyphName": "uniE0B6_u002e_s_u_d_o_k_u_v02",
+      "character": ".sudoku",
+      "variationIndex": 2,
+      "id": "737DC45F-1CFB-4088-9F48-96B1C5026468",
+      "codepoint": "U+E0B6",
+      "primary": false,
+      "advanceWidth": 752
+    },
+    {
+      "glyphName": "uniE0B7_u002e_s_u_d_o_k_u_v03",
+      "character": ".sudoku",
+      "variationIndex": 3,
+      "id": "7184A4DB-651A-4328-876E-69F4EF692EEA",
+      "codepoint": "U+E0B7",
+      "primary": false,
+      "advanceWidth": 662
+    },
+    {
+      "glyphName": "uniE0B8_u002e_s_u_d_o_k_u_v04",
+      "character": ".sudoku",
+      "variationIndex": 4,
+      "id": "8BBA1D95-8B5E-487D-89CD-7CC4BEB4D2ED",
+      "codepoint": "U+E0B8",
+      "primary": false,
+      "advanceWidth": 726
+    },
+    {
+      "glyphName": "uniE0B9_u002e_s_u_d_o_k_u_b_a_n_n_e_r_v04",
+      "character": ".sudokubanner",
+      "variationIndex": 4,
+      "id": "4F8043B0-2B1B-4B8C-84C3-EB103C7693D8",
+      "codepoint": "U+E0B9",
+      "primary": true,
+      "advanceWidth": 1442
+    },
+    {
+      "glyphName": "uniE0BA_u002e_s_u_d_o_k_u_b_a_n_n_e_r_v05",
+      "character": ".sudokubanner",
+      "variationIndex": 5,
+      "id": "23E77843-6E69-4119-A17D-A394B8087DF0",
+      "codepoint": "U+E0BA",
+      "primary": false,
+      "advanceWidth": 1495
+    },
+    {
+      "glyphName": "uniE0BB_u002e_s_u_n_v00",
+      "character": ".sun",
+      "variationIndex": 0,
+      "id": "CE460AA7-18D9-4E6C-9527-DA497FFD7DCF",
+      "codepoint": "U+E0BB",
+      "primary": true,
+      "advanceWidth": 761
+    },
+    {
+      "glyphName": "uniE0BC_u002e_s_u_n_r_i_s_e_v01",
+      "character": ".sunrise",
+      "variationIndex": 1,
+      "id": "8E6225D6-AAC1-4C66-B285-E67179DC57F9",
+      "codepoint": "U+E0BC",
+      "primary": true,
+      "advanceWidth": 832
+    },
+    {
+      "glyphName": "uniE0BD_u002e_s_y_s_t_e_m_c_o_l_o_r_v00",
+      "character": ".systemColor",
+      "variationIndex": 0,
+      "id": "851BA18D-6B63-41EB-B249-6A90731C55FD",
+      "codepoint": "U+E0BD",
+      "primary": true,
+      "advanceWidth": 720
+    },
+    {
+      "glyphName": "uniE0BE_u002e_t_h_e_m_e_f_a_l_l_b_a_c_k_v00",
+      "character": ".themeFallback",
+      "variationIndex": 0,
+      "id": "345FB7E6-369D-41EB-8576-D2B3568E81E6",
+      "codepoint": "U+E0BE",
+      "primary": true,
+      "advanceWidth": 580
+    },
+    {
+      "glyphName": "uniE0BF_u002e_t_h_e_m_e_f_a_l_l_b_a_c_k_v01",
+      "character": ".themeFallback",
+      "variationIndex": 1,
+      "id": "6DBF1CB0-E817-4EF7-9642-B6763D15BA87",
+      "codepoint": "U+E0BF",
+      "primary": false,
+      "advanceWidth": 587
+    },
+    {
+      "glyphName": "uniE0C0_u002e_t_h_e_m_e_f_a_l_l_b_a_c_k_v02",
+      "character": ".themeFallback",
+      "variationIndex": 2,
+      "id": "390E7915-E01C-43CC-BB45-48776B53A61B",
+      "codepoint": "U+E0C0",
+      "primary": false,
+      "advanceWidth": 641
+    },
+    {
+      "glyphName": "uniE0C1_u002e_t_i_k_t_o_k_v00",
+      "character": ".tiktok",
+      "variationIndex": 0,
+      "id": "17EB3EDB-6D7A-4681-A831-D8CA7989E75F",
+      "codepoint": "U+E0C1",
+      "primary": true,
+      "advanceWidth": 553
+    },
+    {
+      "glyphName": "uniE0C2_u002e_t_r_e_e_v00",
+      "character": ".tree",
+      "variationIndex": 0,
+      "id": "E6170ACB-DBFA-44BC-BA49-C3E49D7D00E9",
+      "codepoint": "U+E0C2",
+      "primary": true,
+      "advanceWidth": 670
+    },
+    {
+      "glyphName": "uniE0C3_u002e_u_n_d_o_v01",
+      "character": ".undo",
+      "variationIndex": 1,
+      "id": "95460B32-93DB-4E25-BD3F-60E3E74C0678",
+      "codepoint": "U+E0C3",
+      "primary": true,
+      "advanceWidth": 814
+    },
+    {
+      "glyphName": "uniE0C4_u002e_w_a_t_e_r_v00",
+      "character": ".water",
+      "variationIndex": 0,
+      "id": "F8C4F0B2-D918-4DDB-9822-D1B141D4634A",
+      "codepoint": "U+E0C4",
+      "primary": true,
+      "advanceWidth": 789
+    },
+    {
+      "glyphName": "uniE0C5_u002e_w_i_n_d_v00",
+      "character": ".wind",
+      "variationIndex": 0,
+      "id": "7C8A29BE-A7C0-4F6C-83D0-9951E940D28B",
+      "codepoint": "U+E0C5",
+      "primary": true,
+      "advanceWidth": 621
+    },
+    {
+      "glyphName": "uniE0C6_u002e_x_c_o_m_v00",
+      "character": ".xcom",
+      "variationIndex": 0,
+      "id": "4240D599-1742-423D-BEDD-85592643F6F2",
+      "codepoint": "U+E0C6",
+      "primary": true,
+      "advanceWidth": 564
+    },
+    {
+      "glyphName": "uniE0C7_u002e_z_a_p_v01",
+      "character": ".zap",
+      "variationIndex": 1,
+      "id": "23F1A042-5529-4BA2-8D62-C41468547B2F",
+      "codepoint": "U+E0C7",
+      "primary": true,
+      "advanceWidth": 427
+    }
+  ]
+}

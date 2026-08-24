@@ -151,6 +151,13 @@ button {
   font-size: 17px;
 }
 
+.header-nav,
+.closing-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .hero {
   display: grid;
   min-height: min(830px, calc(100svh - 84px));
@@ -540,6 +547,20 @@ button {
 
   .header-link {
     font-size: 15px;
+  }
+
+  .header-nav {
+    gap: 8px;
+  }
+
+  .closing-actions,
+  .closing-actions .button {
+    width: 100%;
+  }
+
+  .closing-actions {
+    align-items: stretch;
+    flex-direction: column;
   }
 
   .hero-bottom {

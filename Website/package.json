@@ -10,9 +10,13 @@
     "deploy": "npm run build && wrangler deploy"
   },
   "devDependencies": {
+    "esbuild": "0.28.2",
     "wrangler": "4.125.0"
   },
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "fonteditor-core": "2.6.3"
   }
 }
