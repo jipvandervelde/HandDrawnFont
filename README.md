@@ -4,9 +4,9 @@
 handwritten pen strokes. Glyphs are drawn in their original stroke order with
 `Canvas` and a single shared `TimelineView` per text view.
 
-Created by [Jip van der Velde](https://github.com/jipvandervelde), co-creator
-of [`grug`](https://developer.apple.com/design/awards/) with Michel Elings at
-Ocho. `grug` won the 2026 Apple Design Award for Delight and Fun.
+Created by Jip van der Velde and Michel Elings, creators of
+[`grug`](https://developer.apple.com/design/awards/) at Ocho. `grug` won the
+2026 Apple Design Award for Delight and Fun.
 
 The package includes:
 
