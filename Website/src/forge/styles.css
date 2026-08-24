@@ -201,11 +201,11 @@ p {
 .font-card__meta,
 .family-download span,
 .save-indicator,
-.variation-field span,
+.variation-field > span,
 .guide-controls label > span,
 .project-sliders label > span,
 .stacked-field > span,
-.preview-card > label {
+.preview-card__heading {
   font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas,
     monospace;
   letter-spacing: 0.1em;
@@ -592,7 +592,6 @@ button:disabled {
 .search-field input,
 .stacked-field input,
 .stacked-field select,
-.variation-field select,
 .preview-card input,
 .add-dialog input,
 .add-dialog select {
@@ -665,6 +664,8 @@ button:disabled {
 }
 
 .panel-heading--drawing {
+  display: grid;
+  grid-template-columns: minmax(72px, auto) minmax(0, 1fr);
   align-items: flex-start;
   margin-bottom: 20px;
 }
@@ -678,14 +679,65 @@ button:disabled {
 }
 
 .variation-field {
-  width: min(142px, 46%);
+  min-width: 0;
 }
 
-.variation-field span {
+.variation-field > span {
   display: block;
   margin-bottom: 5px;
   color: var(--muted);
   font-size: 8px;
+}
+
+.variation-strip {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding: 1px 1px 5px;
+  scroll-snap-type: x proximity;
+}
+
+.variation-thumbnail {
+  position: relative;
+  display: grid;
+  width: 54px;
+  min-width: 54px;
+  min-height: 62px;
+  flex: 0 0 54px;
+  grid-template-rows: 44px auto;
+  place-items: center;
+  padding: 5px 4px 3px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  scroll-snap-align: start;
+  touch-action: manipulation;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    transform 150ms ease;
+}
+
+.variation-thumbnail[aria-pressed="true"] {
+  border-color: var(--ink);
+  background: var(--yellow);
+  color: #0f0d0a;
+}
+
+.variation-thumbnail canvas {
+  width: 46px;
+  height: 42px;
+  pointer-events: none;
+}
+
+.variation-thumbnail span {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: 8px;
+  line-height: 1;
+  pointer-events: none;
 }
 
 .canvas-shell {
@@ -742,8 +794,7 @@ button:disabled {
 
 .drawing-actions button,
 .project-file-actions button,
-.file-button,
-.preview-card button {
+.file-button {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
@@ -809,7 +860,7 @@ input[type="range"] {
 }
 
 .stacked-field > span,
-.preview-card > label {
+.preview-card__heading {
   color: var(--muted);
   font-size: 8px;
 }
@@ -822,21 +873,91 @@ input[type="range"] {
   background: var(--paper-soft);
 }
 
+.preview-card__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.preview-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.preview-card__actions [data-preview-status] {
+  min-width: 54px;
+  text-align: right;
+}
+
+.preview-play {
+  display: inline-flex;
+  min-width: 126px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-family: "Grug Hand", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1;
+  text-transform: none;
+  touch-action: manipulation;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+}
+
+.preview-play:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
 .preview-card input {
   margin-top: 7px;
   background: var(--panel);
 }
 
+.preview-stage {
+  position: relative;
+  min-height: 100px;
+  margin-top: 18px;
+  isolation: isolate;
+}
+
 .preview-card p {
   min-height: 100px;
-  margin: 18px 0;
+  margin: 0;
   overflow-wrap: anywhere;
   font-size: clamp(28px, 3.2vw, 44px);
   line-height: 1.04;
+  transition: opacity 120ms ease;
 }
 
-.preview-card button {
+.preview-stage canvas {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: block;
   width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease;
+}
+
+.preview-stage[data-animating="true"] p {
+  opacity: 0;
+}
+
+.preview-stage[data-animating="true"] canvas {
+  opacity: 1;
 }
 
 .export-stack {
@@ -1017,7 +1138,6 @@ input[type="range"] {
   .drawing-actions button:hover:not(:disabled),
   .project-file-actions button:hover:not(:disabled),
   .file-button:hover,
-  .preview-card button:hover:not(:disabled),
   .square-button:hover:not(:disabled) {
     background: var(--ink);
     color: var(--paper);
@@ -1030,6 +1150,15 @@ input[type="range"] {
 
   .glyph-tile:hover:not([aria-pressed="true"]) {
     background: var(--quiet);
+  }
+
+  .variation-thumbnail:hover:not([aria-pressed="true"]) {
+    background: var(--quiet);
+  }
+
+  .preview-play:hover:not(:disabled) {
+    background: var(--ink);
+    color: var(--paper);
   }
 
   .font-card > a:hover,
@@ -1195,6 +1324,16 @@ input[type="range"] {
   .preview-card p {
     min-height: 88px;
     font-size: 34px;
+  }
+
+  .preview-card__heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .preview-card__actions {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .format-grid article > p:first-child {

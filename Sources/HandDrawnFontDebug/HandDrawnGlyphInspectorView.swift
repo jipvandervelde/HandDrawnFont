@@ -119,14 +119,14 @@ public struct HandDrawnGlyphMetricsView: View {
         )
 
         drawGuide(
-          y: glyph.xHeight,
+          y: glyph.canvasXHeight,
           color: .green,
           canvasSize: canvasSize,
           transform: transform,
           context: &context
         )
         drawGuide(
-          y: glyph.baseline,
+          y: glyph.canvasBaseline,
           color: .blue,
           canvasSize: canvasSize,
           transform: transform,

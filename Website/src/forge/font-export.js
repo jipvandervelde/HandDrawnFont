@@ -1,4 +1,9 @@
 import { createFont } from "fonteditor-core";
+import {
+  canvasBaselineY,
+  canvasXHeightY,
+  fontYForNormalizedPoint,
+} from "./font-metrics.mjs";
 
 const UNITS_PER_EM = 1000;
 const TARGET_X_HEIGHT = 500;
@@ -165,19 +170,12 @@ function calculateBounds(contours) {
 }
 
 function sourceScale(glyphs) {
-  const primaries = new Map();
-  for (const glyph of glyphs) {
-    const existing = primaries.get(glyph.key);
-    if (!existing || glyph.variationIndex < existing.variationIndex) {
-      primaries.set(glyph.key, glyph);
-    }
-  }
-
-  const sourceHeights = [...primaries.values()]
+  const sourceHeights = glyphs
     .filter((glyph) => /^[a-z]$/.test(glyph.key))
     .map(
       (glyph) =>
-        Math.abs(glyph.metrics.baselineY - glyph.metrics.xHeightY) * glyph.canvasHeight,
+        Math.abs(canvasBaselineY(glyph.metrics) - canvasXHeightY(glyph.metrics)) *
+        glyph.canvasHeight,
     )
     .filter((height) => Number.isFinite(height) && height > 0);
 
@@ -193,7 +191,7 @@ function fontPointsForGlyph(glyph, scale, sideBearing) {
         FONT_COORDINATE_LIMIT,
       ),
       y: clamp(
-        (glyph.metrics.baselineY - point.y) * glyph.canvasHeight * scale,
+        fontYForNormalizedPoint(glyph, point.y, scale),
         -FONT_COORDINATE_LIMIT,
         FONT_COORDINATE_LIMIT,
       ),
@@ -283,6 +281,17 @@ function validateGlyph(glyph) {
 export function validateProject(project) {
   if (!project || project.formatVersion !== 1 || !Array.isArray(project.glyphs)) {
     throw new Error("project no speak handdrawn format one");
+  }
+  if (
+    project.fontGuides !== undefined &&
+    (!Number.isFinite(project.fontGuides?.baselineY) ||
+      !Number.isFinite(project.fontGuides?.xHeightY) ||
+      project.fontGuides.baselineY < 0 ||
+      project.fontGuides.baselineY > 1 ||
+      project.fontGuides.xHeightY < 0 ||
+      project.fontGuides.xHeightY > 1)
+  ) {
+    throw new Error("font guides leave drawing cave");
   }
   if (!project.glyphs.every(validateGlyph)) {
     throw new Error("one glyph carry broken bone");

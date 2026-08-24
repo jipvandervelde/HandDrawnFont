@@ -1,4 +1,14 @@
 import { buildTrueType, fileStemForFamily, validateProject } from "./font-export.js";
+import {
+  drawAnimatedPreviewFrame,
+  makeAnimatedPreviewPlan,
+} from "./animated-preview.mjs";
+import {
+  deriveBoundsPreservingGuides,
+  setProjectBaselineY,
+  setProjectXHeightY,
+  synchronizeProjectGuides,
+} from "./font-metrics.mjs";
 
 const PROJECT_URL = "/forge/grug-hand-project.json";
 const MANIFEST_URL = "/forge/grug-hand-manifest.json";
@@ -8,10 +18,10 @@ const root = document.querySelector("[data-forge-app]");
 const elements = {
   addDialog: document.querySelector("[data-add-dialog]"),
   addForm: document.querySelector("[data-add-form]"),
+  animatedPreview: document.querySelector("[data-animated-preview]"),
   baseline: document.querySelector("[data-baseline]"),
   baselineOutput: document.querySelector("[data-baseline-output]"),
   bearingOutput: document.querySelector("[data-bearing-output]"),
-  buildPreview: document.querySelector("[data-build-preview]"),
   canvas: document.querySelector("[data-drawing-canvas]"),
   clearGlyph: document.querySelector("[data-clear-glyph]"),
   compiledGrid: document.querySelector("[data-compiled-grid]"),
@@ -37,12 +47,15 @@ const elements = {
   penOutput: document.querySelector("[data-pen-output]"),
   penWidth: document.querySelector("[data-pen-width]"),
   previewInput: document.querySelector("[data-preview-input]"),
+  previewPlay: document.querySelector("[data-preview-play]"),
+  previewStage: document.querySelector("[data-preview-stage]"),
+  previewStatus: document.querySelector("[data-preview-status]"),
   resetProject: document.querySelector("[data-reset-project]"),
   saveIndicator: document.querySelector("[data-save-indicator]"),
   sideBearing: document.querySelector("[data-side-bearing]"),
   toast: document.querySelector("[data-toast]"),
   undoStroke: document.querySelector("[data-undo-stroke]"),
-  variationSelect: document.querySelector("[data-variation-select]"),
+  variationStrip: document.querySelector("[data-variation-strip]"),
   xHeight: document.querySelector("[data-x-height]"),
   xHeightOutput: document.querySelector("[data-x-height-output]"),
 };
@@ -56,6 +69,13 @@ const state = {
   fontCache: null,
   glyphFilter: "characters",
   manifest: null,
+  previewAnimationFrame: null,
+  previewAnimationPausedAt: null,
+  previewAnimationPlan: null,
+  previewAnimationStart: 0,
+  previewFontFace: null,
+  previewRevision: -1,
+  previewTimer: null,
   project: null,
   revision: 0,
   saveTimer: null,
@@ -65,6 +85,19 @@ const state = {
 
 function clone(value) {
   return JSON.parse(JSON.stringify(value));
+}
+
+function prepareProject(project) {
+  project.familyName ||= "My Hand";
+  project.fontForge = {
+    lineCap: "round",
+    sideBearing: 40,
+    spaceWidth: 280,
+    strokeWidth: 60,
+    ...project.fontForge,
+  };
+  synchronizeProjectGuides(project);
+  return project;
 }
 
 function groupGlyphs(glyphs) {
@@ -108,11 +141,13 @@ function setBusy(button, busy, busyText, normalText) {
 function markChanged({ renderGrid = false, renderCanvas = true } = {}) {
   state.revision += 1;
   state.fontCache = null;
+  cancelAnimatedPreview();
   elements.saveIndicator.textContent = "saving";
   window.clearTimeout(state.saveTimer);
   state.saveTimer = window.setTimeout(saveProjectLocally, 140);
   if (renderGrid) renderGlyphGrid();
   if (renderCanvas) renderEditor();
+  scheduleLivePreview();
 }
 
 function saveProjectLocally() {
@@ -124,29 +159,6 @@ function saveProjectLocally() {
     elements.saveIndicator.textContent = "not saved";
     showToast("browser pocket full. download json backup.");
   }
-}
-
-function deriveBounds(glyph) {
-  const points = glyph.strokes.flatMap((stroke) => stroke.points);
-  if (points.length === 0) {
-    glyph.metrics.boundsX = 0;
-    glyph.metrics.boundsY = 0;
-    glyph.metrics.boundsWidth = 0;
-    glyph.metrics.boundsHeight = 0;
-    return;
-  }
-
-  const minimumX = Math.min(...points.map((point) => point.x));
-  const maximumX = Math.max(...points.map((point) => point.x));
-  const minimumY = Math.min(...points.map((point) => point.y));
-  const maximumY = Math.max(...points.map((point) => point.y));
-  const padding = 0.02;
-  const boundsX = Math.max(0, minimumX - padding);
-  const boundsY = Math.max(0, minimumY - padding);
-  glyph.metrics.boundsX = boundsX;
-  glyph.metrics.boundsY = boundsY;
-  glyph.metrics.boundsWidth = Math.max(0, Math.min(1, maximumX + padding) - boundsX);
-  glyph.metrics.boundsHeight = Math.max(0, Math.min(1, maximumY + padding) - boundsY);
 }
 
 function inkColor() {
@@ -193,6 +205,7 @@ function drawMainCanvas() {
   context.strokeStyle = inkColor();
   context.lineWidth = lineWidth;
   const mapPoint = (point) => ({ x: point.x * width, y: point.y * height });
+  const { baselineY, xHeightY } = state.project.fontGuides;
 
   for (const stroke of glyph.strokes) traceStroke(context, stroke.points, mapPoint);
   if (state.currentStroke.length > 0) traceStroke(context, state.currentStroke, mapPoint);
@@ -204,22 +217,22 @@ function drawMainCanvas() {
     .getPropertyValue("--guide-x")
     .trim();
   context.beginPath();
-  context.moveTo(0, glyph.metrics.xHeightY * height);
-  context.lineTo(width, glyph.metrics.xHeightY * height);
+  context.moveTo(0, xHeightY * height);
+  context.lineTo(width, xHeightY * height);
   context.stroke();
   context.strokeStyle = getComputedStyle(document.documentElement)
     .getPropertyValue("--guide-base")
     .trim();
   context.beginPath();
-  context.moveTo(0, glyph.metrics.baselineY * height);
-  context.lineTo(width, glyph.metrics.baselineY * height);
+  context.moveTo(0, baselineY * height);
+  context.lineTo(width, baselineY * height);
   context.stroke();
   context.restore();
 
   const xLabel = document.querySelector(".guide-label--x");
   const baselineLabel = document.querySelector(".guide-label--baseline");
-  xLabel.style.top = `${glyph.metrics.xHeightY * 100}%`;
-  baselineLabel.style.top = `${glyph.metrics.baselineY * 100}%`;
+  xLabel.style.top = `${xHeightY * 100}%`;
+  baselineLabel.style.top = `${baselineY * 100}%`;
 }
 
 function drawTileCanvas(canvas, glyph, selected = false) {
@@ -236,24 +249,59 @@ function drawTileCanvas(canvas, glyph, selected = false) {
   });
 
   context.strokeStyle = selected ? "#0f0d0a" : inkColor();
-  context.lineCap = "round";
+  context.lineCap = state.project.fontForge.lineCap;
   context.lineJoin = "round";
   context.lineWidth = Math.max(1.25, Math.min(width, height) * 0.035);
   for (const stroke of glyph.strokes) traceStroke(context, stroke.points, mapPoint);
 }
 
-function renderVariationSelect(glyph) {
+function renderVariationStrip(glyph) {
   const groups = groupGlyphs(state.project.glyphs);
   const variations = groups.get(glyph.key) ?? [];
-  elements.variationSelect.replaceChildren(
-    ...variations.map((variation) => {
-      const option = document.createElement("option");
-      option.value = variation.id;
-      option.textContent = String(variation.variationIndex);
-      option.selected = variation.id === glyph.id;
-      return option;
-    }),
-  );
+  const signature = variations.map((variation) => variation.id).join(",");
+
+  if (elements.variationStrip.dataset.signature !== signature) {
+    const fragment = document.createDocumentFragment();
+    for (const variation of variations) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "variation-thumbnail";
+      button.dataset.variationId = variation.id;
+      button.setAttribute(
+        "aria-label",
+        `Variation ${variation.variationIndex} for ${glyph.key === " " ? "space" : glyph.key}`,
+      );
+
+      const canvas = document.createElement("canvas");
+      canvas.width = 52;
+      canvas.height = 44;
+      canvas.setAttribute("aria-hidden", "true");
+      const label = document.createElement("span");
+      label.textContent = String(variation.variationIndex);
+      button.append(canvas, label);
+      fragment.append(button);
+    }
+    elements.variationStrip.replaceChildren(fragment);
+    elements.variationStrip.dataset.signature = signature;
+  }
+
+  const buttons = [...elements.variationStrip.querySelectorAll("[data-variation-id]")];
+  for (const button of buttons) {
+    const variation = variations.find((candidate) => candidate.id === button.dataset.variationId);
+    if (!variation) continue;
+    const selected = variation.id === glyph.id;
+    button.setAttribute("aria-pressed", String(selected));
+    requestAnimationFrame(() => drawTileCanvas(button.querySelector("canvas"), variation, selected));
+  }
+
+  if (elements.variationStrip.dataset.selected !== glyph.id) {
+    elements.variationStrip.dataset.selected = glyph.id;
+    requestAnimationFrame(() => {
+      elements.variationStrip
+        .querySelector('[aria-pressed="true"]')
+        ?.scrollIntoView({ block: "nearest", inline: "nearest" });
+    });
+  }
 }
 
 function renderEditor() {
@@ -261,13 +309,14 @@ function renderEditor() {
   if (!glyph) return;
   elements.currentKey.textContent = glyph.key === " " ? "space" : glyph.key.replace(/^\./, "");
   elements.currentKind.textContent = Array.from(glyph.key).length === 1 ? "character" : "named icon";
-  renderVariationSelect(glyph);
+  renderVariationStrip(glyph);
   elements.undoStroke.disabled = glyph.strokes.length === 0;
   elements.clearGlyph.disabled = glyph.strokes.length === 0;
-  elements.xHeight.value = String(glyph.metrics.xHeightY);
-  elements.baseline.value = String(glyph.metrics.baselineY);
-  elements.xHeightOutput.value = glyph.metrics.xHeightY.toFixed(2);
-  elements.baselineOutput.value = glyph.metrics.baselineY.toFixed(2);
+  const { baselineY, xHeightY } = state.project.fontGuides;
+  elements.xHeight.value = String(xHeightY);
+  elements.baseline.value = String(baselineY);
+  elements.xHeightOutput.value = xHeightY.toFixed(2);
+  elements.baselineOutput.value = baselineY.toFixed(2);
   drawMainCanvas();
 }
 
@@ -400,7 +449,7 @@ function finishStroke(cancelled = false) {
   const glyph = currentGlyph();
   if (!cancelled && glyph && state.currentStroke.length > 1) {
     glyph.strokes.push({ id: crypto.randomUUID(), points: state.currentStroke });
-    deriveBounds(glyph);
+    deriveBoundsPreservingGuides(glyph);
     state.currentStroke = [];
     markChanged({ renderGrid: true });
   } else {
@@ -445,10 +494,115 @@ function exportProjectJSON() {
   showToast("json carry every path.");
 }
 
+function scheduleLivePreview(delay = 180) {
+  window.clearTimeout(state.previewTimer);
+  elements.previewStatus.textContent = "updating";
+  state.previewTimer = window.setTimeout(() => {
+    buildFont();
+  }, delay);
+}
+
+function restingPreviewStatus() {
+  return state.previewRevision === state.revision ? "live" : "updating";
+}
+
+function finishAnimatedPreview() {
+  if (state.previewAnimationFrame !== null) {
+    cancelAnimationFrame(state.previewAnimationFrame);
+  }
+  state.previewAnimationFrame = null;
+  state.previewAnimationPausedAt = null;
+  state.previewAnimationPlan = null;
+  elements.previewStage.dataset.animating = "false";
+  elements.previewPlay.textContent = "play strokes ▶";
+  elements.previewStatus.textContent = restingPreviewStatus();
+}
+
+function clearAnimatedPreviewCanvas() {
+  const context = elements.animatedPreview.getContext("2d");
+  context.clearRect(0, 0, elements.animatedPreview.width, elements.animatedPreview.height);
+}
+
+function cancelAnimatedPreview() {
+  finishAnimatedPreview();
+  clearAnimatedPreviewCanvas();
+}
+
+function drawPreviewAnimationFrame(timestamp) {
+  const plan = state.previewAnimationPlan;
+  if (!plan) return;
+  const elapsed = timestamp - state.previewAnimationStart;
+  const { context, height, width } = prepareCanvas(elements.animatedPreview);
+  context.strokeStyle = inkColor();
+  context.lineCap = state.project.fontForge.lineCap;
+  context.lineJoin = "round";
+  const previewFontSize = Number.parseFloat(getComputedStyle(elements.fontPreview).fontSize) || 44;
+  context.lineWidth = Math.max(
+    1,
+    (state.project.fontForge.strokeWidth / 1000) * previewFontSize,
+  );
+  drawAnimatedPreviewFrame(context, plan, Math.min(elapsed, plan.totalDuration));
+
+  if (elapsed >= plan.totalDuration + 180) {
+    finishAnimatedPreview();
+    return;
+  }
+
+  if (width > 0 && height > 0) {
+    state.previewAnimationFrame = requestAnimationFrame(drawPreviewAnimationFrame);
+  }
+}
+
+function playAnimatedPreview() {
+  cancelAnimatedPreview();
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    showToast("motion rest. finished hand stay still.");
+    return;
+  }
+
+  const style = getComputedStyle(elements.fontPreview);
+  const fontSize = Number.parseFloat(style.fontSize) || 44;
+  const lineHeight = Number.parseFloat(style.lineHeight) || fontSize * 1.04;
+  const plan = makeAnimatedPreviewPlan(
+    state.project,
+    elements.previewInput.value,
+    {
+      width: elements.previewStage.clientWidth,
+      fontSize,
+      lineHeight,
+    },
+  );
+  if (plan.items.length === 0) return;
+
+  state.previewAnimationPlan = plan;
+  state.previewAnimationStart = performance.now();
+  elements.previewStage.dataset.animating = "true";
+  elements.previewPlay.textContent = "replay strokes ↻";
+  elements.previewStatus.textContent = "playing";
+  state.previewAnimationFrame = requestAnimationFrame(drawPreviewAnimationFrame);
+}
+
+function handleAnimationVisibilityChange() {
+  if (!state.previewAnimationPlan) return;
+  if (document.hidden && state.previewAnimationPausedAt === null) {
+    if (state.previewAnimationFrame !== null) cancelAnimationFrame(state.previewAnimationFrame);
+    state.previewAnimationFrame = null;
+    state.previewAnimationPausedAt = performance.now();
+    return;
+  }
+
+  if (!document.hidden && state.previewAnimationPausedAt !== null) {
+    state.previewAnimationStart += performance.now() - state.previewAnimationPausedAt;
+    state.previewAnimationPausedAt = null;
+    state.previewAnimationFrame = requestAnimationFrame(drawPreviewAnimationFrame);
+  }
+}
+
 async function buildFont({ download = false } = {}) {
-  const button = download ? elements.exportTTF : elements.buildPreview;
-  const normalText = download ? "download ttf ↓" : "build fresh preview";
-  setBusy(button, true, "stone grind…", normalText);
+  const button = download ? elements.exportTTF : null;
+  const normalText = "download ttf ↓";
+  if (button) setBusy(button, true, "stone grind…", normalText);
+  elements.previewStatus.textContent = state.previewAnimationPlan ? "playing" : "updating";
   await new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)));
 
   try {
@@ -458,29 +612,44 @@ async function buildFont({ download = false } = {}) {
         revision: state.revision,
       };
     }
-    const previewFamily = `Forge Preview ${state.revision}`;
-    const fontFace = new FontFace(previewFamily, state.fontCache.buffer);
-    await fontFace.load();
-    document.fonts.add(fontFace);
-    elements.fontPreview.style.fontFamily = `"${previewFamily}", "Grug Hand", sans-serif`;
+    const cache = state.fontCache;
+
+    if (state.previewRevision !== cache.revision) {
+      const previewFamily = `Forge Preview ${cache.revision}`;
+      const fontFace = new FontFace(previewFamily, cache.buffer);
+      await fontFace.load();
+
+      if (cache.revision !== state.revision) {
+        scheduleLivePreview(0);
+        if (!download) return cache;
+      } else {
+        document.fonts.add(fontFace);
+        if (state.previewFontFace) document.fonts.delete(state.previewFontFace);
+        state.previewFontFace = fontFace;
+        state.previewRevision = cache.revision;
+        elements.fontPreview.style.fontFamily = `"${previewFamily}", "Grug Hand", sans-serif`;
+      }
+    }
+    if (state.previewRevision === state.revision && !state.previewAnimationPlan) {
+      elements.previewStatus.textContent = "live";
+    }
 
     if (download) {
       const stem = fileStemForFamily(state.project.familyName);
       downloadBlob(
-        new Blob([state.fontCache.buffer], { type: "font/ttf" }),
+        new Blob([cache.buffer], { type: "font/ttf" }),
         `${stem}-Regular.ttf`,
       );
       showToast("ttf leave cave.");
-    } else {
-      showToast("fresh font stand up.");
     }
-    return state.fontCache;
+    return cache;
   } catch (error) {
     console.error(error);
+    elements.previewStatus.textContent = "error";
     showToast(error instanceof Error ? error.message : "font stone crack");
     return null;
   } finally {
-    setBusy(button, false, "", normalText);
+    if (button) setBusy(button, false, "", normalText);
   }
 }
 
@@ -504,15 +673,7 @@ async function importProject(file) {
     const parsed = JSON.parse(await file.text());
     validateProject(parsed);
     if (!window.confirm("replace current browser project with imported json?")) return;
-    parsed.familyName ||= "My Hand";
-    parsed.fontForge = {
-      lineCap: "round",
-      sideBearing: 40,
-      spaceWidth: 280,
-      strokeWidth: 60,
-      ...parsed.fontForge,
-    };
-    state.project = parsed;
+    state.project = prepareProject(parsed);
     const preferred = parsed.glyphs.find((glyph) => glyph.key === "a") ?? parsed.glyphs[0];
     state.currentGlyphID = preferred.id;
     state.glyphFilter = Array.from(preferred.key).length === 1 ? "characters" : "icons";
@@ -569,12 +730,12 @@ function addGlyph() {
     id: crypto.randomUUID(),
     key,
     metrics: {
-      baselineY: 0.75,
+      baselineY: state.project.fontGuides.baselineY,
       boundsHeight: 0,
       boundsWidth: 0,
       boundsX: 0,
       boundsY: 0,
-      xHeightY: 0.25,
+      xHeightY: state.project.fontGuides.xHeightY,
     },
     strokes: [],
     variationIndex: 0,
@@ -631,8 +792,10 @@ function bindEvents() {
     finishStroke(true);
   });
 
-  elements.variationSelect.addEventListener("change", () => {
-    state.currentGlyphID = elements.variationSelect.value;
+  elements.variationStrip.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-variation-id]");
+    if (!button) return;
+    state.currentGlyphID = button.dataset.variationId;
     renderGlyphGrid();
     renderEditor();
   });
@@ -641,7 +804,7 @@ function bindEvents() {
     const glyph = currentGlyph();
     if (!glyph?.strokes.length) return;
     glyph.strokes.pop();
-    deriveBounds(glyph);
+    deriveBoundsPreservingGuides(glyph);
     markChanged({ renderGrid: true });
   });
   elements.clearGlyph.addEventListener("click", () => {
@@ -649,20 +812,20 @@ function bindEvents() {
     if (!glyph?.strokes.length) return;
     if (!window.confirm(`clear every stroke from ${glyph.key}?`)) return;
     glyph.strokes = [];
-    deriveBounds(glyph);
+    deriveBoundsPreservingGuides(glyph);
     markChanged({ renderGrid: true });
   });
 
   elements.xHeight.addEventListener("input", () => {
-    const glyph = currentGlyph();
-    glyph.metrics.xHeightY = Number(elements.xHeight.value);
-    elements.xHeightOutput.value = glyph.metrics.xHeightY.toFixed(2);
+    const xHeightY = Number(elements.xHeight.value);
+    setProjectXHeightY(state.project, xHeightY);
+    elements.xHeightOutput.value = xHeightY.toFixed(2);
     markChanged({ renderCanvas: true });
   });
   elements.baseline.addEventListener("input", () => {
-    const glyph = currentGlyph();
-    glyph.metrics.baselineY = Number(elements.baseline.value);
-    elements.baselineOutput.value = glyph.metrics.baselineY.toFixed(2);
+    const baselineY = Number(elements.baseline.value);
+    setProjectBaselineY(state.project, baselineY);
+    elements.baselineOutput.value = baselineY.toFixed(2);
     markChanged({ renderCanvas: true });
   });
 
@@ -686,16 +849,17 @@ function bindEvents() {
   });
 
   elements.previewInput.addEventListener("input", () => {
+    cancelAnimatedPreview();
     elements.fontPreview.textContent = elements.previewInput.value || " ";
   });
-  elements.buildPreview.addEventListener("click", () => buildFont());
+  elements.previewPlay.addEventListener("click", playAnimatedPreview);
   elements.exportTTF.addEventListener("click", () => buildFont({ download: true }));
   elements.exportJSON.addEventListener("click", exportProjectJSON);
   elements.exportManifest.addEventListener("click", exportManifest);
   elements.importProject.addEventListener("change", () => importProject(elements.importProject.files[0]));
   elements.resetProject.addEventListener("click", () => {
     if (!window.confirm("replace browser project with original Grug drawing source?")) return;
-    state.project = clone(state.defaultProject);
+    state.project = prepareProject(clone(state.defaultProject));
     state.currentGlyphID = state.project.glyphs.find((glyph) => glyph.key === "a")?.id;
     state.glyphFilter = "characters";
     setPressed("[data-glyph-filter]", state.glyphFilter);
@@ -720,7 +884,10 @@ function bindEvents() {
     addGlyph();
   });
 
-  window.addEventListener("resize", drawMainCanvas);
+  window.addEventListener("resize", () => {
+    drawMainCanvas();
+    cancelAnimatedPreview();
+  });
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
     renderGlyphGrid();
     drawMainCanvas();
@@ -732,9 +899,10 @@ function bindEvents() {
     if (!glyph?.strokes.length) return;
     event.preventDefault();
     glyph.strokes.pop();
-    deriveBounds(glyph);
+    deriveBoundsPreservingGuides(glyph);
     markChanged({ renderGrid: true });
   });
+  document.addEventListener("visibilitychange", handleAnimationVisibilityChange);
 }
 
 async function load() {
@@ -749,7 +917,7 @@ async function load() {
       manifestResponse.json(),
     ]);
     validateProject(defaultProject);
-    state.defaultProject = defaultProject;
+    state.defaultProject = prepareProject(defaultProject);
     state.manifest = manifest;
 
     const stored = localStorage.getItem(STORAGE_KEY);
@@ -757,22 +925,14 @@ async function load() {
       try {
         state.project = JSON.parse(stored);
         validateProject(state.project);
+        prepareProject(state.project);
       } catch (error) {
         console.warn("Stored project was ignored", error);
-        state.project = clone(defaultProject);
+        state.project = prepareProject(clone(state.defaultProject));
       }
     } else {
-      state.project = clone(defaultProject);
+      state.project = prepareProject(clone(state.defaultProject));
     }
-
-    state.project.familyName ||= "My Hand";
-    state.project.fontForge = {
-      lineCap: "round",
-      sideBearing: 40,
-      spaceWidth: 280,
-      strokeWidth: 60,
-      ...state.project.fontForge,
-    };
     state.currentGlyphID =
       state.project.glyphs.find((glyph) => glyph.key === "a" && glyph.variationIndex === 0)?.id ??
       state.project.glyphs[0]?.id;
@@ -785,6 +945,7 @@ async function load() {
     renderEditor();
     root.setAttribute("aria-busy", "false");
     elements.saveIndicator.textContent = stored ? "saved local" : "new local";
+    scheduleLivePreview(0);
     window.HandDrawnForge = {
       buildFont: () => buildFont(),
       project: () => clone(state.project),

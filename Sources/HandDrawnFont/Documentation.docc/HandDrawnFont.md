@@ -18,6 +18,15 @@ finishes or Reduce Motion is enabled.
 Use ``HandDrawnGlyphView`` and ``AnimatedHandDrawnGlyphView`` for individual
 glyphs. Use ``HandDrawnTypeface/init(data:)`` to load custom artwork.
 
+## Glyph metrics
+
+The version 1 JSON format stores glyph bounds in the normalized full-canvas
+coordinate space. ``HandDrawnGlyphMetrics/baselineY`` and
+``HandDrawnGlyphMetrics/xHeightY`` are normalized offsets from the top of those
+bounds. Use ``HandDrawnGlyphMetrics/canvasBaselineY`` and
+``HandDrawnGlyphMetrics/canvasXHeightY`` when placing guides in the complete
+canvas.
+
 ## Topics
 
 ### Text

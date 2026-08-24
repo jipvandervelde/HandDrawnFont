@@ -182,10 +182,14 @@
                 <p class="panel-kicker" data-current-kind>character</p>
                 <h3 id="drawing-title" data-current-key>—</h3>
               </div>
-              <label class="variation-field">
-                <span>variation</span>
-                <select data-variation-select aria-label="Glyph variation"></select>
-              </label>
+              <div class="variation-field" aria-labelledby="variation-label">
+                <span id="variation-label">variations</span>
+                <div
+                  class="variation-strip"
+                  role="group"
+                  data-variation-strip
+                ></div>
+              </div>
             </div>
 
             <div class="canvas-shell">
@@ -207,11 +211,11 @@
 
             <div class="guide-controls">
               <label>
-                <span>x-height <output data-x-height-output>0.25</output></span>
+                <span>font x-height <output data-x-height-output>0.25</output></span>
                 <input type="range" min="0" max="1" step="0.01" data-x-height />
               </label>
               <label>
-                <span>baseline <output data-baseline-output>0.75</output></span>
+                <span>font baseline <output data-baseline-output>0.75</output></span>
                 <input type="range" min="0" max="1" step="0.01" data-baseline />
               </label>
             </div>
@@ -258,7 +262,20 @@
             </label>
 
             <div class="preview-card">
-              <label for="preview-copy">font preview</label>
+              <div class="preview-card__heading">
+                <label for="preview-copy">font preview</label>
+                <div class="preview-card__actions">
+                  <span role="status" aria-live="polite" data-preview-status>building</span>
+                  <button
+                    class="preview-play"
+                    type="button"
+                    aria-label="Play animated font preview"
+                    data-preview-play
+                  >
+                    play strokes ▶
+                  </button>
+                </div>
+              </div>
               <input
                 id="preview-copy"
                 type="text"
@@ -267,8 +284,10 @@
                 spellcheck="false"
                 data-preview-input
               />
-              <p data-font-preview>small hand make own mark.</p>
-              <button type="button" data-build-preview>build fresh preview</button>
+              <div class="preview-stage" data-preview-stage>
+                <p data-font-preview>small hand make own mark.</p>
+                <canvas data-animated-preview aria-hidden="true"></canvas>
+              </div>
             </div>
 
             <div class="export-stack">

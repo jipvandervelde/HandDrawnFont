@@ -142,8 +142,8 @@ public struct HandDrawnGlyphAuthoringView: View {
     _key = State(initialValue: initialGlyph?.key ?? "a")
     _variationIndex = State(initialValue: initialGlyph?.variationIndex ?? 0)
     _strokes = State(initialValue: initialGlyph?.strokes ?? [])
-    _baselineY = State(initialValue: initialGlyph?.metrics.baselineY ?? 0.75)
-    _xHeightY = State(initialValue: initialGlyph?.metrics.xHeightY ?? 0.25)
+    _baselineY = State(initialValue: initialGlyph?.metrics.canvasBaselineY ?? 0.75)
+    _xHeightY = State(initialValue: initialGlyph?.metrics.canvasXHeightY ?? 0.25)
   }
 
   public var body: some View {

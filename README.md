@@ -230,6 +230,19 @@ let typeface = try HandDrawnTypeface(
 let data = try typeface.encoded()
 ```
 
+### Glyph metric coordinate space
+
+The version 1 JSON format preserves the original drawing coordinate system.
+`boundsX`, `boundsY`, `boundsWidth`, and `boundsHeight` are normalized against
+the full glyph canvas. `baselineY` and `xHeightY` are normalized vertical
+offsets from `boundsY`, not absolute canvas positions.
+
+Use `metrics.canvasBaselineY` and `metrics.canvasXHeightY` for normalized guide
+positions across the complete canvas, or `glyph.canvasBaseline` and
+`glyph.canvasXHeight` for their point values. `HandDrawnGlyph.authored(...)`
+accepts full-canvas guide positions and stores the correct bounds-relative
+offsets automatically.
+
 The debug product also provides a persistence-free authoring canvas. Its save
 callback returns a normal `HandDrawnGlyph` that can be combined into a typeface
 and encoded:

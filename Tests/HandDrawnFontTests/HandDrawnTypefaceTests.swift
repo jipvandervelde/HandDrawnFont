@@ -40,6 +40,17 @@ final class HandDrawnTypefaceTests: XCTestCase {
     XCTAssertEqual(decoded.glyphs, original.glyphs)
   }
 
+  func testBundledCharacterGuidesShareCanvasPositions() throws {
+    let typeface = try HandDrawnTypeface.loadBundled()
+    let characterGlyphs = typeface.glyphs.filter { $0.key.count == 1 && $0.key != " " }
+
+    XCTAssertEqual(characterGlyphs.count, 178)
+    for glyph in characterGlyphs {
+      XCTAssertEqual(glyph.metrics.canvasXHeightY, 0.243_281_25, accuracy: 0.000_000_001)
+      XCTAssertEqual(glyph.metrics.canvasBaselineY, 0.729_843_75, accuracy: 0.000_000_001)
+    }
+  }
+
   func testDuplicateGlyphIDsAreRejected() throws {
     let original = try HandDrawnTypeface.loadBundled()
     let glyph = try XCTUnwrap(original.glyphs.first)
@@ -71,6 +82,10 @@ final class HandDrawnTypefaceTests: XCTestCase {
     XCTAssertEqual(glyph.metrics.boundsY, 0.25, accuracy: 0.000_001)
     XCTAssertEqual(glyph.metrics.boundsWidth, 0.6, accuracy: 0.000_001)
     XCTAssertEqual(glyph.metrics.boundsHeight, 0.6, accuracy: 0.000_001)
+    XCTAssertEqual(glyph.metrics.xHeightY, 0, accuracy: 0.000_001)
+    XCTAssertEqual(glyph.metrics.baselineY, 0.5, accuracy: 0.000_001)
+    XCTAssertEqual(glyph.metrics.canvasXHeightY, 0.25, accuracy: 0.000_001)
+    XCTAssertEqual(glyph.metrics.canvasBaselineY, 0.75, accuracy: 0.000_001)
   }
 
   @MainActor

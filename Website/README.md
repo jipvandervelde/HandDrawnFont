@@ -18,6 +18,18 @@ animated renderer.
   package.
 - Client-side TrueType generation and a codepoint manifest. Nothing is sent to
   a server; browser local storage is only used for autosave.
+- A live font preview that rebuilds automatically after drawing, guide, spacing,
+  or stroke-style changes.
+- An optional animated preview that replays the editable centerline strokes
+  letter by letter, using the Swift package's relaxed timing model.
+- A horizontally scrollable thumbnail strip for switching between glyph
+  variations without opening a dropdown.
+
+The version 1 project schema stores each glyph's `baselineY` and `xHeightY` as
+normalized offsets from `boundsY`. The forge also stores one full-canvas
+`fontGuides` pair for the whole project. It keeps every glyph synchronized to
+those fixed positions, preserves them when drawing bounds change, and converts
+them back to bounds-relative glyph values when saving JSON or building a font.
 
 The source project has 249 drawings across 90 character and named-icon keys.
 The archived Regular TTF has 246 compiled drawings. Generated fonts map the
