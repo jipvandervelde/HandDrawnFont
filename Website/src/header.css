@@ -104,52 +104,53 @@
 @media (max-width: 760px) {
   .site-header,
   .forge-header {
-    display: grid;
-    height: 112px;
-    min-height: 112px;
-    grid-template-rows: 30px 44px;
-    align-content: center;
-    gap: 6px;
-    padding-block: 8px;
-  }
-
-  .site-header .wordmark,
-  .site-header .header-nav,
-  .forge-header .wordmark,
-  .forge-header .header-nav {
-    width: 100%;
+    display: flex;
+    height: 68px;
+    min-height: 68px;
+    gap: 10px;
+    padding: 0 16px;
   }
 
   .site-header .wordmark,
   .forge-header .wordmark {
     display: inline-flex;
-    min-height: 30px;
+    min-height: 44px;
     align-items: center;
-    font-size: 21px;
+    font-size: 18px;
   }
 
   .site-header .header-nav,
   .forge-header .header-nav {
-    justify-content: flex-start;
-    gap: 8px;
-    overflow: hidden;
+    width: auto;
+    gap: 4px;
+    margin-left: auto;
   }
 
   .site-header .header-links,
   .forge-header .header-links {
-    min-width: 0;
-    flex: 1;
-    gap: 8px;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .site-header .header-links::-webkit-scrollbar,
-  .forge-header .header-links::-webkit-scrollbar {
-    display: none;
+    gap: 4px;
   }
 
   .header-link {
-    font-size: 14px;
+    min-height: 44px;
+    padding-inline: 6px;
+    font-size: 13px;
+  }
+
+  .theme-toggle {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+  }
+
+  .theme-glyph {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-header .wordmark span,
+  .forge-header .wordmark span {
+    display: none;
   }
 }

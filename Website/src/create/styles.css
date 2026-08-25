@@ -1643,29 +1643,75 @@ input[type="range"]::-moz-range-thumb {
 
 @media (max-width: 760px) {
   body {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   [id] {
-    scroll-margin-top: 126px;
+    scroll-margin-top: 80px;
   }
 
   .forge-footer {
     grid-template-columns: 1fr;
   }
 
-  .font-card-grid,
-  .wisdom-grid,
   .format-grid {
     grid-template-columns: 1fr;
   }
 
+  .download-section,
+  .wisdom-section,
+  .coverage-section,
+  .format-section {
+    padding-block: 64px;
+  }
+
+  .section-heading h1,
+  .section-heading h2,
+  .wisdom-heading h2,
+  .coverage-heading h2,
+  .format-section > h2 {
+    font-size: clamp(43px, 12vw, 58px);
+  }
+
+  .font-card-grid,
+  .wisdom-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .font-card {
+    min-height: 220px;
+    padding: 20px 18px;
+  }
+
+  .font-card__sample {
+    font-size: clamp(25px, 7vw, 34px);
+  }
+
+  .font-card > a {
+    width: 100%;
+    padding-inline: 10px;
+    margin-top: 22px;
+    font-size: 15px;
+  }
+
   .wisdom-today {
-    margin-top: 42px;
+    padding: 28px 22px 32px;
+    margin-top: 36px;
+  }
+
+  .wisdom-today blockquote {
+    margin-top: 22px;
+    font-size: clamp(34px, 9vw, 46px);
   }
 
   .wisdom-card {
-    min-height: 210px;
+    min-height: 230px;
+    gap: 24px;
+    padding: 20px 16px;
+  }
+
+  .wisdom-card blockquote {
+    font-size: clamp(19px, 5.3vw, 24px);
   }
 
   .download-heading {
@@ -1678,11 +1724,21 @@ input[type="range"]::-moz-range-thumb {
   }
 
   .compiled-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
   }
 
   .compiled-glyph {
-    min-height: 106px;
+    min-height: 88px;
+    padding: 8px 5px;
+  }
+
+  .compiled-glyph__mark {
+    font-size: 39px;
+  }
+
+  .compiled-glyph__label {
+    font-size: 7px;
   }
 
   .forge-app {
@@ -1700,17 +1756,30 @@ input[type="range"]::-moz-range-thumb {
     max-height: none;
     contain: none;
     overflow: visible;
+    padding: 16px;
   }
 
   .glyph-grid {
     height: auto;
     flex: none;
-    max-height: 320px;
+    max-height: 280px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .drawing-panel {
     padding-inline: 16px;
+  }
+
+  .panel-heading--drawing {
+    margin-bottom: 12px;
+  }
+
+  .variation-strip {
+    padding-top: 22px;
+  }
+
+  .canvas-shell {
+    width: min(84vw, 300px);
   }
 
   .drawing-actions {
@@ -1724,17 +1793,60 @@ input[type="range"]::-moz-range-thumb {
     grid-template-columns: 1fr;
   }
 
+  input[type="range"] {
+    height: 44px;
+  }
+
   .project-panel {
     display: flex;
+    padding: 18px 16px;
+  }
+
+  .export-section,
+  .project-file-actions {
+    width: 100%;
+    align-self: stretch;
+  }
+
+  .preview-card {
+    min-height: 205px;
+    padding: 16px 16px 64px;
+    margin-top: 18px;
+  }
+
+  .preview-stage {
+    min-height: 120px;
   }
 
   .preview-card textarea {
-    min-height: 88px;
-    font-size: 34px;
+    min-height: 80px;
+    font-size: 31px;
+  }
+
+  .export-section {
+    margin-top: 22px;
+  }
+
+  .export-action {
+    min-height: 54px;
+  }
+
+  .export-action--primary {
+    min-height: 64px;
+  }
+
+  .format-grid {
+    gap: 10px;
+    margin-top: 34px;
+  }
+
+  .format-grid article {
+    min-height: 220px;
+    padding: 24px 20px;
   }
 
   .format-grid article > p:first-child {
-    margin-bottom: 54px;
+    margin-bottom: 36px;
   }
 
   .forge-footer {
@@ -1743,10 +1855,6 @@ input[type="range"]::-moz-range-thumb {
 }
 
 @media (max-width: 430px) {
-  .glyph-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
   .segmented {
     display: flex;
   }
@@ -1754,6 +1862,29 @@ input[type="range"]::-moz-range-thumb {
   .segmented button {
     min-width: 0;
     flex: 1;
+  }
+}
+
+@media (max-width: 360px) {
+  .glyph-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .download-section,
+  .wisdom-section,
+  .coverage-section,
+  .format-section {
+    padding-block: 52px;
+  }
+
+  .wisdom-card {
+    min-height: 210px;
+    gap: 16px;
+    padding: 16px 13px;
+  }
+
+  .wisdom-card blockquote {
+    font-size: 18px;
   }
 }
 

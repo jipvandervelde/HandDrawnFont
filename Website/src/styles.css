@@ -458,15 +458,11 @@ button {
   }
 
   .feature-card {
-    min-height: 230px;
-  }
-
-  .feature-number {
-    margin-bottom: 52px;
+    min-height: 190px;
   }
 
   .install {
-    gap: 52px;
+    gap: 40px;
   }
 
   .site-footer {
@@ -476,14 +472,57 @@ button {
 
 @media (max-width: 760px) {
   [id] {
-    scroll-margin-top: 126px;
+    scroll-margin-top: 80px;
+  }
+
+  .story {
+    padding-block: 54px 64px;
+  }
+
+  .hand-drawn--section {
+    font-size: clamp(42px, 12vw, 58px);
+  }
+
+  .story-copy {
+    margin-top: 26px;
+    font-size: 20px;
+  }
+
+  .story-actions {
+    margin-bottom: 42px;
+  }
+
+  .feature-card {
+    min-height: 0;
+    padding: 24px 22px 28px;
+  }
+
+  .feature-card h3 {
+    font-size: 25px;
+  }
+
+  .install {
+    gap: 32px;
+    padding-block: 64px;
+  }
+
+  .install-copy h2 {
+    font-size: clamp(38px, 11vw, 52px);
+  }
+
+  .code-card pre {
+    padding: 28px 22px 34px;
+    font-size: 13px;
+  }
+
+  .site-footer {
+    padding-block: 28px calc(28px + env(safe-area-inset-bottom));
   }
 }
 
 @media (max-width: 520px) {
-
   .code-card {
-    margin-inline: calc(-1 * var(--page-gutter));
+    margin-inline: 0;
   }
 }
 

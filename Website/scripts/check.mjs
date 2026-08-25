@@ -53,6 +53,7 @@ const requiredFiles = [
   "header.css",
   "home-intro.js",
   "index.html",
+  "og-image.png",
   "robots.txt",
   "rough-edges.css",
   "rough-edges.js",
@@ -137,6 +138,26 @@ for (const value of requiredMarkup) {
   }
 }
 assertAttributionLinks(html, "index.html");
+
+const socialImageMarkup = [
+  'property="og:image" content="https://handdrawn.software/og-image.png"',
+  'property="og:image:width" content="1200"',
+  'property="og:image:height" content="630"',
+  'name="twitter:card" content="summary_large_image"',
+  'name="twitter:image" content="https://handdrawn.software/og-image.png"',
+];
+
+for (const [file, source] of [
+  ["index.html", html],
+  ["create/index.html", await readFile(join(outputDirectory, "create", "index.html"), "utf8")],
+  ["grug/index.html", await readFile(join(outputDirectory, "grug", "index.html"), "utf8")],
+]) {
+  for (const value of socialImageMarkup) {
+    if (!source.includes(value)) {
+      throw new Error(`${file} is missing social image metadata: ${value}`);
+    }
+  }
+}
 
 const homeHeader = html.match(/<header\b[\s\S]*?<\/header>/)?.[0];
 if (!homeHeader?.includes("data-home-after-intro")) {
