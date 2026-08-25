@@ -53,6 +53,8 @@ const requiredFiles = [
   "header.css",
   "home-intro.js",
   "index.html",
+  "llms-full.txt",
+  "llms.txt",
   "og-image.png",
   "robots.txt",
   "rough-edges.css",
@@ -67,6 +69,42 @@ const requiredFiles = [
 
 for (const file of requiredFiles) {
   await access(join(outputDirectory, file));
+}
+
+const llms = await readFile(join(outputDirectory, "llms.txt"), "utf8");
+for (const value of [
+  "# HandDrawnFont",
+  "https://github.com/jipvandervelde/HandDrawnFont.git",
+  "https://handdrawn.software/create/",
+  "HandDrawnTypeface(data:)",
+  "## Rules for coding agents",
+]) {
+  if (!llms.includes(value)) {
+    throw new Error(`llms.txt is missing required guidance: ${value}`);
+  }
+}
+
+const llmsFull = await readFile(join(outputDirectory, "llms-full.txt"), "utf8");
+for (const value of [
+  "# HandDrawnFont",
+  "## Instructions for coding agents and LLMs",
+]) {
+  if (!llmsFull.includes(value)) {
+    throw new Error(`llms-full.txt is missing README guidance: ${value}`);
+  }
+}
+
+for (const file of ["index.html", "create/index.html", "grug/index.html"]) {
+  const source = await readFile(join(outputDirectory, file), "utf8");
+  for (const value of [
+    'rel="describedby"',
+    'type="text/markdown"',
+    'href="https://handdrawn.software/llms.txt"',
+  ]) {
+    if (!source.includes(value)) {
+      throw new Error(`${file} is missing LLM discovery markup: ${value}`);
+    }
+  }
 }
 
 const thirdPartyNotices = await readFile(

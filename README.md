@@ -4,14 +4,40 @@
 handwritten pen strokes. Glyphs are drawn in their original stroke order with
 `Canvas` and a single shared `TimelineView` per text view.
 
-See it at [handdrawn.software](https://handdrawn.software), or use the
-[browser font creator](https://handdrawn.software/create/) to download the Grug
-Hand TTF family, draw characters or named icons, and export editable JSON plus
-an installable TrueType font—or one ZIP containing the complete font project.
+See it at [handdrawn.software](https://handdrawn.software).
 
-Created by Jip van der Velde and Michel Elings, creators of
-[`grug`](https://developer.apple.com/design/awards/) at Ocho. `grug` won the
-2026 Apple Design Award for Delight and Fun.
+Created by [Jip van der Velde](https://x.com/jipvandervelde) and
+[Michel Elings](https://x.com/michelelings) at [Ocho](https://ocho.so), creators
+of [`grug`](https://apps.apple.com/app/grug/id6751649802). `grug` won the
+[2026 Apple Design Award for Delight and
+Fun](https://www.apple.com/newsroom/2026/06/apple-reveals-winners-of-the-2026-apple-design-awards/).
+
+## Choose your hand-drawn typeface
+
+### Use Grug Hand
+
+The package includes the original Grug Hand stroke artwork used by `grug`.
+`HandDrawnText` uses it by default, so the quick start below works without
+downloading, copying, or configuring a font resource.
+
+- [Preview and download the Grug Hand font family](https://handdrawn.software/grug/)
+- [Add HandDrawnFont to a SwiftUI app](#install-from-git)
+
+### Create your own hand-drawn typeface
+
+Open the [browser font creator](https://handdrawn.software/create/) to draw
+letters, variations, punctuation, and named icons. Choose **Download full
+package** to receive:
+
+- An installable TrueType font (`.ttf`).
+- An editable project (`.json`) using the same versioned schema accepted by
+  `HandDrawnTypeface(data:)`.
+- A codepoint map for alternates and named icons.
+- A ZIP containing the complete font project.
+
+Add the exported project JSON to the consuming app, load it as shown in
+[Load a custom typeface](#load-a-custom-typeface), and pass the resulting
+`HandDrawnTypeface` to `HandDrawnText`.
 
 The package includes:
 
@@ -284,18 +310,24 @@ special meaning from punctuation prefixes.
 
 When integrating this package into an app, follow this exact sequence:
 
-1. Confirm the target is iOS 16+/macOS 13+ and uses SwiftUI.
-2. Add the package dependency; do not copy package sources or resources.
-3. Link the `HandDrawnFont` product to the exact consuming target.
-4. Add `import HandDrawnFont` only in files that use its public types.
-5. Start with `HandDrawnText("...")`; do not create a loader, view model,
+1. Choose the bundled Grug Hand artwork or create a custom typeface at
+   [handdrawn.software/create](https://handdrawn.software/create/).
+2. Confirm the target is iOS 16+/macOS 13+ and uses SwiftUI.
+3. Add the package dependency; do not copy package sources or resources.
+4. Link the `HandDrawnFont` product to the exact consuming target.
+5. Add `import HandDrawnFont` only in files that use its public types.
+6. For Grug Hand, start with `HandDrawnText("...")`; it uses
+   `HandDrawnTypeface.bundled` automatically. Do not create a loader, view model,
    database model, timer, or animation date.
-6. Use `animation: nil` for static rendering.
-7. Use an integer `animationTrigger` to replay.
-8. Use `variationSeed` only when stable choices are desired.
-9. Add `HandDrawnFontDebug` only when inspection UI is requested, preferably
+7. For a custom hand, add the creator's exported project JSON to the app,
+   initialize it with `HandDrawnTypeface(data:)`, and pass that typeface to
+   `HandDrawnText`.
+8. Use `animation: nil` for static rendering.
+9. Use an integer `animationTrigger` to replay.
+10. Use `variationSeed` only when stable choices are desired.
+11. Add `HandDrawnFontDebug` only when inspection UI is requested, preferably
    behind `#if DEBUG`.
-10. Build the consuming target and inspect wrapping, accessibility text,
+12. Build the consuming target and inspect wrapping, accessibility text,
     Reduce Motion, light mode, and dark mode.
 
 Copyable prompt for a coding agent:
@@ -303,10 +335,11 @@ Copyable prompt for a coding agent:
 ```text
 Add the HandDrawnFont Swift package to this SwiftUI target. Use the
 HandDrawnFont product, import HandDrawnFont in the relevant view, and render the
-requested copy with HandDrawnText. Do not copy the bundled JSON, add SwiftData,
-create an animation timer, or manage start dates. Use animationTrigger for
-replay and animation: nil for static content. Preserve semantic accessibility
-and verify the target builds.
+requested copy with HandDrawnText. Use the bundled Grug Hand typeface unless a
+custom project JSON is explicitly provided. Do not copy the bundled JSON, add
+SwiftData, create an animation timer, or manage start dates. Use
+animationTrigger for replay and animation: nil for static content. Preserve
+semantic accessibility and verify the target builds.
 ```
 
 Repository-specific instructions for agents are also available in

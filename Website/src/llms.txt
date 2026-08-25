@@ -1,0 +1,56 @@
+# HandDrawnFont
+
+> SwiftUI package for animated and static text rendered from real hand-drawn pen strokes. It includes the Grug Hand artwork and can load custom typefaces created at handdrawn.software.
+
+## Choose a typeface
+
+- [Use Grug Hand](https://handdrawn.software/grug/): `HandDrawnTypeface.bundled` is the package default. Do not copy a font resource into the consuming app.
+- [Create a custom typeface](https://handdrawn.software/create/): Draw letters, variations, punctuation, or named icons. Download the full package, then add the exported project JSON to the app.
+
+## Install
+
+Requirements: Swift 6, SwiftUI, iOS 16+, or macOS 13+.
+
+Swift Package URL:
+`https://github.com/jipvandervelde/HandDrawnFont.git`
+
+Add the `HandDrawnFont` product to the consuming app target.
+
+```swift
+import HandDrawnFont
+
+HandDrawnText("Hand-drawn text, ready to move.")
+```
+
+For static rendering, pass `animation: nil`. To replay, change an integer `animationTrigger`. Use `variationSeed` for stable glyph choices.
+
+## Use a custom typeface
+
+```swift
+let data = try Data(contentsOf: typefaceURL)
+let typeface = try HandDrawnTypeface(data: data)
+
+HandDrawnText(
+    "custom hand.",
+    typeface: typeface
+)
+```
+
+The font creator's editable project JSON uses the schema accepted by `HandDrawnTypeface(data:)`.
+
+## Rules for coding agents
+
+1. Link the package product to the exact SwiftUI target.
+2. Import `HandDrawnFont` only where it is used.
+3. Use bundled Grug Hand unless custom project JSON is explicitly provided.
+4. Do not copy bundled JSON or package source files into the consuming app.
+5. Do not add SwiftData, a view model, a timer, or animation-date management.
+6. Use `animationTrigger` for replay and `animation: nil` for static text.
+7. Verify wrapping, accessibility, Reduce Motion, light mode, and dark mode.
+
+## Documentation
+
+- [Full package documentation](https://handdrawn.software/llms-full.txt)
+- [GitHub repository](https://github.com/jipvandervelde/HandDrawnFont)
+- [Grug Hand downloads](https://handdrawn.software/grug/)
+- [Font creator](https://handdrawn.software/create/)

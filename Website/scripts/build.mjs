@@ -5,6 +5,7 @@ import { build } from "esbuild";
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const websiteDirectory = join(scriptDirectory, "..");
+const repositoryDirectory = dirname(websiteDirectory);
 const sourceDirectory = join(websiteDirectory, "src");
 const outputDirectory = join(websiteDirectory, "dist");
 const interFontSource = join(
@@ -19,6 +20,7 @@ const interFontSource = join(
 await rm(outputDirectory, { force: true, recursive: true });
 await mkdir(outputDirectory, { recursive: true });
 await cp(sourceDirectory, outputDirectory, { recursive: true });
+await cp(join(repositoryDirectory, "README.md"), join(outputDirectory, "llms-full.txt"));
 await cp(interFontSource, join(outputDirectory, "fonts", "Inter-Regular.woff2"));
 
 await build({
