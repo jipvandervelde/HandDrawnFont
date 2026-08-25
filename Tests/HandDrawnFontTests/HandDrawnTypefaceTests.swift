@@ -1,3 +1,4 @@
+import Foundation
 import XCTest
 
 @testable import HandDrawnFont
@@ -37,7 +38,59 @@ final class HandDrawnTypefaceTests: XCTestCase {
     let decoded = try HandDrawnTypeface(data: data)
 
     XCTAssertEqual(decoded.version, original.version)
+    XCTAssertEqual(decoded.fontGuides, original.fontGuides)
     XCTAssertEqual(decoded.glyphs, original.glyphs)
+  }
+
+  func testTypefaceDocumentExportsCurrentFontGuides() throws {
+    let bundled = try HandDrawnTypeface.loadBundled()
+    let typeface = try HandDrawnTypeface(
+      version: "guide-test",
+      glyphs: bundled.glyphs,
+      fontGuides: HandDrawnFontGuides(capHeightY: 0.11)
+    )
+    let object = try XCTUnwrap(
+      JSONSerialization.jsonObject(with: typeface.encoded()) as? [String: Any]
+    )
+    let fontGuides = try XCTUnwrap(object["fontGuides"] as? [String: Any])
+
+    XCTAssertEqual(object["formatVersion"] as? Int, 2)
+    XCTAssertEqual(
+      try XCTUnwrap(fontGuides["capHeightY"] as? Double),
+      0.11,
+      accuracy: 0.000_000_001
+    )
+  }
+
+  func testVersionOneDocumentMigratesWithInferredCapHeight() throws {
+    let bundled = try HandDrawnTypeface.loadBundled()
+    var object = try XCTUnwrap(
+      JSONSerialization.jsonObject(with: bundled.encoded()) as? [String: Any]
+    )
+    object["formatVersion"] = 1
+    object.removeValue(forKey: "fontGuides")
+
+    let versionOneData = try JSONSerialization.data(withJSONObject: object)
+    let migrated = try HandDrawnTypeface(data: versionOneData)
+
+    XCTAssertEqual(migrated.glyphs, bundled.glyphs)
+    XCTAssertEqual(migrated.fontGuides.capHeightY, 0.058_387_5, accuracy: 0.000_000_001)
+  }
+
+  func testInvalidFontGuidesAreRejected() throws {
+    let bundled = try HandDrawnTypeface.loadBundled()
+
+    XCTAssertThrowsError(
+      try HandDrawnTypeface(
+        version: "invalid-guides",
+        glyphs: bundled.glyphs,
+        fontGuides: HandDrawnFontGuides(capHeightY: .nan)
+      )
+    ) { error in
+      guard case HandDrawnFontError.invalidFontGuides = error else {
+        return XCTFail("Unexpected error: \(error)")
+      }
+    }
   }
 
   func testBundledCharacterGuidesShareCanvasPositions() throws {

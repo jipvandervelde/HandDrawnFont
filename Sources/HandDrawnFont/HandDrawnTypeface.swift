@@ -7,6 +7,7 @@ public enum HandDrawnFontError: Error, LocalizedError, Sendable {
   case emptyGlyphKey(UUID)
   case invalidCanvasSize(UUID)
   case invalidMetrics(UUID)
+  case invalidFontGuides
   case invalidPoint(UUID)
   case duplicateGlyphID(UUID)
   case duplicateVariation(key: String, variationIndex: Int)
@@ -23,6 +24,8 @@ public enum HandDrawnFontError: Error, LocalizedError, Sendable {
       "Glyph \(id) has an invalid canvas size."
     case .invalidMetrics(let id):
       "Glyph \(id) has invalid metrics."
+    case .invalidFontGuides:
+      "Typeface font guides are invalid."
     case .invalidPoint(let id):
       "Glyph \(id) contains a non-finite point."
     case .duplicateGlyphID(let id):
@@ -33,9 +36,45 @@ public enum HandDrawnFontError: Error, LocalizedError, Sendable {
   }
 }
 
-struct HandDrawnTypefaceDocument: Codable, Sendable {
-  static let currentFormatVersion = 1
+/// Font-wide guide positions in normalized glyph-canvas coordinates.
+public struct HandDrawnFontGuides: Codable, Hashable, Sendable {
+  /// The shared cap-height line, where `0` is the top of the canonical canvas.
+  public var capHeightY: Double
 
+  public init(capHeightY: Double = 0.06) {
+    self.capHeightY = capHeightY
+  }
+
+  public static let `default` = HandDrawnFontGuides()
+
+  static func inferred(from glyphs: [HandDrawnGlyph]) -> HandDrawnFontGuides {
+    guard let reference = glyphs.first(where: { $0.key != " " }) ?? glyphs.first else {
+      return .default
+    }
+
+    let baselineY = reference.metrics.canvasBaselineY
+    let xHeightY = reference.metrics.canvasXHeightY
+    let xHeight = max(0, baselineY - xHeightY)
+    return HandDrawnFontGuides(
+      capHeightY: min(1, max(0, xHeightY - xHeight * 0.38))
+    )
+  }
+}
+
+struct HandDrawnTypefaceDocument: Codable, Sendable {
+  static let currentFormatVersion = 2
+
+  var formatVersion: Int
+  var typefaceVersion: String
+  var fontGuides: HandDrawnFontGuides
+  var glyphs: [HandDrawnGlyph]
+}
+
+private struct HandDrawnTypefaceVersionHeader: Decodable {
+  var formatVersion: Int
+}
+
+private struct HandDrawnTypefaceDocumentV1: Decodable {
   var formatVersion: Int
   var typefaceVersion: String
   var glyphs: [HandDrawnGlyph]
@@ -44,15 +83,23 @@ struct HandDrawnTypefaceDocument: Codable, Sendable {
 /// A validated, immutable collection of handwritten glyph variations.
 public struct HandDrawnTypeface: Sendable {
   public let version: String
+  public let fontGuides: HandDrawnFontGuides
   public let glyphs: [HandDrawnGlyph]
 
   private let glyphsByKey: [String: [HandDrawnGlyph]]
   private let glyphsByID: [UUID: HandDrawnGlyph]
 
-  public init(version: String, glyphs: [HandDrawnGlyph]) throws {
+  public init(
+    version: String,
+    glyphs: [HandDrawnGlyph],
+    fontGuides: HandDrawnFontGuides? = nil
+  ) throws {
     try Self.validate(glyphs)
+    let resolvedFontGuides = fontGuides ?? .inferred(from: glyphs)
+    try Self.validate(resolvedFontGuides)
 
     self.version = version
+    self.fontGuides = resolvedFontGuides
     self.glyphs = glyphs.sorted {
       if $0.key == $1.key {
         return $0.variationIndex < $1.variationIndex
@@ -64,11 +111,27 @@ public struct HandDrawnTypeface: Sendable {
   }
 
   public init(data: Data) throws {
-    let document = try JSONDecoder().decode(HandDrawnTypefaceDocument.self, from: data)
-    guard document.formatVersion == HandDrawnTypefaceDocument.currentFormatVersion else {
-      throw HandDrawnFontError.unsupportedFormat(document.formatVersion)
+    let decoder = JSONDecoder()
+    let header = try decoder.decode(HandDrawnTypefaceVersionHeader.self, from: data)
+
+    switch header.formatVersion {
+    case 1:
+      let document = try decoder.decode(HandDrawnTypefaceDocumentV1.self, from: data)
+      try self.init(
+        version: document.typefaceVersion,
+        glyphs: document.glyphs,
+        fontGuides: .inferred(from: document.glyphs)
+      )
+    case HandDrawnTypefaceDocument.currentFormatVersion:
+      let document = try decoder.decode(HandDrawnTypefaceDocument.self, from: data)
+      try self.init(
+        version: document.typefaceVersion,
+        glyphs: document.glyphs,
+        fontGuides: document.fontGuides
+      )
+    default:
+      throw HandDrawnFontError.unsupportedFormat(header.formatVersion)
     }
-    try self.init(version: document.typefaceVersion, glyphs: document.glyphs)
   }
 
   /// The package's built-in lowercase Latin typeface, digits, and punctuation.
@@ -99,6 +162,7 @@ public struct HandDrawnTypeface: Sendable {
     let document = HandDrawnTypefaceDocument(
       formatVersion: HandDrawnTypefaceDocument.currentFormatVersion,
       typefaceVersion: version,
+      fontGuides: fontGuides,
       glyphs: glyphs
     )
     let encoder = JSONEncoder()
@@ -183,6 +247,14 @@ public struct HandDrawnTypeface: Sendable {
           variationIndex: glyph.variationIndex
         )
       }
+    }
+  }
+
+  private static func validate(_ fontGuides: HandDrawnFontGuides) throws {
+    guard fontGuides.capHeightY.isFinite,
+      (0...1).contains(fontGuides.capHeightY)
+    else {
+      throw HandDrawnFontError.invalidFontGuides
     }
   }
 }

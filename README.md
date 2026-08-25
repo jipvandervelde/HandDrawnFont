@@ -49,8 +49,8 @@ The package includes:
 - Reduce Motion and semantic accessibility support.
 - Deterministic or random variation selection.
 - A versioned JSON format for loading custom typefaces.
-- An optional debug product with a playground, catalog, variation browser,
-  stroke-order preview, metrics inspector, and normalized stroke editor.
+- An optional debug product with a playground and editable visual glyph catalog,
+  variation thumbnails, JSON import/export, and a full-height normalized stroke editor.
 
 There is no database, networking, analytics, app-group, haptic, or host-app
 dependency.
@@ -115,6 +115,13 @@ struct WelcomeView: View {
 
 `HandDrawnText` animates once when it appears and then switches to the static
 renderer. It owns all timing and completion state.
+
+### Demo app
+
+Open [`Demo/HandDrawnFontDemo.xcodeproj`](Demo/HandDrawnFontDemo.xcodeproj) to
+run a minimal consuming iOS app. It renders an animated pangram, shows an
+A-Z/0-9 glyph grid, and presents the shipped debug tools from the toolbar.
+The target links both products through a local Swift Package Manager reference.
 
 ### Static text
 
@@ -229,6 +236,30 @@ The debug product includes:
 - `HandDrawnGlyphAuthoringView`
 - `HandDrawnStrokeEditorView`
 
+The dashboard keeps an editable typeface draft in memory. Open **Glyphs** to
+browse the adaptive grid, select a glyph, add or remove variations, and tap its
+rendered geometry to enter the drawing view. The drawing view uses the full
+available height and keeps variation selection, undo, redo, clear, and Save in
+reach without a vertical form or scrolling canvas. The floating editing toolbar
+sits in the bottom safe area so the proportional drawing canvas gets as much
+height as possible.
+
+The Playground owns the font-wide cap-height setting. Adjusting it moves the
+shared guide in every glyph editor without changing any saved stroke point,
+baseline, or x-height. The drawing viewport adds visual breathing room above
+the cap height and below the baseline, but that extra screen space is not part
+of the normalized JSON coordinate system.
+
+Clearing a variation keeps that variation editable. An empty variation shows
+the regular system character when it is the only drawing, or overlays its
+sibling variations at 10% opacity when other drawings exist. These references
+are not exported and disappear as soon as a new stroke is drawn.
+
+Use the import/export menu in the glyph catalog to load or save the complete
+versioned font-config JSON. Catalog edits are intentionally not persisted until
+the host exports them, so adding the debug product never chooses storage on the
+app's behalf.
+
 The runtime product never imports the debug product.
 
 ## Load a custom typeface
@@ -256,9 +287,15 @@ let typeface = try HandDrawnTypeface(
 let data = try typeface.encoded()
 ```
 
-### Glyph metric coordinate space
+### Typeface format and glyph metric coordinate space
 
-The version 1 JSON format preserves the original drawing coordinate system.
+The current JSON format is version 2. It adds the font-wide
+`fontGuides.capHeightY` value in normalized full-canvas coordinates. Version 1
+documents remain loadable; the package infers a compatible cap height from the
+existing x-height and baseline when migrating them in memory. New exports use
+version 2.
+
+Both versions preserve the original drawing coordinate system.
 `boundsX`, `boundsY`, `boundsWidth`, and `boundsHeight` are normalized against
 the full glyph canvas. `baselineY` and `xHeightY` are normalized vertical
 offsets from `boundsY`, not absolute canvas positions.
@@ -302,6 +339,7 @@ special meaning from punctuation prefixes.
 | Static glyph | `HandDrawnGlyphView` |
 | Animated glyph | `AnimatedHandDrawnGlyphView` |
 | Bundled/custom collection | `HandDrawnTypeface` |
+| Font-wide cap-height guide | `HandDrawnFontGuides` |
 | Glyph data | `HandDrawnGlyph`, `HandDrawnStroke`, `HandDrawnPoint` |
 | Debug dashboard | `HandDrawnFontDebugView` in `HandDrawnFontDebug` |
 | Draw custom strokes | `HandDrawnGlyphAuthoringView` in `HandDrawnFontDebug` |
