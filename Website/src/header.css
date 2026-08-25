@@ -1,5 +1,6 @@
 .site-header,
 .forge-header {
+  --header-label-size: 24px;
   position: sticky;
   z-index: var(--z-header);
   top: 0;
@@ -22,12 +23,12 @@
 
 .wordmark,
 .header-link {
+  font-size: var(--header-label-size);
   text-decoration: none;
 }
 
 .wordmark {
   font-family: "Grug Hand", ui-rounded, system-ui, sans-serif;
-  font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1;
@@ -60,7 +61,6 @@
   min-height: 44px;
   align-items: center;
   gap: 8px;
-  font-size: 17px;
   white-space: nowrap;
 }
 
@@ -104,6 +104,7 @@
 @media (max-width: 760px) {
   .site-header,
   .forge-header {
+    --header-label-size: 18px;
     display: flex;
     height: 68px;
     min-height: 68px;
@@ -116,7 +117,6 @@
     display: inline-flex;
     min-height: 44px;
     align-items: center;
-    font-size: 18px;
   }
 
   .site-header .header-nav,
@@ -134,7 +134,6 @@
   .header-link {
     min-height: 44px;
     padding-inline: 6px;
-    font-size: 13px;
   }
 
   .theme-toggle {

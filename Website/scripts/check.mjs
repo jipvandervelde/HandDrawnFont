@@ -61,6 +61,8 @@ const requiredFiles = [
   "styles.css",
   "theme.js",
   "third-party-notices.txt",
+  "video/grug-demo.mp4",
+  "video/grug-demo-poster.jpg",
 ];
 
 for (const file of requiredFiles) {
@@ -110,13 +112,19 @@ const html = await readFile(join(outputDirectory, "index.html"), "utf8");
 const requiredMarkup = [
   "https://github.com/jipvandervelde/HandDrawnFont",
   "GrugHand-Regular.ttf",
-  'class="header-link" href="/grug/">grug font</a>',
-  'class="header-link" href="/create/">create font</a>',
+  'class="header-link" href="/grug/">grug hand</a>',
+  'class="header-link" href="/create/">create</a>',
   'class="story-actions"',
   'class="button button--primary"',
   'class="button button--quiet"',
   "Create your font",
   "Open GitHub",
+  "Open in GitHub",
+  'class="install-code"',
+  "Enter this URL in Swift Package Manager:",
+  "data-package-url",
+  "data-copy-package-url",
+  "data-copy-package-status",
   'class="github-scribble"',
   "data-theme-toggle",
   'href="/header.css"',
@@ -130,6 +138,9 @@ const requiredMarkup = [
   "data-home-title-canvas",
   "data-home-after-intro",
   "home-intro-pending",
+  "data-home-demo-video",
+  'src="/video/grug-demo.mp4"',
+  'poster="/video/grug-demo-poster.jpg"',
 ];
 
 for (const value of requiredMarkup) {
@@ -184,8 +195,8 @@ if (html.includes('class="feature-number"')) {
 }
 
 if (
-  !html.includes("<span data-home-title-line>Hand-drawn text</span>") ||
-  !html.includes("<span data-home-title-line>for every app.</span>")
+  !html.includes("<span data-home-title-line>Hand drawn text</span>") ||
+  !html.includes("<span data-home-title-line>in your app.</span>")
 ) {
   throw new Error("homepage title must share two explicit lines with its animation");
 }
@@ -206,6 +217,8 @@ for (const value of [
   ".home-intro-pending [data-home-after-intro]",
   "transition: opacity 320ms ease-out",
   "--rough-edge-intensity: 1.75",
+  ".package-url__input",
+  "font-size: 13px",
   ".code-card code::selection",
   "user-select: text",
 ]) {
@@ -247,6 +260,8 @@ for (const value of [
   "home-intro-complete",
   "requestAnimationFrame",
   "data-home-title-canvas",
+  "data-home-demo-video",
+  "IntersectionObserver",
 ]) {
   if (!homeIntroScript.includes(value)) {
     throw new Error(`home-intro.js is missing homepage animation behavior: ${value}`);
@@ -280,7 +295,9 @@ for (const value of [
   ".forge-header--editor",
   "padding-inline: calc(12px + clamp(20px, 2.5vw, 34px))",
   ".header-link",
-  "font-size: 17px",
+  "--header-label-size: 24px",
+  "--header-label-size: 18px",
+  "font-size: var(--header-label-size)",
   "height: 84px",
 ]) {
   if (!headerCSS.includes(value)) {
@@ -322,8 +339,8 @@ for (const value of [
   'data-line-cap-option="round"',
   'data-line-cap-option="butt"',
   '<h4 id="export-title">Download</h4>',
-  'class="header-link" href="/grug/">grug font</a>',
-  'href="/create/" aria-current="page">create font</a>',
+  'class="header-link" href="/grug/">grug hand</a>',
+  'href="/create/" aria-current="page">create</a>',
   "data-theme-toggle",
   'href="/header.css"',
   'href="/rough-edges.css"',
@@ -384,7 +401,7 @@ for (const value of [
   "--rough-edge-intensity: 2.35",
   "font-size: clamp(46px, 4vw, 62px)",
   "--editor-side-column: minmax(290px, 0.88fr)",
-  "--glyph-column-min: 90px",
+  "--glyph-column-min: 72px",
   "--glyph-column-max: 122px",
   "grid-template-columns: var(--editor-side-column) minmax(440px, 1.55fr) var(--editor-side-column)",
   "repeat(auto-fill, minmax(var(--glyph-column-min), 1fr))",
@@ -469,8 +486,8 @@ for (const value of [
   "one wisdom today",
   "download grug",
   'class="grug-download-icon" aria-hidden="true">&#xE085;</span>',
-  'href="/grug/" aria-current="page">grug font</a>',
-  'class="header-link" href="/create/">create font</a>',
+  'href="/grug/" aria-current="page">grug hand</a>',
+  'class="header-link" href="/create/">create</a>',
   "data-theme-toggle",
   'href="/header.css"',
   'href="/rough-edges.css"',
@@ -539,6 +556,7 @@ if (grugFontApp.includes("wisdomCount")) {
 
 for (const value of [
   ".wisdom-replay-canvas",
+  ".wisdom-card .wisdom-replay-canvas",
   ".wisdom-replay.is-replaying .wisdom-replay-static",
   ".wisdom-replay:focus-visible",
   "@media (hover: hover) and (pointer: fine)",
@@ -589,6 +607,10 @@ for (const value of [
   "ResizeObserver",
   "MutationObserver",
   "rough-range-host",
+  "MASKED_BOX_SELECTOR",
+  "installMaskedBox",
+  "rough-video-outline",
+  'setProperty("-webkit-mask-image"',
   "--rough-edge-intensity",
   '".button"',
   '".button--primary"',
@@ -632,6 +654,10 @@ for (const value of [
   ".rough-fill__shape",
   '.segmented button[aria-pressed="true"] > .rough-edge-overlay',
   '.variation-thumbnail[aria-pressed="true"] > .rough-edge-overlay',
+  ".rough-video-host",
+  ".rough-range-host,\n.rough-video-host",
+  ".rough-video-outline",
+  "-webkit-mask-size: 100% 100%",
   "fill: var(--rough-fill-color, var(--ink))",
   "stroke: none",
   ".github-scribble",
@@ -872,14 +898,14 @@ assert.deepEqual(
 );
 const homepageTitlePlan = makeAnimatedPreviewPlan(
   project,
-  "Hand-drawn text\nfor every app.",
+  "Hand drawn text\nin your app.",
   {
     width: 780,
     fontSize: 90,
     lineHeight: 91.8,
   },
 );
-assert.equal(homepageTitlePlan.items.length, 26);
+assert.equal(homepageTitlePlan.items.length, 23);
 const homepagePrimaryGlyphs = new Map();
 for (const glyph of [...project.glyphs].sort(
   (left, right) => left.variationIndex - right.variationIndex,
@@ -896,14 +922,14 @@ assert.ok(
 assert.ok(
   Math.max(
     ...homepageTitlePlan.items
-      .slice(0, "Hand-drawntext".length)
+      .slice(0, "Handdrawntext".length)
       .flatMap((item) => item.strokes)
       .flatMap((stroke) => stroke.points)
       .map((point) => point.y),
   ) <
     Math.min(
       ...homepageTitlePlan.items
-        .slice("Hand-drawntext".length)
+        .slice("Handdrawntext".length)
         .flatMap((item) => item.strokes)
         .flatMap((stroke) => stroke.points)
         .map((point) => point.y),

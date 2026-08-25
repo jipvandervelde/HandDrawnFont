@@ -52,7 +52,7 @@
   --page-gutter: clamp(20px, 5vw, 72px);
   --content-width: 1280px;
   --editor-side-column: minmax(290px, 0.88fr);
-  --glyph-column-min: 90px;
+  --glyph-column-min: 72px;
   --glyph-column-max: 122px;
   --z-dialog: 200;
   --z-header: 100;
@@ -236,8 +236,7 @@ button:disabled {
 .section-heading h1,
 .section-heading h2,
 .wisdom-heading h2,
-.coverage-heading h2,
-.format-section > h2 {
+.coverage-heading h2 {
   margin: 0;
   font-size: clamp(46px, 7vw, 94px);
   font-weight: 400;
@@ -434,8 +433,13 @@ button:disabled {
   display: block;
   width: 100%;
   height: 100%;
+  transform: translate(1px, 1px);
   opacity: 0;
   pointer-events: none;
+}
+
+.wisdom-card .wisdom-replay-canvas {
+  transform: translate(1px, 1px);
 }
 
 .wisdom-replay.is-replaying .wisdom-replay-static {
@@ -1299,9 +1303,16 @@ input[type="range"]::-moz-range-thumb {
 
 .project-file-actions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  grid-template-columns: 1fr;
   gap: 8px;
-  margin-top: 16px;
+}
+
+.project-file-divider {
+  width: 100%;
+  height: 0;
+  flex: 0 0 auto;
+  margin-block: 16px;
 }
 
 .project-file-actions button,
@@ -1338,15 +1349,11 @@ input[type="range"]::-moz-range-thumb {
   font-size: 14px;
 }
 
-.format-section > h2 {
-  max-width: 1000px;
-}
-
 .format-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  margin-top: 60px;
+  margin-top: 0;
 }
 
 .format-grid article {
@@ -1363,13 +1370,6 @@ input[type="range"]::-moz-range-thumb {
 
 .format-grid article:last-child {
   background: var(--paper);
-}
-
-.format-grid article > p:first-child {
-  margin: 0 0 78px;
-  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
-  font-size: 10px;
-  text-transform: uppercase;
 }
 
 .format-grid h3 {
@@ -1631,7 +1631,9 @@ input[type="range"]::-moz-range-thumb {
 
   .project-panel .panel-heading,
   .project-panel .preview-card,
-  .project-panel .privacy-note {
+  .project-panel .privacy-note,
+  .project-file-divider,
+  .project-file-actions {
     grid-column: 1 / -1;
   }
 
@@ -1668,8 +1670,7 @@ input[type="range"]::-moz-range-thumb {
   .section-heading h1,
   .section-heading h2,
   .wisdom-heading h2,
-  .coverage-heading h2,
-  .format-section > h2 {
+  .coverage-heading h2 {
     font-size: clamp(43px, 12vw, 58px);
   }
 
@@ -1855,10 +1856,6 @@ input[type="range"]::-moz-range-thumb {
   .format-grid article {
     min-height: 220px;
     padding: 24px 20px;
-  }
-
-  .format-grid article > p:first-child {
-    margin-bottom: 36px;
   }
 
   .forge-footer {

@@ -15,11 +15,28 @@ const staticTitle = document.querySelector("[data-home-title-static]");
 const staticTitleLines = document.querySelectorAll("[data-home-title-line]");
 const canvas = document.querySelector("[data-home-title-canvas]");
 const revealTargets = document.querySelectorAll("[data-home-after-intro]");
+const demoVideo = document.querySelector("[data-home-demo-video]");
 const reducedMotion = window.matchMedia(REDUCED_MOTION_QUERY);
 
 let animationFrame = 0;
 let failSafe = window.__homeIntroFailSafe || 0;
 let finished = false;
+let demoVideoVisible = true;
+
+function updateDemoVideoPlayback() {
+  if (!demoVideo) return;
+
+  if (!finished || reducedMotion.matches || document.hidden || !demoVideoVisible) {
+    demoVideo.pause();
+    demoVideo.controls = reducedMotion.matches;
+    return;
+  }
+
+  demoVideo.controls = false;
+  demoVideo.play().catch(() => {
+    demoVideo.controls = true;
+  });
+}
 
 function setRevealTargetsInert(inert) {
   for (const target of revealTargets) target.inert = inert;
@@ -34,6 +51,7 @@ function finishIntro() {
   root.classList.remove("home-intro-pending");
   root.classList.add("home-intro-complete");
   root.dataset.homeIntro = "complete";
+  updateDemoVideoPlayback();
 }
 
 function prepareCanvas(target) {
@@ -141,6 +159,17 @@ async function playIntro() {
 
 reducedMotion.addEventListener("change", ({ matches }) => {
   if (matches) finishIntro();
+  updateDemoVideoPlayback();
 });
+
+document.addEventListener("visibilitychange", updateDemoVideoPlayback);
+
+if (demoVideo && "IntersectionObserver" in window) {
+  const videoObserver = new IntersectionObserver(([entry]) => {
+    demoVideoVisible = entry?.isIntersecting ?? true;
+    updateDemoVideoPlayback();
+  });
+  videoObserver.observe(demoVideo);
+}
 
 playIntro();

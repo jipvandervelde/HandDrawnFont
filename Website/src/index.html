@@ -64,8 +64,8 @@
       </a>
       <nav class="header-nav" aria-label="site links">
         <div class="header-links">
-          <a class="header-link" href="/grug/">grug font</a>
-          <a class="header-link" href="/create/">create font</a>
+          <a class="header-link" href="/grug/">grug hand</a>
+          <a class="header-link" href="/create/">create</a>
         </div>
         <button
           class="theme-toggle"
@@ -81,33 +81,54 @@
 
     <main id="main">
       <section class="story" aria-labelledby="story-title">
-        <div class="section-heading">
-          <h1 id="story-title" class="hand-drawn hand-drawn--section home-title">
-            <span data-home-title-static>
-              <span data-home-title-line>Hand-drawn text</span>
-              <span data-home-title-line>for every app.</span>
-            </span>
-            <canvas
-              class="home-title-canvas"
-              data-home-title-canvas
-              aria-hidden="true"
-            ></canvas>
-          </h1>
-        </div>
+        <div class="story-hero">
+          <div class="story-intro">
+            <div class="section-heading">
+              <h1 id="story-title" class="hand-drawn hand-drawn--section home-title">
+                <span data-home-title-static>
+                  <span data-home-title-line>Hand drawn text</span>
+                  <span data-home-title-line>in your app.</span>
+                </span>
+                <canvas
+                  class="home-title-canvas"
+                  data-home-title-canvas
+                  aria-hidden="true"
+                ></canvas>
+              </h1>
+            </div>
 
-        <p class="story-copy" data-home-after-intro>
-          Draw each letter once, then reuse the same strokes, variations, and
-          animation in every SwiftUI project.
-        </p>
+            <p class="story-copy" data-home-after-intro>
+              truly hand drawn text and illustrations in your app, made by hand,
+              rendered by swift.
+            </p>
 
-        <div class="story-actions" data-home-after-intro>
-          <a class="button button--primary" href="/create/">Create your font</a>
-          <a
-            class="button button--quiet"
-            href="https://github.com/jipvandervelde/HandDrawnFont"
-          >
-            Open GitHub <span class="github-scribble" aria-hidden="true"></span>
-          </a>
+            <div class="story-actions" data-home-after-intro>
+              <a class="button button--primary" href="/create/">Create your font</a>
+              <a
+                class="button button--quiet"
+                href="https://github.com/jipvandervelde/HandDrawnFont"
+              >
+                Open GitHub <span class="github-scribble" aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
+
+          <figure class="story-video" data-home-after-intro>
+            <video
+              class="story-video__media"
+              data-home-demo-video
+              muted
+              loop
+              playsinline
+              controls
+              preload="metadata"
+              poster="/video/grug-demo-poster.jpg"
+              aria-label="Grug showing hand-drawn text and illustrations in the app"
+            >
+              <source src="/video/grug-demo.mp4" type="video/mp4" />
+              Your browser does not support embedded video.
+            </video>
+          </figure>
         </div>
 
         <div class="feature-grid" data-home-after-intro>
@@ -142,21 +163,45 @@
             class="button button--primary"
             href="https://github.com/jipvandervelde/HandDrawnFont#install-from-git"
           >
-            Open GitHub <span class="github-scribble" aria-hidden="true"></span>
+            Open in GitHub <span class="github-scribble" aria-hidden="true"></span>
           </a>
         </div>
 
-        <div class="code-card">
-          <div class="code-card__bar">
-            <span>swift</span>
-            <button type="button" data-copy-code>Copy</button>
+        <div class="install-code">
+          <div class="package-url">
+            <label class="package-url__label" for="package-url">
+              Enter this URL in Swift Package Manager:
+            </label>
+            <div class="package-url__field">
+              <input
+                id="package-url"
+                class="package-url__input"
+                type="url"
+                value="https://github.com/jipvandervelde/HandDrawnFont"
+                readonly
+                spellcheck="false"
+                autocomplete="off"
+                data-package-url
+              />
+              <button class="package-url__copy" type="button" data-copy-package-url>
+                Copy
+              </button>
+            </div>
+            <p class="sr-only" aria-live="polite" data-copy-package-status></p>
           </div>
-          <pre><code data-code>import HandDrawnFont
+
+          <div class="code-card">
+            <div class="code-card__bar">
+              <span>swift</span>
+              <button type="button" data-copy-code>Copy</button>
+            </div>
+            <pre><code data-code>import HandDrawnFont
 
 HandDrawnText(
     "Hand-drawn text, ready to move."
 )</code></pre>
-          <p class="sr-only" aria-live="polite" data-copy-status></p>
+            <p class="sr-only" aria-live="polite" data-copy-status></p>
+          </div>
         </div>
       </section>
 
@@ -179,16 +224,32 @@ HandDrawnText(
       const copyButton = document.querySelector("[data-copy-code]");
       const code = document.querySelector("[data-code]");
       const status = document.querySelector("[data-copy-status]");
+      const packageUrl = document.querySelector("[data-package-url]");
+      const packageCopyButton = document.querySelector("[data-copy-package-url]");
+      const packageStatus = document.querySelector("[data-copy-package-status]");
+
+      const showCopiedState = (button, liveRegion, message) => {
+        button.textContent = "Copied";
+        liveRegion.textContent = message;
+        window.setTimeout(() => {
+          button.textContent = "Copy";
+          liveRegion.textContent = "";
+        }, 1800);
+      };
 
       copyButton?.addEventListener("click", async () => {
         if (!code || !status) return;
         await navigator.clipboard.writeText(code.textContent ?? "");
-        copyButton.textContent = "Copied";
-        status.textContent = "code copied";
-        window.setTimeout(() => {
-          copyButton.textContent = "Copy";
-          status.textContent = "";
-        }, 1800);
+        showCopiedState(copyButton, status, "code copied");
+      });
+
+      packageUrl?.addEventListener("focus", () => packageUrl.select());
+      packageUrl?.addEventListener("click", () => packageUrl.select());
+
+      packageCopyButton?.addEventListener("click", async () => {
+        if (!packageUrl || !packageStatus) return;
+        await navigator.clipboard.writeText(packageUrl.value);
+        showCopiedState(packageCopyButton, packageStatus, "package URL copied");
       });
     </script>
   </body>

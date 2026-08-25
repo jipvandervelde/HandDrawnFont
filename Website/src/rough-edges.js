@@ -17,6 +17,8 @@
   const BOX_SELECTOR = [
     ".button",
     ".feature-card",
+    ".package-url__field",
+    ".package-url__copy",
     ".code-card__bar button",
     ".font-card",
     ".font-card > a",
@@ -40,10 +42,11 @@
     ".rough-control-host",
   ].join(",");
   const CONTROL_SELECTOR = [
-    'input:not([type="range"]):not([type="file"]):not([type="hidden"])',
+    'input:not([type="range"]):not([type="file"]):not([type="hidden"]):not(.package-url__input)',
     "select",
   ].join(",");
   const RANGE_SELECTOR = 'input[type="range"]';
+  const MASKED_BOX_SELECTOR = ".story-video";
   let installIndex = 0;
 
   function seedFor(value) {
@@ -195,6 +198,45 @@
     new ResizeObserver(draw).observe(element);
   }
 
+  function installMaskedBox(element, index) {
+    if (element.dataset.roughMaskInstalled === "true") return;
+    const media = element.querySelector(".story-video__media");
+    if (!media) return;
+
+    element.dataset.roughMaskInstalled = "true";
+    const svg = makeSVG("rough-video-outline");
+    const outline = makePath("rough-edge__stroke rough-edge__stroke--main");
+    const seed = seedFor(`${location.pathname}:mask:${elementIdentity(element, index)}`);
+    svg.append(outline);
+    element.append(svg);
+    element.classList.add("rough-video-host");
+
+    const draw = () => {
+      const rectangle = element.getBoundingClientRect();
+      const width = Math.max(8, rectangle.width);
+      const height = Math.max(8, rectangle.height);
+      const styles = getComputedStyle(element);
+      const radius = Number.parseFloat(styles.borderTopLeftRadius) || 0;
+      const intensity =
+        Number.parseFloat(styles.getPropertyValue("--rough-edge-intensity")) || 1.75;
+      const path = roughBoxPath(width, height, radius, seed, intensity);
+      const maskSVG = [
+        '<svg xmlns="http://www.w3.org/2000/svg"',
+        ` viewBox="0 0 ${width} ${height}" preserveAspectRatio="none">`,
+        `<path d="${path}" fill="white"/></svg>`,
+      ].join("");
+      const maskImage = `url("data:image/svg+xml,${encodeURIComponent(maskSVG)}")`;
+
+      svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+      outline.setAttribute("d", path);
+      media.style.setProperty("-webkit-mask-image", maskImage);
+      media.style.setProperty("mask-image", maskImage);
+    };
+
+    draw();
+    new ResizeObserver(draw).observe(element);
+  }
+
   function installFill(element, index) {
     if (element.dataset.roughFillInstalled === "true") return;
     element.dataset.roughFillInstalled = "true";
@@ -290,6 +332,9 @@
   }
 
   function installWithin(root) {
+    for (const element of matchingElements(root, MASKED_BOX_SELECTOR)) {
+      installMaskedBox(element, installIndex++);
+    }
     for (const control of matchingElements(root, CONTROL_SELECTOR)) {
       installControl(control, installIndex++);
     }
@@ -306,7 +351,7 @@
       if (element.matches(FILL_SELECTOR)) continue;
       installBox(element, installIndex++);
     }
-    for (const element of matchingElements(root, ".code-card__bar")) {
+    for (const element of matchingElements(root, ".code-card__bar, .project-file-divider")) {
       installBottomLine(element, installIndex++);
     }
   }
