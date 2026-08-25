@@ -120,6 +120,7 @@ const requiredMarkup = [
   "Create your font",
   "Open GitHub",
   "Open in GitHub",
+  "thanks to our apple design award winning app grug. now in your own app.",
   'class="install-code"',
   "Enter this URL in Swift Package Manager:",
   "data-package-url",
