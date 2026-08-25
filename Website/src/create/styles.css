@@ -1797,6 +1797,18 @@ input[type="range"]::-moz-range-thumb {
     height: 44px;
   }
 
+  .forge-app .rough-range-host {
+    height: 44px;
+  }
+
+  .forge-app .rough-range-overlay {
+    top: 50%;
+    right: 0;
+    bottom: auto;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
   .project-panel {
     display: flex;
     padding: 18px 16px;
