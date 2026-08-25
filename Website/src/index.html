@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f5edd6" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
     <meta
       name="description"
       content="HandDrawnFont is a SwiftUI package for animated hand-drawn text, glyphs, and font authoring."
@@ -13,9 +14,21 @@
     <meta property="og:title" content="HandDrawnFont" />
     <meta
       property="og:description"
-      content="Real pen strokes. One small Swift package. Many apps."
+      content="A Swift package for real pen strokes, animated text, and custom glyph tools."
     />
     <link rel="canonical" href="https://handdrawn.software/" />
+    <script src="/theme.js"></script>
+    <script>
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        const root = document.documentElement;
+        root.classList.add("home-intro-pending");
+        window.__homeIntroFailSafe = window.setTimeout(() => {
+          root.classList.remove("home-intro-pending");
+          root.classList.add("home-intro-complete");
+          root.dataset.homeIntro = "complete";
+        }, 7000);
+      }
+    </script>
     <link
       rel="preload"
       href="/fonts/GrugHand-Regular.ttf"
@@ -24,144 +37,134 @@
       crossorigin
     />
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/header.css" />
+    <link rel="stylesheet" href="/rough-edges.css" />
+    <script src="/home-intro.js" defer></script>
+    <script src="/rough-edges.js" defer></script>
     <title>HandDrawnFont — animated hand-drawn text for SwiftUI</title>
   </head>
   <body>
-    <a class="skip-link" href="#main">skip to words</a>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header" aria-label="main navigation">
+    <header
+      class="site-header forge-header--editor"
+      aria-label="main navigation"
+      data-home-after-intro
+    >
       <a class="wordmark" href="/" aria-label="HandDrawnFont home">
         handdrawn<span>.software</span>
       </a>
       <nav class="header-nav" aria-label="site links">
-        <a class="header-link" href="/forge/">font forge</a>
-        <a
-          class="header-link"
-          href="https://github.com/jipvandervelde/HandDrawnFont"
+        <div class="header-links">
+          <a class="header-link" href="/grug/">grug font</a>
+          <a class="header-link" href="/create/">create font</a>
+        </div>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Color scheme: system. Switch to light."
+          title="system color scheme · switch to light"
         >
-          github <span aria-hidden="true">↗</span>
-        </a>
+          <span class="theme-glyph" aria-hidden="true">&#xE0BD;</span>
+        </button>
       </nav>
     </header>
 
     <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <p class="eyebrow">handdrawnfont · swift package</p>
-
-        <h1 id="hero-title" class="hand-drawn hand-drawn--hero">
-          hand draw letter.<br />letter visit app.
-        </h1>
-
-        <div class="hero-bottom">
-          <p class="hero-copy">
-            grug draw letter once. small swift package carry stroke and
-            movement to many app. drawing tool come too.
-          </p>
-
-          <div class="hero-actions">
-            <a
-              class="button button--primary"
-              href="https://github.com/jipvandervelde/HandDrawnFont"
-            >
-              open github <span aria-hidden="true">↗</span>
-            </a>
-            <a class="button button--quiet" href="#small-spell">see small spell</a>
-          </div>
-        </div>
-
-        <ul class="platform-list" aria-label="package requirements">
-          <li>swift 6</li>
-          <li>swiftui</li>
-          <li>ios 16+</li>
-          <li>macos 13+</li>
-        </ul>
-      </section>
-
       <section class="story" aria-labelledby="story-title">
         <div class="section-heading">
-          <p class="eyebrow">why small box exist</p>
-          <h2 id="story-title" class="hand-drawn hand-drawn--section">
-            many app. one hand.
-          </h2>
+          <h1 id="story-title" class="hand-drawn hand-drawn--section home-title">
+            <span data-home-title-static>
+              <span data-home-title-line>Hand-drawn text</span>
+              <span data-home-title-line>for every app.</span>
+            </span>
+            <canvas
+              class="home-title-canvas"
+              data-home-title-canvas
+              aria-hidden="true"
+            ></canvas>
+          </h1>
         </div>
 
-        <p class="story-copy">
-          copying drawing code make many cave. fix one cave. other cave still
-          hurt. package keep hand in one place.
+        <p class="story-copy" data-home-after-intro>
+          Draw each letter once, then reuse the same strokes, variations, and
+          animation in every SwiftUI project.
         </p>
 
-        <div class="feature-grid">
+        <div class="story-actions" data-home-after-intro>
+          <a class="button button--primary" href="/create/">Create your font</a>
+          <a
+            class="button button--quiet"
+            href="https://github.com/jipvandervelde/HandDrawnFont"
+          >
+            Open GitHub <span class="github-scribble" aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <div class="feature-grid" data-home-after-intro>
           <article class="feature-card feature-card--peach">
-            <p class="feature-number">01</p>
-            <h3>real stroke</h3>
-            <p>letter use real pen path. no fake font skin.</p>
+            <h3>Real strokes</h3>
+            <p>Letters are rendered from their original pen paths, not a conventional font.</p>
           </article>
           <article class="feature-card feature-card--sky">
-            <p class="feature-number">02</p>
-            <h3>letter move</h3>
-            <p>stroke remember order. letter walk same path hand walk.</p>
+            <h3>Built-in animation</h3>
+            <p>Stroke order and timing stay intact, so every word can draw itself on screen.</p>
           </article>
           <article class="feature-card feature-card--yellow">
-            <p class="feature-number">03</p>
-            <h3>debug cave</h3>
-            <p>see variation. see bound. see point. see timing. draw new letter.</p>
+            <h3>Authoring tools</h3>
+            <p>Inspect bounds and points, test variations, and add new letters or icons.</p>
           </article>
         </div>
       </section>
 
-      <section id="small-spell" class="install" aria-labelledby="install-title">
+      <section
+        id="install"
+        class="install"
+        aria-labelledby="install-title"
+        data-home-after-intro
+      >
         <div class="install-copy">
-          <p class="eyebrow">small spell</p>
-          <h2 id="install-title">one line wake hand.</h2>
+          <h2 id="install-title">Add it with Swift Package Manager.</h2>
           <p>
-            add package. import HandDrawnFont. use animated text view. hand
-            wake. reduce motion still respected.
+            Import HandDrawnFont and render animated handwriting in a few lines.
+            The package respects Reduce Motion automatically.
           </p>
           <a
-            class="text-link"
+            class="button button--primary"
             href="https://github.com/jipvandervelde/HandDrawnFont#install-from-git"
           >
-            read install words <span aria-hidden="true">→</span>
+            Open GitHub <span class="github-scribble" aria-hidden="true"></span>
           </a>
         </div>
 
         <div class="code-card">
           <div class="code-card__bar">
             <span>swift</span>
-            <button type="button" data-copy-code>copy spell</button>
+            <button type="button" data-copy-code>Copy</button>
           </div>
           <pre><code data-code>import HandDrawnFont
 
 HandDrawnText(
-    "small action move mountain."
+    "Hand-drawn text, ready to move."
 )</code></pre>
           <p class="sr-only" aria-live="polite" data-copy-status></p>
         </div>
       </section>
 
-      <section class="closing" aria-labelledby="closing-title">
-        <h2 id="closing-title" class="hand-drawn hand-drawn--closing">
-          one hand. many place.
-        </h2>
-        <div class="closing-actions">
-          <a class="button button--light" href="/forge/">make own font →</a>
-          <a
-            class="button button--light"
-            href="https://github.com/jipvandervelde/HandDrawnFont"
-          >
-            take package <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </section>
     </main>
 
-    <footer class="site-footer">
+    <footer class="site-footer" data-home-after-intro>
       <p>
-        made by Jip van der Velde and Michel Elings at Ocho. creators of
-        <a href="https://developer.apple.com/design/awards/">grug</a>, 2026
-        Apple Design Award winner.
+        Made by <a href="https://x.com/jipvandervelde">Jip van der Velde</a> and
+        <a href="https://x.com/michelelings">Michel Elings</a> at
+        <a href="https://ocho.so">Ocho</a>, creators of
+        <a href="https://apps.apple.com/app/grug/id6751649802">grug</a>,
+        a <a href="https://developer.apple.com/design/awards/"
+          >2026 Apple Design Award winner</a
+        >.
       </p>
-      <p>two human draw many line. now line travel.</p>
+      <p>Built for reuse, customization, and sharing.</p>
     </footer>
 
     <script>
@@ -172,10 +175,10 @@ HandDrawnText(
       copyButton?.addEventListener("click", async () => {
         if (!code || !status) return;
         await navigator.clipboard.writeText(code.textContent ?? "");
-        copyButton.textContent = "copied. small win.";
+        copyButton.textContent = "Copied";
         status.textContent = "code copied";
         window.setTimeout(() => {
-          copyButton.textContent = "copy spell";
+          copyButton.textContent = "Copy";
           status.textContent = "";
         }, 1800);
       });

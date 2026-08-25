@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+    <meta
+      name="description"
+      content="Draw letters and icons in a private browser-based font editor. Export editable JSON and installable TTF files."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://handdrawn.software/create/" />
+    <meta property="og:title" content="HandDrawnFont Forge" />
+    <meta
+      property="og:description"
+      content="Create a custom font and export editable JSON and installable TTF files in your browser."
+    />
+    <link rel="canonical" href="https://handdrawn.software/create/" />
+    <script src="/theme.js"></script>
+    <link
+      rel="preload"
+      href="/fonts/GrugHand-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/create/styles.css" />
+    <link rel="stylesheet" href="/header.css" />
+    <link rel="stylesheet" href="/rough-edges.css" />
+    <script src="/rough-edges.js" defer></script>
+    <title>Font Forge — draw letters, icons, and export TTF</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to editor</a>
+
+    <header class="forge-header forge-header--editor" aria-label="main navigation">
+      <a class="wordmark" href="/">handdrawn<span>.software</span></a>
+      <nav class="header-nav" aria-label="site links">
+        <div class="header-links">
+          <a class="header-link" href="/grug/">grug font</a>
+          <a class="header-link" href="/create/" aria-current="page">create font</a>
+        </div>
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-label="Color scheme: system. Switch to light."
+          title="system color scheme · switch to light"
+        >
+          <span class="theme-glyph" aria-hidden="true">&#xE0BD;</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="draw" class="editor-section" aria-label="create font">
+        <div class="forge-app" data-forge-app aria-busy="true">
+          <aside class="glyph-browser" aria-labelledby="glyph-browser-title">
+            <div class="panel-heading">
+              <div>
+                <h3 id="glyph-browser-title"><span data-glyph-count>90</span> glyphs</h3>
+              </div>
+              <button
+                class="square-button square-button--thumb"
+                type="button"
+                data-open-add
+                aria-label="Add glyph"
+              >
+                +
+              </button>
+            </div>
+
+            <label class="search-field" for="glyph-search">
+              <span class="sr-only">Search glyphs</span>
+              <input
+                id="glyph-search"
+                type="search"
+                placeholder="Search letters and icons"
+                autocomplete="off"
+                spellcheck="false"
+                data-glyph-search
+              />
+            </label>
+
+            <div class="segmented segmented--small" aria-label="Editable glyph group">
+              <button type="button" data-glyph-filter="characters" aria-pressed="true">
+                abc
+              </button>
+              <button type="button" data-glyph-filter="icons" aria-pressed="false">
+                icons
+              </button>
+            </div>
+
+            <div class="glyph-grid" data-glyph-grid></div>
+          </aside>
+
+          <section class="drawing-panel" aria-labelledby="drawing-title">
+            <div class="panel-heading panel-heading--drawing">
+              <div>
+                <p class="panel-kicker" data-current-kind>character</p>
+                <h3 id="drawing-title" data-current-key>—</h3>
+              </div>
+              <div class="variation-field" aria-labelledby="variation-label">
+                <span id="variation-label">variations</span>
+                <div
+                  class="variation-strip"
+                  role="group"
+                  data-variation-strip
+                ></div>
+              </div>
+            </div>
+
+            <div class="canvas-stage">
+              <div class="canvas-shell">
+                <canvas
+                  width="600"
+                  height="800"
+                  data-drawing-canvas
+                  aria-label="Glyph drawing canvas. Draw with one finger, Apple Pencil, or pointing device."
+                ></canvas>
+                <span class="guide-label guide-label--cap">cap height</span>
+                <span class="guide-label guide-label--x">x-height</span>
+                <span class="guide-label guide-label--baseline">baseline</span>
+              </div>
+            </div>
+
+            <div class="drawing-actions">
+              <button type="button" data-undo-stroke disabled>undo stroke</button>
+              <button type="button" data-copy-variation>copy variation</button>
+              <button type="button" data-clear-glyph disabled>clear</button>
+              <button
+                class="drawing-play"
+                type="button"
+                aria-label="Play selected letter animation"
+                title="Play letter animation"
+                data-glyph-play
+                disabled
+              >
+                <span class="drawing-play__icon" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <div class="guide-controls">
+              <label>
+                <span>font cap height <output data-cap-height-output>0.06</output></span>
+                <input type="range" min="0" max="1" step="0.01" data-cap-height />
+              </label>
+              <label>
+                <span>font x-height <output data-x-height-output>0.25</output></span>
+                <input type="range" min="0" max="1" step="0.01" data-x-height />
+              </label>
+              <label>
+                <span>font baseline <output data-baseline-output>0.75</output></span>
+                <input type="range" min="0" max="1" step="0.01" data-baseline />
+              </label>
+            </div>
+          </section>
+
+          <aside class="project-panel" aria-label="Font settings">
+            <span class="sr-only" role="status" aria-live="polite" data-save-indicator>
+              loading
+            </span>
+
+            <label class="stacked-field">
+              <span>font family name</span>
+              <input
+                type="text"
+                maxlength="63"
+                value="My Hand"
+                autocomplete="off"
+                spellcheck="false"
+                data-family-name
+              />
+            </label>
+
+            <div class="project-sliders">
+              <label>
+                <span>pen width <output data-pen-output>60</output></span>
+                <input type="range" min="20" max="140" step="5" data-pen-width />
+              </label>
+              <label>
+                <span>letter space <output data-bearing-output>40</output></span>
+                <input type="range" min="0" max="140" step="5" data-side-bearing />
+              </label>
+            </div>
+
+            <fieldset class="stroke-cap-field">
+              <legend>stroke ends</legend>
+              <div class="segmented stroke-cap-segmented" data-line-cap>
+                <button
+                  type="button"
+                  aria-label="Round stroke ends"
+                  aria-pressed="true"
+                  title="Round stroke ends"
+                  data-line-cap-option="round"
+                >
+                  <span
+                    class="stroke-cap-example stroke-cap-example--round"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+                <button
+                  type="button"
+                  aria-label="Flat stroke ends"
+                  aria-pressed="false"
+                  title="Flat stroke ends"
+                  data-line-cap-option="butt"
+                >
+                  <span
+                    class="stroke-cap-example stroke-cap-example--flat"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              </div>
+            </fieldset>
+
+            <div class="preview-card">
+              <label class="sr-only" for="preview-copy">font preview</label>
+              <span class="sr-only" role="status" aria-live="polite" data-preview-status>
+                building
+              </span>
+              <div class="preview-stage" data-preview-stage>
+                <textarea
+                  id="preview-copy"
+                  rows="3"
+                  autocomplete="off"
+                  spellcheck="false"
+                  aria-label="Font preview text"
+                  data-preview-input
+                  data-font-preview
+                >Type here to preview your font.</textarea>
+                <canvas data-animated-preview aria-hidden="true"></canvas>
+              </div>
+              <button
+                class="preview-play"
+                type="button"
+                aria-label="Play animated font preview"
+                data-preview-play
+              >
+                <span class="preview-play__icon" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <section class="export-section" aria-labelledby="export-title">
+              <div class="export-heading">
+                <h4 id="export-title">Download</h4>
+              </div>
+
+              <button
+                class="export-action export-action--primary"
+                type="button"
+                data-export-package
+              >
+                <span class="export-action__copy">
+                  <strong data-button-label>download full package</strong>
+                  <small>ZIP · font + editable source + codepoints</small>
+                </span>
+              </button>
+
+              <div class="export-stack" aria-label="Individual downloads">
+                <button class="export-action" type="button" data-export-ttf>
+                  <span class="export-action__copy">
+                    <strong data-button-label>download font (.ttf)</strong>
+                    <small>Install in design tools and apps</small>
+                  </span>
+                </button>
+                <button class="export-action" type="button" data-export-json>
+                  <span class="export-action__copy">
+                    <strong>download editable project</strong>
+                    <small>JSON · continue drawing later</small>
+                  </span>
+                </button>
+                <button class="export-action" type="button" data-export-manifest>
+                  <span class="export-action__copy">
+                    <strong>download codepoint map</strong>
+                    <small>JSON · characters, icons, and alternates</small>
+                  </span>
+                </button>
+              </div>
+            </section>
+
+            <div class="project-file-actions">
+              <label class="file-button">
+                <span>import project</span>
+                <small>JSON · replaces current work</small>
+                <input type="file" accept="application/json,.json" data-import-project />
+              </label>
+              <button type="button" data-reset-project>
+                <span>restore starter font</span>
+                <small>Reset this browser project</small>
+              </button>
+            </div>
+
+            <p class="privacy-note">
+              Everything stays on this device. No account or upload required.
+              Browser storage is convenient, but it is not a backup.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="format-section" aria-labelledby="format-title">
+        <h2 id="format-title">Keep the source.<br />Export the font.</h2>
+        <div class="format-grid">
+          <article>
+            <p>01 · keep this file</p>
+            <h3>Editable project (.json)</h3>
+            <p>
+              This is your working file and backup. It preserves every stroke,
+              variation, guide, spacing setting, custom glyph, and drawing
+              order. Import it here later to continue editing or export a fresh
+              font.
+            </p>
+          </article>
+          <article>
+            <p>02 · use this file</p>
+            <h3>Installable font (.ttf)</h3>
+            <p>
+              This is the finished font for apps and design tools. Install it
+              like any other font or bundle it with a project. It contains
+              compiled outlines and cannot be reopened for editing here; custom
+              glyph assignments live in the codepoint map.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="add-dialog" data-add-dialog aria-labelledby="add-dialog-title">
+      <form method="dialog" data-add-form>
+        <div class="dialog-heading">
+          <div>
+            <p class="panel-kicker">New glyph</p>
+            <h2 id="add-dialog-title">Add a glyph.</h2>
+          </div>
+          <button class="square-button" value="cancel" aria-label="Close dialog">×</button>
+        </div>
+
+        <label class="stacked-field">
+          <span>kind</span>
+          <select data-new-glyph-kind>
+            <option value="character">letter or symbol</option>
+            <option value="icon">named icon</option>
+          </select>
+        </label>
+
+        <label class="stacked-field">
+          <span data-new-glyph-label>one character</span>
+          <input
+            type="text"
+            maxlength="32"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="å"
+            data-new-glyph-value
+          />
+        </label>
+        <p class="field-error" data-new-glyph-error aria-live="polite"></p>
+
+        <div class="dialog-actions">
+          <button class="pill pill--outline" value="cancel">Cancel</button>
+          <button class="pill pill--dark" type="submit" value="default">Create blank glyph</button>
+        </div>
+      </form>
+    </dialog>
+
+    <p class="toast" role="status" aria-live="polite" data-toast></p>
+
+    <footer class="forge-footer">
+      <p>
+        Made by <a href="https://x.com/jipvandervelde">Jip van der Velde</a> and
+        <a href="https://x.com/michelelings">Michel Elings</a> at
+        <a href="https://ocho.so">Ocho</a>, creators of
+        <a href="https://apps.apple.com/app/grug/id6751649802">grug</a>,
+        a <a href="https://developer.apple.com/design/awards/"
+          >2026 Apple Design Award winner</a
+        >.
+      </p>
+      <p>
+        <a href="https://github.com/jipvandervelde/HandDrawnFont">source</a>
+        · <a href="/third-party-notices.txt">third-party notices</a>
+      </p>
+    </footer>
+
+    <script src="/create/app.js" defer></script>
+  </body>
+</html>

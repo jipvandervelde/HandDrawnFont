@@ -1,8 +1,10 @@
 import { createFont } from "fonteditor-core";
+import { EndType, JoinType, inflatePaths } from "clipper2-ts";
 import {
   canvasBaselineY,
   canvasXHeightY,
   fontYForNormalizedPoint,
+  resolveProjectGuides,
 } from "./font-metrics.mjs";
 
 const UNITS_PER_EM = 1000;
@@ -82,42 +84,15 @@ function contour(points, clockwise = true) {
       compact.push(resolved);
     }
   }
+  const first = compact[0];
+  const last = compact.at(-1);
+  if (compact.length > 1 && first.x === last.x && first.y === last.y) compact.pop();
   if (compact.length < 3) return null;
+  if (Math.abs(signedArea(compact)) < 1) return null;
 
   const isClockwise = signedArea(compact) < 0;
   if (isClockwise !== clockwise) compact.reverse();
   return compact;
-}
-
-function circleContour(center, radius, steps = 12) {
-  const points = [];
-  for (let index = 0; index < steps; index += 1) {
-    const angle = (Math.PI * 2 * index) / steps;
-    points.push({
-      x: center.x + Math.cos(angle) * radius,
-      y: center.y + Math.sin(angle) * radius,
-    });
-  }
-  return contour(points, true);
-}
-
-function segmentContour(start, end, radius) {
-  const deltaX = end.x - start.x;
-  const deltaY = end.y - start.y;
-  const length = Math.hypot(deltaX, deltaY);
-  if (length < 0.01) return null;
-
-  const normalX = (-deltaY / length) * radius;
-  const normalY = (deltaX / length) * radius;
-  return contour(
-    [
-      { x: start.x + normalX, y: start.y + normalY },
-      { x: end.x + normalX, y: end.y + normalY },
-      { x: end.x - normalX, y: end.y - normalY },
-      { x: start.x - normalX, y: start.y - normalY },
-    ],
-    true,
-  );
 }
 
 function compactPoints(points, minimumDistance = 3) {
@@ -133,29 +108,41 @@ function compactPoints(points, minimumDistance = 3) {
   return compacted;
 }
 
-function strokeContours(points, width, lineCap) {
-  if (points.length === 0) return [];
-  const radius = width / 2;
-  const result = [];
-
-  if (points.length === 1) {
-    const dot = circleContour(points[0], radius);
-    return dot ? [dot] : [];
+function integerPath(points) {
+  const path = [];
+  for (const point of points) {
+    const resolved = { x: Math.round(point.x), y: Math.round(point.y) };
+    const previous = path.at(-1);
+    if (!previous || previous.x !== resolved.x || previous.y !== resolved.y) {
+      path.push(resolved);
+    }
   }
+  return path;
+}
 
-  for (let index = 1; index < points.length; index += 1) {
-    const segment = segmentContour(points[index - 1], points[index], radius);
-    if (segment) result.push(segment);
-  }
+export function mergeStrokeContours(centerlines, width, lineCap) {
+  const paths = centerlines.map(integerPath).filter((path) => path.length > 0);
+  if (paths.length === 0 || width <= 0) return [];
 
-  const firstJoin = lineCap === "round" ? 0 : 1;
-  const lastJoin = lineCap === "round" ? points.length : points.length - 1;
-  for (let index = firstJoin; index < lastJoin; index += 1) {
-    const circle = circleContour(points[index], radius);
-    if (circle) result.push(circle);
-  }
+  const outlinedPaths = inflatePaths(
+    paths,
+    width / 2,
+    JoinType.Round,
+    lineCap === "round" ? EndType.Round : EndType.Butt,
+    2,
+    0.5,
+  );
 
-  return result;
+  return outlinedPaths
+    .map((path) => {
+      const area = signedArea(path);
+      if (Math.abs(area) < 1) return null;
+
+      // Clipper emits positive outer rings and negative holes in the font's
+      // Cartesian coordinate space. TrueType expects the inverse winding.
+      return contour(path, area > 0);
+    })
+    .filter(Boolean);
 }
 
 function calculateBounds(contours) {
@@ -180,6 +167,17 @@ function sourceScale(glyphs) {
     .filter((height) => Number.isFinite(height) && height > 0);
 
   return TARGET_X_HEIGHT / Math.max(1, median(sourceHeights));
+}
+
+function targetCapHeight(project) {
+  const { baselineY, capHeightY, xHeightY } = resolveProjectGuides(project);
+  const sourceXHeight = baselineY - xHeightY;
+  if (sourceXHeight <= 0) return TARGET_X_HEIGHT;
+  return clamp(
+    Math.round(((baselineY - capHeightY) / sourceXHeight) * TARGET_X_HEIGHT),
+    TARGET_X_HEIGHT,
+    UNITS_PER_EM,
+  );
 }
 
 function fontPointsForGlyph(glyph, scale, sideBearing) {
@@ -280,24 +278,28 @@ function validateGlyph(glyph) {
 
 export function validateProject(project) {
   if (!project || project.formatVersion !== 1 || !Array.isArray(project.glyphs)) {
-    throw new Error("project no speak handdrawn format one");
+    throw new Error("This project does not use HandDrawnFont format version 1.");
   }
   if (
     project.fontGuides !== undefined &&
     (!Number.isFinite(project.fontGuides?.baselineY) ||
       !Number.isFinite(project.fontGuides?.xHeightY) ||
+      (project.fontGuides.capHeightY !== undefined &&
+        !Number.isFinite(project.fontGuides.capHeightY)) ||
       project.fontGuides.baselineY < 0 ||
       project.fontGuides.baselineY > 1 ||
+      (project.fontGuides.capHeightY !== undefined &&
+        (project.fontGuides.capHeightY < 0 || project.fontGuides.capHeightY > 1)) ||
       project.fontGuides.xHeightY < 0 ||
       project.fontGuides.xHeightY > 1)
   ) {
-    throw new Error("font guides leave drawing cave");
+    throw new Error("Font guides must stay within the drawing canvas.");
   }
   if (!project.glyphs.every(validateGlyph)) {
-    throw new Error("one glyph carry broken bone");
+    throw new Error("One or more glyphs contain invalid data.");
   }
   if (project.glyphs.length === 0 || project.glyphs.length > 4096) {
-    throw new Error("glyph cave wrong size");
+    throw new Error("Glyph canvas dimensions must be greater than zero.");
   }
 
   const pointCount = project.glyphs.reduce(
@@ -309,12 +311,12 @@ export function validateProject(project) {
       ),
     0,
   );
-  if (pointCount > 100_000) throw new Error("too many point for one cave");
+  if (pointCount > 100_000) throw new Error("This project contains too many points.");
 
   const pairs = new Set();
   for (const glyph of project.glyphs) {
     const pair = `${glyph.key}\u0000${glyph.variationIndex}`;
-    if (pairs.has(pair)) throw new Error(`duplicate variation for ${glyph.key}`);
+    if (pairs.has(pair)) throw new Error(`Duplicate variation for ${glyph.key}.`);
     pairs.add(pair);
   }
   return project;
@@ -323,7 +325,7 @@ export function validateProject(project) {
 function allocateCodepoint(usedCodepoints, nextCodepoint) {
   let candidate = nextCodepoint;
   while (usedCodepoints.has(candidate) && candidate <= PUA_END) candidate += 1;
-  if (candidate > PUA_END) throw new Error("private-use cave full");
+  if (candidate > PUA_END) throw new Error("No private-use codepoints remain for additional glyphs.");
   usedCodepoints.add(candidate);
   return candidate;
 }
@@ -339,6 +341,7 @@ export function buildTrueType(project) {
     strokeWidth: clamp(Number(project.fontForge?.strokeWidth) || 60, 10, 220),
   };
   const scale = sourceScale(project.glyphs);
+  const capHeight = targetCapHeight(project);
   const groups = new Map();
   for (const glyph of project.glyphs) {
     const group = groups.get(glyph.key) ?? [];
@@ -369,7 +372,9 @@ export function buildTrueType(project) {
       if (primary && isSingleScalar(key)) {
         codepoint = key.codePointAt(0);
         unicodes.push(codepoint);
-        if (/^[a-z]$/.test(key)) unicodes.push(key.toUpperCase().codePointAt(0));
+        if (/^[a-z]$/.test(key) && !groups.has(key.toUpperCase())) {
+          unicodes.push(key.toUpperCase().codePointAt(0));
+        }
       } else {
         codepoint = allocateCodepoint(explicitCodepoints, nextPUACodepoint);
         nextPUACodepoint = codepoint + 1;
@@ -378,9 +383,19 @@ export function buildTrueType(project) {
 
       const name = glyphName(key, glyph.variationIndex, codepoint, primary);
       const centerlines = fontPointsForGlyph(glyph, scale, settings.sideBearing);
-      const contours = centerlines.flatMap((points) =>
-        strokeContours(points, settings.strokeWidth, settings.lineCap),
-      );
+      let contours;
+      try {
+        contours = mergeStrokeContours(
+          centerlines,
+          settings.strokeWidth,
+          settings.lineCap,
+        );
+      } catch (error) {
+        throw new Error(
+          `Could not merge the outline for ${key === " " ? "space" : key}.`,
+          { cause: error },
+        );
+      }
       const bounds = calculateBounds(contours);
       const measuredWidth = glyph.metrics.boundsWidth * glyph.canvasWidth * scale;
       const advanceWidth = clamp(
@@ -410,6 +425,7 @@ export function buildTrueType(project) {
         glyphName: name,
         id: glyph.id,
         key,
+        contourCount: contours.length,
         primary,
         variationIndex: glyph.variationIndex,
       });
@@ -462,7 +478,7 @@ export function buildTrueType(project) {
   data["OS/2"].usWinAscent = ascent;
   data["OS/2"].usWinDescent = descent;
   data["OS/2"].sxHeight = TARGET_X_HEIGHT;
-  data["OS/2"].sCapHeight = TARGET_X_HEIGHT;
+  data["OS/2"].sCapHeight = capHeight;
   data["OS/2"].achVendID = "Ocho";
   font.set(data);
 
@@ -482,6 +498,7 @@ export function buildTrueType(project) {
       styleName: "Regular",
       unitsPerEm: UNITS_PER_EM,
       ascent,
+      capHeight,
       descent,
       xHeight: TARGET_X_HEIGHT,
       ...settings,

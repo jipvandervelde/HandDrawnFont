@@ -1,0 +1,163 @@
+.rough-edge-host,
+.rough-edge-line-host,
+.rough-fill-host,
+.rough-control-host,
+.rough-range-host {
+  position: relative;
+  isolation: isolate;
+}
+
+.rough-edge-host {
+  border-color: transparent !important;
+}
+
+.rough-fill-host {
+  border-color: transparent !important;
+  background: transparent !important;
+}
+
+.rough-fill-overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.rough-fill__shape {
+  fill: var(--rough-fill-color, var(--ink));
+  stroke: none;
+}
+
+.segmented button[aria-pressed="true"] > .rough-edge-overlay,
+.variation-thumbnail[aria-pressed="true"] > .rough-edge-overlay {
+  opacity: 0;
+}
+
+.rough-edge-overlay,
+.rough-edge-line-overlay {
+  position: absolute;
+  z-index: 7;
+  display: block;
+  overflow: visible;
+  color: var(--rough-edge-color, var(--ink));
+  pointer-events: none;
+}
+
+.rough-edge-overlay {
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+}
+
+.rough-edge-line-overlay {
+  right: -2px;
+  bottom: -3px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: 6px;
+}
+
+.rough-edge__stroke {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.rough-edge__stroke--main {
+  stroke-width: 1.2;
+}
+
+.rough-edge__stroke--echo {
+  opacity: 0.38;
+  stroke-width: 0.7;
+}
+
+.rough-edge-overlay--dashed .rough-edge__stroke {
+  stroke-dasharray: 5 5;
+}
+
+.rough-edge-host:disabled .rough-edge__stroke,
+.rough-edge-host[aria-disabled="true"] .rough-edge__stroke {
+  opacity: 0.42;
+  stroke-dasharray: 5 5;
+}
+
+.code-card__bar.rough-edge-line-host {
+  border-bottom-color: transparent;
+  --rough-edge-color: var(--paper);
+}
+
+.canvas-shell.rough-edge-host canvas {
+  border-color: transparent;
+}
+
+.github-scribble {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  flex: 0 0 21px;
+  background: currentColor;
+  pointer-events: none;
+  transform: rotate(-1.5deg);
+  -webkit-mask: url("/github-scribble.svg") center / contain no-repeat;
+  mask: url("/github-scribble.svg") center / contain no-repeat;
+}
+
+.rough-control-host {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  background: var(--paper-soft, var(--paper));
+}
+
+.rough-control-host > input,
+.rough-control-host > select {
+  position: relative;
+  z-index: 1;
+  border-color: transparent !important;
+  background: transparent !important;
+}
+
+.rough-control-host:focus-within,
+.rough-range-host:focus-within {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.rough-control-host > input:focus-visible,
+.rough-control-host > select:focus-visible,
+.rough-range-host > input:focus-visible {
+  outline: none;
+}
+
+.rough-range-host {
+  display: block;
+  width: 100%;
+  height: 20px;
+}
+
+.rough-range-host > input[type="range"] {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 0;
+}
+
+.rough-range-overlay {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 20px;
+  overflow: visible;
+  color: var(--ink);
+  pointer-events: none;
+}

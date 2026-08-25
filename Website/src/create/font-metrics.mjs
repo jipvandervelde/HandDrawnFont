@@ -1,5 +1,6 @@
 export const DEFAULT_FONT_GUIDES = Object.freeze({
   baselineY: 0.729_843_75,
+  capHeightY: 0.06,
   xHeightY: 0.243_281_25,
 });
 
@@ -34,6 +35,9 @@ export function resolveProjectGuides(project) {
   ) {
     return {
       baselineY: project.fontGuides.baselineY,
+      capHeightY: normalizedGuide(project.fontGuides.capHeightY)
+        ? project.fontGuides.capHeightY
+        : DEFAULT_FONT_GUIDES.capHeightY,
       xHeightY: project.fontGuides.xHeightY,
     };
   }
@@ -57,6 +61,7 @@ export function resolveProjectGuides(project) {
     baselineY: normalizedGuide(baselineY)
       ? baselineY
       : DEFAULT_FONT_GUIDES.baselineY,
+    capHeightY: DEFAULT_FONT_GUIDES.capHeightY,
     xHeightY: normalizedGuide(xHeightY)
       ? xHeightY
       : DEFAULT_FONT_GUIDES.xHeightY,
@@ -87,6 +92,44 @@ export function setProjectXHeightY(project, value) {
   for (const glyph of project.glyphs) {
     setCanvasXHeightY(glyph.metrics, guides.xHeightY);
   }
+}
+
+export function setProjectCapHeightY(project, value) {
+  const guides = synchronizeProjectGuides(project);
+  guides.capHeightY = clampNormalized(value);
+}
+
+export function editorCanvasGeometry(glyph, width, height) {
+  const safeWidth = Math.max(1, width);
+  const safeHeight = Math.max(1, height);
+  const sourceAspectRatio = glyph.canvasHeight / glyph.canvasWidth;
+  const contentHeight = Math.min(safeHeight, safeWidth * sourceAspectRatio);
+  return {
+    contentHeight,
+    topInset: Math.max(0, safeHeight - contentHeight),
+  };
+}
+
+export function thumbnailCanvasGeometry(glyph, width, height) {
+  const safeWidth = Math.max(1, width);
+  const safeHeight = Math.max(1, height);
+  const bounds = glyph.metrics;
+  const sourceWidth = Math.max(0.05, bounds.boundsWidth) * glyph.canvasWidth;
+  const sourceHeight = Math.max(0.05, bounds.boundsHeight) * glyph.canvasHeight;
+  const scale = Math.min(
+    Math.max(1, safeWidth - 12) / sourceWidth,
+    Math.max(1, safeHeight - 10) / sourceHeight,
+  );
+  const renderedWidth = sourceWidth * scale;
+  const renderedHeight = sourceHeight * scale;
+
+  return {
+    offsetX: (safeWidth - renderedWidth) / 2,
+    offsetY: (safeHeight - renderedHeight) / 2,
+    scale,
+    sourceX: bounds.boundsX * glyph.canvasWidth,
+    sourceY: bounds.boundsY * glyph.canvasHeight,
+  };
 }
 
 export function deriveBoundsPreservingGuides(glyph, padding = 0.02) {

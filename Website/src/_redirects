@@ -1,0 +1,4 @@
+/forge /create/ 301
+/grug-font /grug/ 301
+/forge/* /create/:splat 301
+/grug-font/* /grug/:splat 301

@@ -7,6 +7,7 @@ const RELAXED_SPEED_MULTIPLIER = 4;
 const PATH_UNITS_PER_SECOND = 12_000;
 const SPACE_DELAY_MS = 32;
 const LINE_BREAK_DELAY_MS = 48;
+const TEXT_CONTROL_BASELINE_ADJUSTMENT = -1;
 
 function median(values) {
   if (values.length === 0) return 1;
@@ -78,7 +79,10 @@ function glyphData(glyph, scale, pixelsPerFontUnit, sideBearing) {
   });
   const measuredWidth = glyph.metrics.boundsWidth * glyph.canvasWidth * scale;
   return {
-    advanceWidth: Math.max(sideBearing * 2 + 40, measuredWidth + sideBearing * 2) * pixelsPerFontUnit,
+    advanceWidth:
+      Math.max(sideBearing * 2 + 40, Math.round(measuredWidth + sideBearing * 2)) *
+      pixelsPerFontUnit,
+    glyphID: glyph.id,
     pathLength: glyph.strokes.reduce((total, stroke) => {
       const sourcePoints = stroke.points.map((point) => ({
         x: point.x * glyph.canvasWidth,
@@ -90,10 +94,27 @@ function glyphData(glyph, scale, pixelsPerFontUnit, sideBearing) {
   };
 }
 
+export function fontBaselineOffset({
+  ascent,
+  descent,
+  fontSize,
+  lineHeight,
+  unitsPerEm,
+}) {
+  const resolvedUnitsPerEm = Math.max(1, unitsPerEm);
+  const scaledAscent = (ascent / resolvedUnitsPerEm) * fontSize;
+  const scaledDescent = (descent / resolvedUnitsPerEm) * fontSize;
+  return (
+    (lineHeight - scaledAscent - scaledDescent) / 2 +
+    scaledAscent +
+    TEXT_CONTROL_BASELINE_ADJUSTMENT
+  );
+}
+
 export function makeAnimatedPreviewPlan(
   project,
   text,
-  { width, fontSize, lineHeight },
+  { width, fontSize, lineHeight, baselineOffset = fontSize * 0.9 },
 ) {
   const glyphs = project.glyphs;
   const groups = glyphGroups(glyphs);
@@ -103,9 +124,7 @@ export function makeAnimatedPreviewPlan(
   const spaceWidth = (Number(project.fontForge?.spaceWidth) || 280) * pixelsPerFontUnit;
   const maximumWidth = Math.max(1, width);
   const resolvedLineHeight = Math.max(fontSize, lineHeight);
-  const baselineOffset = fontSize * 0.9;
   const items = [];
-  let characterIndex = 0;
   let delay = 0;
   let lineIndex = 0;
   let x = 0;
@@ -116,7 +135,7 @@ export function makeAnimatedPreviewPlan(
     if (addDelay) delay += LINE_BREAK_DELAY_MS;
   }
 
-  function dataForCharacter(character, selectionIndex) {
+  function dataForCharacter(character) {
     const key = character.toLowerCase();
     const variations = groups.get(key) ?? [];
     if (variations.length === 0) {
@@ -127,7 +146,9 @@ export function makeAnimatedPreviewPlan(
       };
     }
 
-    const glyph = variations[selectionIndex % variations.length];
+    // The generated TTF maps normal text to variation zero. Use the same
+    // drawing here so the animated centerline exactly matches its static text.
+    const glyph = variations[0];
     const data = glyphData(glyph, scale, pixelsPerFontUnit, sideBearing);
     return {
       ...data,
@@ -139,9 +160,7 @@ export function makeAnimatedPreviewPlan(
   explicitLines.forEach((line, explicitLineIndex) => {
     const words = line.trim().length > 0 ? line.trim().split(/\s+/) : [];
     words.forEach((word, wordIndex) => {
-      const wordData = Array.from(word).map((character, index) =>
-        dataForCharacter(character, characterIndex + index),
-      );
+      const wordData = Array.from(word).map(dataForCharacter);
       const wordWidth = wordData.reduce((total, data) => total + data.advanceWidth, 0);
       if (x > 0 && x + wordWidth > maximumWidth) moveToNextLine();
 
@@ -160,12 +179,12 @@ export function makeAnimatedPreviewPlan(
           character,
           delay,
           duration: data.duration,
+          glyphID: data.glyphID,
           strokes,
           totalLength: strokes.reduce((total, stroke) => total + stroke.length, 0),
         });
         delay += data.duration;
         x += data.advanceWidth;
-        characterIndex += 1;
       });
 
       if (wordIndex < words.length - 1) {

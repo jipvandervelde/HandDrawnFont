@@ -1,0 +1,3517 @@
+{
+  "version": 1,
+  "source": "Grug app WisdomLibrary.swift",
+  "count": 702,
+  "wisdoms": [
+    {
+      "id": 1,
+      "content": "perfect time never come. grug plant seed when grug have seed. seed in ground grow, seed in hand stay seed forever.",
+      "theme": "seed"
+    },
+    {
+      "id": 2,
+      "content": "better feel silly one day than stay fool forever. ask question = learn. not ask = stay stuck.",
+      "theme": "cave"
+    },
+    {
+      "id": 3,
+      "content": "wrong path teach grug something. right path give grug food. both path better than standing still in cold.",
+      "theme": "cave"
+    },
+    {
+      "id": 4,
+      "content": "big problem made of many small fix. start with one hungry grug today. others copy. tribe fed.",
+      "theme": "stone"
+    },
+    {
+      "id": 5,
+      "content": "small rock every day build mountain. no need big dramatic thing. just pick up one small rock today.",
+      "theme": "stone"
+    },
+    {
+      "id": 6,
+      "content": "give small grug problem, not answer. hands busy make brain busy. learning sneak in when grug wrestle with real thing.",
+      "theme": "water"
+    },
+    {
+      "id": 7,
+      "content": "grug no fix whole cave at once. grug move one rock each day. small thing add up like drops make river.",
+      "theme": "cave"
+    },
+    {
+      "id": 8,
+      "content": "hear forget. see remember. do understand. stop asking, start doing.",
+      "theme": "fire"
+    },
+    {
+      "id": 9,
+      "content": "say \"grug not know\" = door open to learning. pretend-knowing = stay stupid forever.",
+      "theme": "stone"
+    },
+    {
+      "id": 10,
+      "content": "doing teach more than hearing. grug hands remember what grug ears forget. start doing badly now.",
+      "theme": "fire"
+    },
+    {
+      "id": 11,
+      "content": "small stick every day keep fire alive. big log sometimes make fire dead. grug do tiny thing each sun, get strong.",
+      "theme": "sun"
+    },
+    {
+      "id": 12,
+      "content": "be best you, not worst copy of other grug. world need your skill, not broken version of someone else skill.",
+      "theme": "fire"
+    },
+    {
+      "id": 13,
+      "content": "small kindness = big magic. grug do tiny good thing each sun. world change from many grug doing small thing with full heart.",
+      "theme": "stone"
+    },
+    {
+      "id": 14,
+      "content": "between bad thing and grug reaction, small space exist. in space, grug choose: react like angry animal or breathe like wise human. pause = power.",
+      "theme": "cave"
+    },
+    {
+      "id": 15,
+      "content": "tomorrow never come. grug do small thing now, not perfect thing later. today action = real.",
+      "theme": "cave"
+    },
+    {
+      "id": 16,
+      "content": "grug say: stop wait for perfect. start with one small help today. small action spread, make big change.",
+      "theme": "cave"
+    },
+    {
+      "id": 17,
+      "content": "good thing = do now thing. waiting = excuse for fear. small help today better than big help maybe tomorrow.",
+      "theme": "sun"
+    },
+    {
+      "id": 18,
+      "content": "small thing every sun = big change after many season. grug do boring thing daily, magic happen later.",
+      "theme": "seed"
+    },
+    {
+      "id": 19,
+      "content": "if grug need thing and thing not exist, grug make thing. waiting = slow death. wrong thing better than no thing.",
+      "theme": "cave"
+    },
+    {
+      "id": 20,
+      "content": "small stick every sun better than big log once. grug do tiny bit daily, fire stay alive, grug get strong.",
+      "theme": "sun"
+    },
+    {
+      "id": 21,
+      "content": "everyone carry invisible wound. grug no judge, grug show kindness instead. small care heal big pain.",
+      "theme": "stone"
+    },
+    {
+      "id": 22,
+      "content": "care = best selling magic. when grug actually care about other grug, other grug feel it. listen first, sell second.",
+      "theme": "stone"
+    },
+    {
+      "id": 23,
+      "content": "grug ask: \"grug hands fix this?\" if yes, use hands. if no, drop like heavy rock.",
+      "theme": "fire"
+    },
+    {
+      "id": 24,
+      "content": "ask not \"what grug get away with?\" ask \"what make grug proud when sun go down?\" right thing = peace inside.",
+      "theme": "fire"
+    },
+    {
+      "id": 25,
+      "content": "grug know: weak grug help no one. take care self first, then strong for tribe. hungry grug cannot hunt.",
+      "theme": "fire"
+    },
+    {
+      "id": 26,
+      "content": "stop talking about good. be good today. help one grug, speak truth, share food. good = doing not discussing.",
+      "theme": "fire"
+    },
+    {
+      "id": 27,
+      "content": "grug say: start with broken stick today. perfect stick never come. doing badly better than waiting perfectly.",
+      "theme": "fire"
+    },
+    {
+      "id": 28,
+      "content": "grug see three type human: dreamer who starve, wisher who wait, doer who dig. want thing? pick up stick today.",
+      "theme": "fire"
+    },
+    {
+      "id": 29,
+      "content": "share success with all who help make success. treat helper like partner, not slave. happy tribe work harder than scared tribe.",
+      "theme": "cave"
+    },
+    {
+      "id": 30,
+      "content": "big mountain made of small steps. grug focus on next foot, not scary top. walking beats staring.",
+      "theme": "stone"
+    },
+    {
+      "id": 31,
+      "content": "grug no plan whole mountain. grug just move foot. path show up when grug walk, not when grug think.",
+      "theme": "cave"
+    },
+    {
+      "id": 32,
+      "content": "focus like hunter on one deer. scattered mind catch nothing. one thing done well beat ten thing done bad.",
+      "theme": "fire"
+    },
+    {
+      "id": 33,
+      "content": "start with one true thing you know. small fire grow bigger than thinking about big fire.",
+      "theme": "fire"
+    },
+    {
+      "id": 34,
+      "content": "knowledge like sharp stick in cave. only useful when grug poke mammoth. stop collecting, start doing.",
+      "theme": "fire"
+    },
+    {
+      "id": 35,
+      "content": "grug know: plan not food. pick up rock, throw rock, see where land. small action today better than perfect plan tomorrow.",
+      "theme": "cave"
+    },
+    {
+      "id": 36,
+      "content": "angry fire make grug break thing grug need later. grug learn: when fire burn hot, walk away from important thing first.",
+      "theme": "fire"
+    },
+    {
+      "id": 37,
+      "content": "if thing make grug sigh when touch, thing steal space from joy thing. keep only smile thing.",
+      "theme": "cave"
+    },
+    {
+      "id": 38,
+      "content": "mistake = teacher with sharp stick. hurt when happen but show exact direction to walk.",
+      "theme": "fire"
+    },
+    {
+      "id": 39,
+      "content": "grug do small thing perfect way. small perfect thing stack into big thing. no wait for perfect moment.",
+      "theme": "fire"
+    },
+    {
+      "id": 40,
+      "content": "grug no waste fire on thing grug no control. save energy for thing grug can change. precious fire stay strong.",
+      "theme": "fire"
+    },
+    {
+      "id": 41,
+      "content": "if grug no move rock, rock stay forever. waiting make problem grow like weed. grug do now, problem gone.",
+      "theme": "stone"
+    },
+    {
+      "id": 42,
+      "content": "grug no blame sky for grug problems. grug make choice, grug fix problem. sky just pretty dots.",
+      "theme": "sky"
+    },
+    {
+      "id": 43,
+      "content": "grug no help small grug with thing small grug can do. small grug get strong from struggle, weak from rescue.",
+      "theme": "stone"
+    },
+    {
+      "id": 44,
+      "content": "grug say: chase where mammoth go tomorrow, not where mammoth been yesterday. smart grug wait at water hole.",
+      "theme": "wind"
+    },
+    {
+      "id": 45,
+      "content": "wall just thing in way. grug go around, under, or through. keep moving, wall temporary.",
+      "theme": "stone"
+    },
+    {
+      "id": 46,
+      "content": "drop rock of yesterday-pain and tomorrow-worry. ask \"what grug see right now?\" answer bring peace.",
+      "theme": "stone"
+    },
+    {
+      "id": 47,
+      "content": "grug give time like water to other grug. sit, listen, help when dark. this fill heart more than shiny thing.",
+      "theme": "cave"
+    },
+    {
+      "id": 48,
+      "content": "when pain come, grug sit with pain like friend. ask \"what you teach grug?\" pain always answer if grug listen brave.",
+      "theme": "stone"
+    },
+    {
+      "id": 49,
+      "content": "grug hands teach better than grug mouth. want other grug do thing? grug do first, other grug copy.",
+      "theme": "stone"
+    },
+    {
+      "id": 50,
+      "content": "small grug learn by doing, not hearing. give safe place to fail and explore.",
+      "theme": "stone"
+    },
+    {
+      "id": 51,
+      "content": "you become what you do, not what you wait for. grug pick up stick daily, become stick-maker. do thing today, become thing tomorrow.",
+      "theme": "cave"
+    },
+    {
+      "id": 52,
+      "content": "grug pick information like picking berries. poison berry make sick, good berry make strong. choose few good source, ignore rest noise.",
+      "theme": "wind"
+    },
+    {
+      "id": 53,
+      "content": "reading about fire no make warm. grug must burn finger, breathe smoke, fail with wet wood before truly know fire.",
+      "theme": "fire"
+    },
+    {
+      "id": 54,
+      "content": "simple food with grug who love you better than fancy feast with grug who hate you.",
+      "theme": "stone"
+    },
+    {
+      "id": 55,
+      "content": "pick one big rock. everything else help carry rock or throw away. scattered energy = no mountain climbed.",
+      "theme": "wind"
+    },
+    {
+      "id": 56,
+      "content": "share pain to heal others, never create pain to heal self. your struggle = gift when shared. others pain = poison when caused.",
+      "theme": "cave"
+    },
+    {
+      "id": 57,
+      "content": "take what grug need, leave rest for tribe. sharing make all grug strong when storm come.",
+      "theme": "cave"
+    },
+    {
+      "id": 58,
+      "content": "grug know secret: mind always somewhere else = miss life happening now. feel ground under feet, taste food in mouth, see real sun.",
+      "theme": "cave"
+    },
+    {
+      "id": 59,
+      "content": "grug choose nice even when other grug mean. nice like fire inside - always possible to share warmth.",
+      "theme": "fire"
+    },
+    {
+      "id": 60,
+      "content": "happiness not thing grug chase. happiness thing grug give when help other grug. stop chasing, start carrying.",
+      "theme": "cave"
+    },
+    {
+      "id": 61,
+      "content": "perfect = enemy of start. messy action beats perfect waiting. grug take broken stick, catch wisdom through doing.",
+      "theme": "fire"
+    },
+    {
+      "id": 62,
+      "content": "future just many today stacked. grug make today rock strong, tomorrow rock strong too. plant good seed now, eat good fruit later.",
+      "theme": "seed"
+    },
+    {
+      "id": 63,
+      "content": "failure teach more than success. broken thing show grug what work. no failure = no learning.",
+      "theme": "fire"
+    },
+    {
+      "id": 64,
+      "content": "other grug actions show other grug heart. grug actions show grug heart. grug choose who grug be.",
+      "theme": "cave"
+    },
+    {
+      "id": 65,
+      "content": "see problem + believe can fix = progress. pretend no problem = stay broken forever.",
+      "theme": "cave"
+    },
+    {
+      "id": 66,
+      "content": "body want flow like river, not dam then flood. grug move little all day - happy body, happy grug.",
+      "theme": "water"
+    },
+    {
+      "id": 67,
+      "content": "when grug need help and no help come, grug become help for other grug. miracle happen through grug, not to grug.",
+      "theme": "cave"
+    },
+    {
+      "id": 68,
+      "content": "prepare deep, trust body when moment come. knowledge in bones better than plan in head.",
+      "theme": "river"
+    },
+    {
+      "id": 69,
+      "content": "grug no count days passing. grug count good things grug do each day. many small good make big good life.",
+      "theme": "cave"
+    },
+    {
+      "id": 70,
+      "content": "grug know cage real but knowing not enough. must push one bar today, then next bar tomorrow. freedom = daily push, not big speech.",
+      "theme": "stone"
+    },
+    {
+      "id": 71,
+      "content": "doing not make wise. thinking after doing make wise. after big thing, sit and ask \"what this teach grug?\"",
+      "theme": "fire"
+    },
+    {
+      "id": 72,
+      "content": "kindness like fire - when grug warm other grug, grug also get warm. same fire help all.",
+      "theme": "fire"
+    },
+    {
+      "id": 73,
+      "content": "time no fix broken thing. grug hands must move first. want change? grug do work, time just count days.",
+      "theme": "cave"
+    },
+    {
+      "id": 74,
+      "content": "feed body first, then mind work good. hungry grug = angry stupid grug. full belly = clear thinking kind grug.",
+      "theme": "fire"
+    },
+    {
+      "id": 75,
+      "content": "doubt-voice like bully. when grug do thing anyway, voice get weak. hear doubt? do small thing now.",
+      "theme": "fire"
+    },
+    {
+      "id": 76,
+      "content": "ideas come when hands already moving. sitting wait for inspiration = hungry grug. start clumsy work, brain find better way.",
+      "theme": "cave"
+    },
+    {
+      "id": 77,
+      "content": "can grug fix with hands? grug fix. cannot fix? grug shrug, find berries. worry = push boulder with forehead.",
+      "theme": "stone"
+    },
+    {
+      "id": 78,
+      "content": "life heavy when grug carry complicated, impatient, angry. grug learn: simple + wait + kind = light pack, easy walk.",
+      "theme": "tree"
+    },
+    {
+      "id": 79,
+      "content": "yesterday rock stay in yesterday cave. grug pick new stick each sunrise. stick light, help grug walk forward.",
+      "theme": "cave"
+    },
+    {
+      "id": 80,
+      "content": "grug see mammoth, grug throw spear. no plan, just do. action beat perfect plan every time.",
+      "theme": "cave"
+    },
+    {
+      "id": 81,
+      "content": "one size fit no grug. watch what make each grug strong, give matching work. less crying later.",
+      "theme": "stone"
+    },
+    {
+      "id": 82,
+      "content": "stop think. start do. bad doing better than perfect nothing.",
+      "theme": "fire"
+    },
+    {
+      "id": 83,
+      "content": "adventure should be mostly easy berries grug can reach, but always stretch for few high ones. mix = grug grow strong.",
+      "theme": "cave"
+    },
+    {
+      "id": 84,
+      "content": "small pain now = big joy later. grug choose future-grug happiness over now-grug want.",
+      "theme": "seed"
+    },
+    {
+      "id": 85,
+      "content": "grug learn: step toward fear instead of away. fear get smaller when grug face it. brave = feel scared but do anyway.",
+      "theme": "stone"
+    },
+    {
+      "id": 86,
+      "content": "grug watch how other grug treat weak when no one looking. good heart beat clever hands always.",
+      "theme": "fire"
+    },
+    {
+      "id": 87,
+      "content": "when with grug, be with grug. put down glowing rectangle, make eyes soft, listen like life depend on it.",
+      "theme": "fire"
+    },
+    {
+      "id": 88,
+      "content": "small grug copy grug hands, not grug words. want good small grug? be good grug first.",
+      "theme": "fire"
+    },
+    {
+      "id": 89,
+      "content": "grug say: forget big world. make small world perfect. perfect fire teach other grug. kindness spread like fire in dry grass.",
+      "theme": "cave"
+    },
+    {
+      "id": 90,
+      "content": "grug be same grug always. real grug attract real grug. fake grug attract fake grug.",
+      "theme": "cave"
+    },
+    {
+      "id": 91,
+      "content": "when grug have idea, grug count 5-4-3-2-1 then move body. brain no time make excuse when grug move fast.",
+      "theme": "stone"
+    },
+    {
+      "id": 92,
+      "content": "brain like fire. need new wood or die. grug learn one small thing each sun. keep brain alive.",
+      "theme": "fire"
+    },
+    {
+      "id": 93,
+      "content": "before grug do thing to other grug, grug think \"what if other grug do this to grug?\" if grug no like, grug no do.",
+      "theme": "fire"
+    },
+    {
+      "id": 94,
+      "content": "first step = magic step. not perfect step, just step that make next step possible. moving beat thinking about moving.",
+      "theme": "river"
+    },
+    {
+      "id": 95,
+      "content": "grug know secret: start with bad spear better than perfect spear never made. action beat planning every time.",
+      "theme": "cave"
+    },
+    {
+      "id": 96,
+      "content": "done thing catch mammoth. perfect thing catch nothing. make work first, make better later.",
+      "theme": "stone"
+    },
+    {
+      "id": 97,
+      "content": "stay curious like small grug. when think \"know already,\" remember hungry winter. watch everything always.",
+      "theme": "tree"
+    },
+    {
+      "id": 98,
+      "content": "life only happen now. grug focus on what body feel right now, not ghost thoughts.",
+      "theme": "fire"
+    },
+    {
+      "id": 99,
+      "content": "grug learn: know grug-self first, then choose. stop pretending, start being honest grug. truth hurt but make path clear.",
+      "theme": "tree"
+    },
+    {
+      "id": 100,
+      "content": "focus on making thing good, not showing thing off. excellence bring success like shadow follow grug.",
+      "theme": "stone"
+    },
+    {
+      "id": 101,
+      "content": "grug no wait for perfect day. grug make today perfect by doing one thing with full heart.",
+      "theme": "sun"
+    },
+    {
+      "id": 102,
+      "content": "when problem come, grug look in cave mirror first. finger pointing make weak, self fixing make strong.",
+      "theme": "cave"
+    },
+    {
+      "id": 103,
+      "content": "find sweet spot between too easy and too scary. grow happen when thing make grug shake little but not cry.",
+      "theme": "fire"
+    },
+    {
+      "id": 104,
+      "content": "anger rock only hurt grug back. other grug no feel grug pain. drop rock for grug own peace.",
+      "theme": "stone"
+    },
+    {
+      "id": 105,
+      "content": "master boring first. when basic become easy, brain free to make magic no other grug see.",
+      "theme": "cave"
+    },
+    {
+      "id": 106,
+      "content": "talent like spark - spark die without wood. grug feed gift with daily work or gift become nothing.",
+      "theme": "fire"
+    },
+    {
+      "id": 107,
+      "content": "grug mouth busy = grug ears broken. two ear one mouth, use same way. listen more than speak, hear truth that loud grug miss.",
+      "theme": "stone"
+    },
+    {
+      "id": 108,
+      "content": "what grug resist grow stronger. stop fighting pain, sit with pain. pain still there but no waste energy pushing unmovable rock.",
+      "theme": "stone"
+    },
+    {
+      "id": 109,
+      "content": "if grug cannot change thing, grug drop fast. hold burning rock = pain. drop = peace. grug hands free for fixable things.",
+      "theme": "fire"
+    },
+    {
+      "id": 110,
+      "content": "grug check backpack every morning. heavy thought? drop. toxic grug? drop. keep only what help climb mountain.",
+      "theme": "stone"
+    },
+    {
+      "id": 111,
+      "content": "try = learn. no try = hungry. grug rather sore hands than empty belly.",
+      "theme": "cave"
+    },
+    {
+      "id": 112,
+      "content": "feet always in now. mind want run everywhere but only here real. grug practice: when eat, taste. when walk, feel ground.",
+      "theme": "earth"
+    },
+    {
+      "id": 113,
+      "content": "grug know: no need see whole path to start walk. take first step, next step show itself.",
+      "theme": "stone"
+    },
+    {
+      "id": 114,
+      "content": "grug no wish mountain smaller. grug make grug stronger. problem = chance grow bigger muscle.",
+      "theme": "stone"
+    },
+    {
+      "id": 115,
+      "content": "each day: do one thing that matter, learn one small thing. tomorrow take care of tomorrow.",
+      "theme": "sun"
+    },
+    {
+      "id": 116,
+      "content": "always keep backup energy like extra berries in cave. do seven things when can do ten. save three for storm.",
+      "theme": "cave"
+    },
+    {
+      "id": 117,
+      "content": "thing go wrong always. grug learn dance with storm, not fight storm. pain teach grug, grug write lesson on cave wall.",
+      "theme": "cave"
+    },
+    {
+      "id": 118,
+      "content": "carrying poison only hurt grug. when bad thing happen, feel pain then put down like heavy rock. freedom = leaving poison behind.",
+      "theme": "fire"
+    },
+    {
+      "id": 119,
+      "content": "big thing = many small thing. grug do tiny step daily, become different grug after many season.",
+      "theme": "fire"
+    },
+    {
+      "id": 120,
+      "content": "good teacher stay student forever. stop learning = become bad teacher who hurt others.",
+      "theme": "river"
+    },
+    {
+      "id": 121,
+      "content": "small step each sun better than big plan that break. brain no fight tiny thing. many tiny become big pile.",
+      "theme": "sun"
+    },
+    {
+      "id": 122,
+      "content": "when grug notice mind wander, grug already present. wandering mind = proof awareness work. grug no chase, just notice and smile.",
+      "theme": "wind"
+    },
+    {
+      "id": 123,
+      "content": "sharing good thing make more good thing. hoard make less. grug fire light many fire, still burn bright.",
+      "theme": "seed"
+    },
+    {
+      "id": 124,
+      "content": "real strong = beat own grug first. control hungry grug, angry grug, scared grug in same cave. then help other grug.",
+      "theme": "fire"
+    },
+    {
+      "id": 125,
+      "content": "grug learn: make five good touch for every harsh word. relationship stay warm when sweet berry outnumber bitter root.",
+      "theme": "seed"
+    },
+    {
+      "id": 126,
+      "content": "grug learn: sleepy mammoth life = wasted season. each sun grug ask \"this make grug happy?\" simple question save from circle walking.",
+      "theme": "sun"
+    },
+    {
+      "id": 127,
+      "content": "small action today = big harvest tomorrow. grug plant one seed when sun up, repeat next sun.",
+      "theme": "seed"
+    },
+    {
+      "id": 128,
+      "content": "grug who happy with rock in hand no need look at other grug rock. enough already here.",
+      "theme": "stone"
+    },
+    {
+      "id": 129,
+      "content": "question first thing = save grug from bad rock. poke idea with stick before grug give berries.",
+      "theme": "cave"
+    },
+    {
+      "id": 130,
+      "content": "teach small grug what come next, not what small grug already know. find branch just above where small grug can reach.",
+      "theme": "fire"
+    },
+    {
+      "id": 131,
+      "content": "obstacle = teacher. when path blocked, grug walk around. new path often better than old path.",
+      "theme": "stone"
+    },
+    {
+      "id": 132,
+      "content": "gentle touch move world better than angry push. small kind action spread like fire, create big change over many season.",
+      "theme": "water"
+    },
+    {
+      "id": 133,
+      "content": "grug learn: beat self harder than beat thousand enemy. each day pick one bad-grug-thing, say no. small win inside = big peace.",
+      "theme": "fire"
+    },
+    {
+      "id": 134,
+      "content": "focus fire on one log make strong flame. scatter energy make weak smoke. grug pick one thing each sun, give all strength.",
+      "theme": "fire"
+    },
+    {
+      "id": 135,
+      "content": "idea no come to waiting grug. idea come to working grug. start bad thing, good thing follow.",
+      "theme": "cave"
+    },
+    {
+      "id": 136,
+      "content": "real chief make other grug strong, not self look strong. help without need praise = trust. trust = real power.",
+      "theme": "fire"
+    },
+    {
+      "id": 137,
+      "content": "mistake = teacher that hit hard but teach true thing. grug rather fail and learn than stay safe and stay stupid.",
+      "theme": "fire"
+    },
+    {
+      "id": 138,
+      "content": "fail = best teacher. success make grug lazy. when thing break, grug brain wake up and learn.",
+      "theme": "fire"
+    },
+    {
+      "id": 139,
+      "content": "first thought when wake = seed for whole day. grug plant one small good thought, grow good day tree.",
+      "theme": "seed"
+    },
+    {
+      "id": 140,
+      "content": "understand how thing work = freedom from confusion. pick one confusing thing, ask \"how this work?\" until brain see clear.",
+      "theme": "cave"
+    },
+    {
+      "id": 141,
+      "content": "grug no wait for perfect day. grug dance in storm, find small good thing when hurt. happiness choice, not gift.",
+      "theme": "cave"
+    },
+    {
+      "id": 142,
+      "content": "win just one day, lose just one day. what matter is grug get up tomorrow, try again.",
+      "theme": "stone"
+    },
+    {
+      "id": 143,
+      "content": "grug know: first step into water hardest step. after first step already wet. starting = short pain. not starting = long pain.",
+      "theme": "river"
+    },
+    {
+      "id": 144,
+      "content": "brain like muscle. get stronger when fail many time. do thing again, pain temporary, learning permanent.",
+      "theme": "river"
+    },
+    {
+      "id": 145,
+      "content": "big change = many small thing. grug do tiny action every sun. mountain move one pebble at time.",
+      "theme": "stone"
+    },
+    {
+      "id": 146,
+      "content": "comfort cave become prison cave. grug do one scary thing each sun. growth live at edge of safe place.",
+      "theme": "cave"
+    },
+    {
+      "id": 147,
+      "content": "courage = speak when need speak, listen when need listen. ask \"this moment need voice or ears?\" when confused, choose ears first.",
+      "theme": "sun"
+    },
+    {
+      "id": 148,
+      "content": "market take berry from hurry-grug, give berry to wait-grug. grug buy strong company, wait many season, get many fruit.",
+      "theme": "river"
+    },
+    {
+      "id": 149,
+      "content": "right thing still right even when grug alone. wrong thing still wrong when everyone do it. grug do right like sun rise.",
+      "theme": "sun"
+    },
+    {
+      "id": 150,
+      "content": "small change stick. big change break grug spirit. add one pebble daily, build whole new path.",
+      "theme": "stone"
+    },
+    {
+      "id": 151,
+      "content": "life no reward smart or strong. life reward grug who keep pushing rock when arms tired.",
+      "theme": "stone"
+    },
+    {
+      "id": 152,
+      "content": "too many choice make grug freeze. grug set fence around choice. small fence = action happen.",
+      "theme": "stone"
+    },
+    {
+      "id": 153,
+      "content": "worry about tomorrow = double pain. same brain solve today problem will solve tomorrow problem. when worry come, ask: can grug do something now?",
+      "theme": "cave"
+    },
+    {
+      "id": 154,
+      "content": "fear-voice lie about grug strength. when scary thing come, grug do opposite of fear-voice. grug always stronger than grug think.",
+      "theme": "stone"
+    },
+    {
+      "id": 155,
+      "content": "when path get hard, grug move one foot. slow moving better than no moving. river always flow toward big water.",
+      "theme": "river"
+    },
+    {
+      "id": 156,
+      "content": "grug know: be real you or be nothing. fake grug make real grug die inside. other grug like real you or not - both better than lie.",
+      "theme": "cave"
+    },
+    {
+      "id": 157,
+      "content": "admit no know = room for real knowing. empty cup fill with water, full cup spill everywhere.",
+      "theme": "water"
+    },
+    {
+      "id": 158,
+      "content": "grug learn: lose everything but still choose how feel inside. outside world like wild river - no control. but grug always control what grug do with river.",
+      "theme": "river"
+    },
+    {
+      "id": 159,
+      "content": "grug not find self. grug make self. each choice shape grug like clay. stop searching, start building.",
+      "theme": "cave"
+    },
+    {
+      "id": 160,
+      "content": "best revenge is become better grug. when other grug throw mud, grug clean self and walk tall. kindness confuse bad grug more than anger.",
+      "theme": "fire"
+    },
+    {
+      "id": 161,
+      "content": "do hard thing when sun rise while other grug sleep. pain today make strong tomorrow.",
+      "theme": "sun"
+    },
+    {
+      "id": 162,
+      "content": "strong grug not grug who never fall. strong grug get up quick after fall. falling normal, staying down = choice.",
+      "theme": "stone"
+    },
+    {
+      "id": 163,
+      "content": "fighting pain make pain stronger. sit with pain, pain leave faster. stop being enemy of own heart.",
+      "theme": "wind"
+    },
+    {
+      "id": 164,
+      "content": "grug carry only what make grug strong. broken thing stay on ground. light bag = happy grug.",
+      "theme": "stone"
+    },
+    {
+      "id": 165,
+      "content": "loyalty to bad grug = betrayal of self. when hurt keep coming, time find new cave. self-respect = foundation.",
+      "theme": "cave"
+    },
+    {
+      "id": 166,
+      "content": "when body say rest, grug listen. sick grug who rest heal fast. sick grug who work stay sick long time.",
+      "theme": "cave"
+    },
+    {
+      "id": 167,
+      "content": "when mind jump to yesterday or tomorrow, bring attention back to now. feel ground, notice breath, see what actually here.",
+      "theme": "fire"
+    },
+    {
+      "id": 168,
+      "content": "love = help other grug grow strong. grug water plant, give sun, remove bad bug. real love = action, not word.",
+      "theme": "seed"
+    },
+    {
+      "id": 169,
+      "content": "only keep memory if help today hunt. if just make heavy, drop rock. choose where put energy.",
+      "theme": "stone"
+    },
+    {
+      "id": 170,
+      "content": "win just one day, lose just one day. courage = small step when step feel impossible.",
+      "theme": "cave"
+    },
+    {
+      "id": 171,
+      "content": "grug learn: collect fact but no think = walk into tree. think but no learn fact = fall in hole. need both.",
+      "theme": "fire"
+    },
+    {
+      "id": 172,
+      "content": "kind grug get many friend. mean grug sit alone in cave. gentle spirit win long game.",
+      "theme": "water"
+    },
+    {
+      "id": 173,
+      "content": "stay grug-shaped when world want grug be square. bend like tree but keep same roots.",
+      "theme": "tree"
+    },
+    {
+      "id": 174,
+      "content": "not knowing = okay. mystery not enemy, just part of being alive grug.",
+      "theme": "sky"
+    },
+    {
+      "id": 175,
+      "content": "love not feeling that happen to grug. love skill grug practice daily like sharpening spear.",
+      "theme": "tree"
+    },
+    {
+      "id": 176,
+      "content": "showing broken parts make bridge between grug. hiding weakness make wall. real love grow in dirt of truth.",
+      "theme": "cave"
+    },
+    {
+      "id": 177,
+      "content": "grug no remove other grug cloud. grug just be small warm fire next to sad grug. steady flame better than big empty promise.",
+      "theme": "fire"
+    },
+    {
+      "id": 178,
+      "content": "grug blame other = grug stay weak. grug fix grug first = grug get strong. ask \"what grug do different?\" before blame other grug.",
+      "theme": "cave"
+    },
+    {
+      "id": 179,
+      "content": "perfect = trap. good enough = freedom. grug stop polishing, start living.",
+      "theme": "stone"
+    },
+    {
+      "id": 180,
+      "content": "grug wake up, drop yesterday rock. today sun = new hunt. old pain stay in old cave.",
+      "theme": "stone"
+    },
+    {
+      "id": 181,
+      "content": "when life fast, find one strong thing to hold. let other thing flow like water. grug no control river anyway.",
+      "theme": "river"
+    },
+    {
+      "id": 182,
+      "content": "question like sharp stick - dig for truth better than collect dead answers that smell bad after few days",
+      "theme": "cave"
+    },
+    {
+      "id": 183,
+      "content": "teach young grug one thing. let young grug teach other young grug. knowledge spread like fire. tribe stay strong.",
+      "theme": "fire"
+    },
+    {
+      "id": 184,
+      "content": "grug learn: other grug forget words fast but remember feelings forever. make other grug feel good, they remember grug always.",
+      "theme": "tree"
+    },
+    {
+      "id": 185,
+      "content": "when bad grug do bad thing and good grug watch, bad grug get stronger. good grug must say no.",
+      "theme": "stone"
+    },
+    {
+      "id": 186,
+      "content": "fear death = miss life. grug ask each sunrise: what make grug feel alive today? small real thing better than safe emptiness.",
+      "theme": "sun"
+    },
+    {
+      "id": 187,
+      "content": "grug learn: do one thing good better than many thing bad. focus make strong, scatter make weak.",
+      "theme": "fire"
+    },
+    {
+      "id": 188,
+      "content": "asking question = learning. staying quiet = staying confused. grug mouth that ask get fed wisdom.",
+      "theme": "cave"
+    },
+    {
+      "id": 189,
+      "content": "when plan break, grug no freeze. grug ask: what grug do now with what grug have? pick new target fast.",
+      "theme": "cave"
+    },
+    {
+      "id": 190,
+      "content": "truth like medicine - taste bad but make grug strong. when grug speak real words, world change small bit.",
+      "theme": "fire"
+    },
+    {
+      "id": 191,
+      "content": "stop chasing success. become grug worth following. success then chase you like hungry dog.",
+      "theme": "seed"
+    },
+    {
+      "id": 192,
+      "content": "grug learn wisdom three way: think before act, copy smart grug, learn from pain. use all three paths.",
+      "theme": "fire"
+    },
+    {
+      "id": 193,
+      "content": "closed mind catch nothing. open mind catch everything. grug say \"grug not know\" first, then learn.",
+      "theme": "cave"
+    },
+    {
+      "id": 194,
+      "content": "grug say: happiness not in big thing. happiness in this breath, this touch, this moment. use senses like tool when sad.",
+      "theme": "cave"
+    },
+    {
+      "id": 195,
+      "content": "grug learn: want little = have much. stop chasing shiny thing, start enjoying small fire. rich = needing nothing.",
+      "theme": "cave"
+    },
+    {
+      "id": 196,
+      "content": "fear-thing always smaller when grug understand what fear-thing actually is. move toward scary with small step. look at thing = thing lose magic.",
+      "theme": "fire"
+    },
+    {
+      "id": 197,
+      "content": "accept what already happen = peace come fast. fight what done = pain stay long time.",
+      "theme": "cave"
+    },
+    {
+      "id": 198,
+      "content": "work with current, not against. smart fish use river power to move faster. grug stop fighting, start flowing.",
+      "theme": "river"
+    },
+    {
+      "id": 199,
+      "content": "when bad thing happen, grug ask: can grug fix? if yes, fix. if no, shrug and find next thing.",
+      "theme": "cave"
+    },
+    {
+      "id": 200,
+      "content": "focus one thing, give all energy there. that thing grow strong, help other thing later.",
+      "theme": "wind"
+    },
+    {
+      "id": 201,
+      "content": "world change when grug change first. grug be kind, honest, brave today. other grug copy. fire spread stick to stick.",
+      "theme": "fire"
+    },
+    {
+      "id": 202,
+      "content": "rejection not about grug worth. keep knocking until find tribe that need what grug bring. right door always exist.",
+      "theme": "fire"
+    },
+    {
+      "id": 203,
+      "content": "grug hands always in now-time. when brain go yesterday or tomorrow, grug look at hands. hands show what real.",
+      "theme": "stone"
+    },
+    {
+      "id": 204,
+      "content": "tribe stronger when grug help tribe, not when grug help only grug. name on front matter more than grug name inside.",
+      "theme": "fire"
+    },
+    {
+      "id": 205,
+      "content": "reading about fire no make warm. grug must rub stick, make spark. do thing badly first, less badly tomorrow.",
+      "theme": "fire"
+    },
+    {
+      "id": 206,
+      "content": "grug no afraid look foolish. grug afraid stay same. hungry mind find new path.",
+      "theme": "tree"
+    },
+    {
+      "id": 207,
+      "content": "small thing = grug speed. big thing = grug tribe. pick right tool for job.",
+      "theme": "stone"
+    },
+    {
+      "id": 208,
+      "content": "bad thing come like storm. grug not control storm. grug control how grug bend in storm.",
+      "theme": "tree"
+    },
+    {
+      "id": 209,
+      "content": "good thing with small flaw better than perfect nothing. take flawed cave, fix hole later.",
+      "theme": "cave"
+    },
+    {
+      "id": 210,
+      "content": "sharing broken part make strongest bond. tell one hard truth to one grug today. watch closeness grow like fire.",
+      "theme": "cave"
+    },
+    {
+      "id": 211,
+      "content": "grug learn: alone = weak stick. together = strong bundle. find tribe, share load, problems shrink.",
+      "theme": "stone"
+    },
+    {
+      "id": 212,
+      "content": "when grug throw angry fire at fire, make bigger fire. grug learn throw water instead. kind word beat mean word every time.",
+      "theme": "water"
+    },
+    {
+      "id": 213,
+      "content": "grug cannot fix other grug. fix grug first, then help from strength not weakness.",
+      "theme": "fire"
+    },
+    {
+      "id": 214,
+      "content": "be where feet are. when hands work, heart work with hands. split attention make everything weak like thin branch.",
+      "theme": "fire"
+    },
+    {
+      "id": 215,
+      "content": "love not hiding. grug job remove fear-rocks blocking heart-water from flowing.",
+      "theme": "water"
+    },
+    {
+      "id": 216,
+      "content": "first step only step that matter. thinking no fill belly. grug just move one foot, then worry about second foot.",
+      "theme": "river"
+    },
+    {
+      "id": 217,
+      "content": "keep dream fire alive with small stick every day. scared brain lie about tomorrow. let body decide when done, not fear.",
+      "theme": "fire"
+    },
+    {
+      "id": 218,
+      "content": "grug who comfortable alone can love without needing. grug who run from self use others as hiding place.",
+      "theme": "cave"
+    },
+    {
+      "id": 219,
+      "content": "money like water - squeeze tight, lose more. let flow natural, always return.",
+      "theme": "river"
+    },
+    {
+      "id": 220,
+      "content": "pick path quick. wrong path teach, right path move forward. standing still = certain doom.",
+      "theme": "stone"
+    },
+    {
+      "id": 221,
+      "content": "comfort cave become prison cave. when feel too safe, time do small scary thing. discomfort make grug grow.",
+      "theme": "cave"
+    },
+    {
+      "id": 222,
+      "content": "you worth quiet moment. tired grug help nobody. rested grug help many. give self permission be still rock.",
+      "theme": "stone"
+    },
+    {
+      "id": 223,
+      "content": "find big reason to keep walking when path get rocky. reason bigger than pain make grug strong like mountain.",
+      "theme": "fire"
+    },
+    {
+      "id": 224,
+      "content": "learning not practice for life. learning IS life. stop waiting for real life start - happening now when grug discover new thing.",
+      "theme": "fire"
+    },
+    {
+      "id": 225,
+      "content": "first thought in morning = seed for whole day. grug plant good seed before feet touch ground.",
+      "theme": "seed"
+    },
+    {
+      "id": 226,
+      "content": "questions sharp stick for tomorrow. answers dead meat for today. ask \"what grug not understand?\" every sun.",
+      "theme": "sun"
+    },
+    {
+      "id": 227,
+      "content": "brave = feel scared, do anyway. fear like smoke - real but not solid. grug shake and still pick up spear.",
+      "theme": "wind"
+    },
+    {
+      "id": 228,
+      "content": "age just number. hands work, brain think, heart want. fear normal but grug choose: stay small or walk toward new mountain.",
+      "theme": "seed"
+    },
+    {
+      "id": 229,
+      "content": "mistakes = best teacher. grug mess up many time, learn many thing. perfect grug learn nothing new.",
+      "theme": "cave"
+    },
+    {
+      "id": 230,
+      "content": "grug no wait for sorry that never come. grug make own sorry in heart, tell hurt \"you can go now.\"",
+      "theme": "cave"
+    },
+    {
+      "id": 231,
+      "content": "love not decoration. love = survival tool. help other grug = strong tribe = grug live longer.",
+      "theme": "fire"
+    },
+    {
+      "id": 232,
+      "content": "\"one day\" = never day. grug choose day one. take tiny step today or stay in excuse cave forever.",
+      "theme": "cave"
+    },
+    {
+      "id": 233,
+      "content": "fear = map to treasure. when grug shake, grug take tiny step anyway. impossible become possible through small action.",
+      "theme": "cave"
+    },
+    {
+      "id": 234,
+      "content": "knowledge not berry to eat. knowledge clay to shape. take one idea, live with many sun, make it yours.",
+      "theme": "stone"
+    },
+    {
+      "id": 235,
+      "content": "forgive not about feeling good about bad thing. forgive about drop heavy rock so grug hands free for good thing.",
+      "theme": "stone"
+    },
+    {
+      "id": 236,
+      "content": "dream without action = empty belly. action without dream = walk in circles. pick one dream, do one small thing today.",
+      "theme": "fire"
+    },
+    {
+      "id": 237,
+      "content": "make crooked thing now. crooked better than perfect nothing. next thing less crooked.",
+      "theme": "fire"
+    },
+    {
+      "id": 238,
+      "content": "yesterday gone, tomorrow not real. only now grug can pick berry, make fire, help tribe. now = gift.",
+      "theme": "sun"
+    },
+    {
+      "id": 239,
+      "content": "other grug words = just noise. grug choose what enter cave of mind. broken grug try break other grug - grug no let happen.",
+      "theme": "cave"
+    },
+    {
+      "id": 240,
+      "content": "facing scary thing make it real size. hiding make fear grow big like bad mushroom. real always smaller than fear.",
+      "theme": "cave"
+    },
+    {
+      "id": 241,
+      "content": "first stick decide all other stick. grug place beginning careful, rest follow easy.",
+      "theme": "stone"
+    },
+    {
+      "id": 242,
+      "content": "when sister grug win, whole tribe stronger. lift other grug up = lift self up too.",
+      "theme": "seed"
+    },
+    {
+      "id": 243,
+      "content": "grug only control what grug think about bad thing. ask \"what grug do with this?\" not \"why this happen?\" first give power, second give pain.",
+      "theme": "sky"
+    },
+    {
+      "id": 244,
+      "content": "grug say: do thing, fail, think why fail, do again. hand and head work together make wise grug.",
+      "theme": "stone"
+    },
+    {
+      "id": 245,
+      "content": "human no buy thing. human buy feeling about grug who make thing. grug make with heart, human feel connection.",
+      "theme": "stone"
+    },
+    {
+      "id": 246,
+      "content": "grug touch rock, remember: today maybe last sun. do important thing now, not tomorrow.",
+      "theme": "sun"
+    },
+    {
+      "id": 247,
+      "content": "empty cup learn. full cup spill. grug who say \"grug not know\" = grug who grow.",
+      "theme": "stone"
+    },
+    {
+      "id": 248,
+      "content": "meaning not thing you find, meaning thing you give. help other grug = grug life matter. small help = big meaning.",
+      "theme": "stone"
+    },
+    {
+      "id": 249,
+      "content": "sharing make grug bigger inside than keeping. when grug give, grug heart grow like shared fire.",
+      "theme": "cave"
+    },
+    {
+      "id": 250,
+      "content": "cannot carry old pain and reach new place. choose: keep heavy thing or move forward. grug put down anger-rock, climb easy.",
+      "theme": "cave"
+    },
+    {
+      "id": 251,
+      "content": "grug learn: belly always hungry never get full. practice grateful for what already have. enough already here.",
+      "theme": "cave"
+    },
+    {
+      "id": 252,
+      "content": "falling down = learning. staying down = hungry. grug count getting up, not falling down. getting up muscle get stronger each time.",
+      "theme": "fire"
+    },
+    {
+      "id": 253,
+      "content": "chaos come, grug breathe deep. grug focus on now-thing, not worry-thing. storm pass, grug stay tree.",
+      "theme": "tree"
+    },
+    {
+      "id": 254,
+      "content": "grug cannot control storm, but grug choose how grug stand in rain. mind like fire - feed angry stick or calm stick.",
+      "theme": "fire"
+    },
+    {
+      "id": 255,
+      "content": "grug ask \"grug here right now?\" many time each day. when answer no, grug take breath, notice one thing. wake up to moment = live real life.",
+      "theme": "wind"
+    },
+    {
+      "id": 256,
+      "content": "grug learn: rushing just running from fear. sit first, think where going. slow with purpose beat fast with panic.",
+      "theme": "wind"
+    },
+    {
+      "id": 257,
+      "content": "each thing grug keep = choice about what grug want life to be. less thing = more life.",
+      "theme": "cave"
+    },
+    {
+      "id": 258,
+      "content": "conflict like fire - can burn or cook. grug ask: this fight help or hurt? if help, stay and work. if hurt, walk away.",
+      "theme": "fire"
+    },
+    {
+      "id": 259,
+      "content": "wisdom not about knowing everything. wisdom about remembering how to not know and be happy anyway.",
+      "theme": "sky"
+    },
+    {
+      "id": 260,
+      "content": "hold loose, enjoy now, let go easy when time come. fighting change = pain, accepting change = peace.",
+      "theme": "water"
+    },
+    {
+      "id": 261,
+      "content": "grug help other grug, both grow strong. alone grug weak like single corn in wind.",
+      "theme": "seed"
+    },
+    {
+      "id": 262,
+      "content": "speak when thing matter or heart become empty cave. voice like muscle - use or lose.",
+      "theme": "fire"
+    },
+    {
+      "id": 263,
+      "content": "stay curious like small grug. question = life force. poke world with wonder stick, world poke back with magic.",
+      "theme": "sky"
+    },
+    {
+      "id": 264,
+      "content": "same fire knowledge, different path to brain. find right path for right grug. no need fancy teaching.",
+      "theme": "fire"
+    },
+    {
+      "id": 265,
+      "content": "anger like poison berry - only hurt grug who eat it. grug put anger rock down, back feel better.",
+      "theme": "stone"
+    },
+    {
+      "id": 266,
+      "content": "when bad thing happen, grug ask \"what part grug do?\" not \"who fault?\" blame others = stay weak, own mistake = grow strong.",
+      "theme": "stone"
+    },
+    {
+      "id": 267,
+      "content": "today sun never return. grug move when light come, no think. thinking keep grug in cave.",
+      "theme": "cave"
+    },
+    {
+      "id": 268,
+      "content": "leader not person who push. leader person who protect tribe.",
+      "theme": "tree"
+    },
+    {
+      "id": 269,
+      "content": "stop being shadow of other grug. world need first you, not second someone else. be brightest version of you.",
+      "theme": "stone"
+    },
+    {
+      "id": 270,
+      "content": "grug learn: getting up after fall more important than never falling. practice bounce back, not perfect balance.",
+      "theme": "cave"
+    },
+    {
+      "id": 271,
+      "content": "genius not big brain. genius = love so deep it make grug crazy for thing. find fire that burn in heart, feed every day.",
+      "theme": "fire"
+    },
+    {
+      "id": 272,
+      "content": "when tribe run toward shiny, grug walk away. when tribe hide scared, grug hunt alone. opposite thinking bring grug good fruit.",
+      "theme": "cave"
+    },
+    {
+      "id": 273,
+      "content": "grug no need see whole mountain. just see next rock. step on rock, next rock appear. path come from walking, not thinking.",
+      "theme": "cave"
+    },
+    {
+      "id": 274,
+      "content": "bad thing happen, but grug choose what do next. pain temporary, how grug handle pain become who grug is.",
+      "theme": "fire"
+    },
+    {
+      "id": 275,
+      "content": "good mentor not make copy of self. mentor give warmth so small grug grow into own strong tree.",
+      "theme": "tree"
+    },
+    {
+      "id": 276,
+      "content": "grug learn: wanting more stuff = wanting more wanting. grug happy when count good thing already have, not dream about other grug cave.",
+      "theme": "cave"
+    },
+    {
+      "id": 277,
+      "content": "before big choice, grug picture small grug faces under ground. grug ask: this help future grug or hurt? step with love.",
+      "theme": "earth"
+    },
+    {
+      "id": 278,
+      "content": "grug brain like fire stick. spread on many thing = weak. focus all fire on one rock = strong result.",
+      "theme": "fire"
+    },
+    {
+      "id": 279,
+      "content": "grug stop asking \"do grug matter?\" start asking \"how grug help other grug feel they matter?\" be present, be kind, be real.",
+      "theme": "fire"
+    },
+    {
+      "id": 280,
+      "content": "when trouble come, move like rabbit. when must fight, hit like falling tree. know difference between run-time and fight-time.",
+      "theme": "wind"
+    },
+    {
+      "id": 281,
+      "content": "mess up = learning. no mess up = no grow. grug mess up many time, get stronger each time.",
+      "theme": "fire"
+    },
+    {
+      "id": 282,
+      "content": "no step in water = no crossing river. bad first step better than perfect plan that never happen.",
+      "theme": "river"
+    },
+    {
+      "id": 283,
+      "content": "children teach three thing: be happy without reason, stay curious about everything, never give up on what matters.",
+      "theme": "stone"
+    },
+    {
+      "id": 284,
+      "content": "grug learn: fake grug hurt more than real grug. be real, dance bad, love deep. other grug join or leave, both okay.",
+      "theme": "cave"
+    },
+    {
+      "id": 285,
+      "content": "grug learn: stop copying other grug thoughts. sit quiet, ask grug-heart what feel right. real grug hiding under borrowed thinking.",
+      "theme": "stone"
+    },
+    {
+      "id": 286,
+      "content": "good treatment start with grug hands today, not wait for permission from chief or fancy building.",
+      "theme": "sun"
+    },
+    {
+      "id": 287,
+      "content": "stop think about life meaning. go do thing. meaning come from doing, not thinking.",
+      "theme": "cave"
+    },
+    {
+      "id": 288,
+      "content": "be grug-shaped hole in world. stop pretending, right grug come to fire. grug core like mountain - not ask wind permission.",
+      "theme": "wind"
+    },
+    {
+      "id": 289,
+      "content": "bad thing happen to all grug. grug cannot stop storm but grug choose how grug act in storm. who grug be in hard time = who grug really is.",
+      "theme": "tree"
+    },
+    {
+      "id": 290,
+      "content": "try thing worth trying. when fail, broken path become bridge for next grug. mountain only care about strong heart.",
+      "theme": "stone"
+    },
+    {
+      "id": 291,
+      "content": "grug say: regret from no try hurt longer than regret from try. jump in cold water, get to other side.",
+      "theme": "river"
+    },
+    {
+      "id": 292,
+      "content": "bad thing like darkness. grug not fight darkness with more darkness. grug bring light instead. light always win.",
+      "theme": "fire"
+    },
+    {
+      "id": 293,
+      "content": "doubt = sharp stick. poke all idea before accept. human who never doubt stay trapped forever.",
+      "theme": "cave"
+    },
+    {
+      "id": 294,
+      "content": "do little, check little, repeat. action and thinking work together like two leg walking.",
+      "theme": "stone"
+    },
+    {
+      "id": 295,
+      "content": "if grug cannot explain simple, grug not really know. teaching show holes in own understanding. clear teaching = clear knowing.",
+      "theme": "cave"
+    },
+    {
+      "id": 296,
+      "content": "learning alone = slow pain. many grug together = fast wisdom. bring problem to tribe first.",
+      "theme": "cave"
+    },
+    {
+      "id": 297,
+      "content": "grug count good thing each morning. fire warm, belly full, sun rise. grateful grug = happy grug.",
+      "theme": "river"
+    },
+    {
+      "id": 298,
+      "content": "strong come and go like weather. brave mean scared but do right thing anyway. fear normal, brave choose good path.",
+      "theme": "cave"
+    },
+    {
+      "id": 299,
+      "content": "grug take from earth, grug give back. small patch healthy better than big worry. leave camp cleaner for small grug who come after.",
+      "theme": "earth"
+    },
+    {
+      "id": 300,
+      "content": "grug say: fix small tooth pain before become no tooth. daily stick-cleaning better than season of soft berry.",
+      "theme": "fire"
+    },
+    {
+      "id": 301,
+      "content": "scattered mind catch nothing. focus mind-fire on one thing. big change grow from small flame.",
+      "theme": "wind"
+    },
+    {
+      "id": 302,
+      "content": "pain show what worth protecting. when hurt come, ask \"what this trying to save?\" then struggle become fuel for important thing.",
+      "theme": "fire"
+    },
+    {
+      "id": 303,
+      "content": "stop copying other grug. find thing only you do good. different grug get many rock, same grug fight for scraps.",
+      "theme": "stone"
+    },
+    {
+      "id": 304,
+      "content": "grug learn: need few thing, want many thing. smart grug know difference. light bag = light mind.",
+      "theme": "cave"
+    },
+    {
+      "id": 305,
+      "content": "big problem need many grug together. alone = crushed. together = strong like mountain.",
+      "theme": "stone"
+    },
+    {
+      "id": 306,
+      "content": "dream good for direction but walking happen with feet. grug pick one berry today better than think about hundred berry tomorrow.",
+      "theme": "sky"
+    },
+    {
+      "id": 307,
+      "content": "when thing in front of grug, grug just do thing. no think perfect, just show up good.",
+      "theme": "stone"
+    },
+    {
+      "id": 308,
+      "content": "world need your small fire. keep burning, help other grug find theirs. many small fire make big light together.",
+      "theme": "fire"
+    },
+    {
+      "id": 309,
+      "content": "grug stop looking at other cave, see own fire burn bright. count good rocks already in pile before wanting new rocks.",
+      "theme": "fire"
+    },
+    {
+      "id": 310,
+      "content": "believe first, proof follow like shadow. grug say \"grug greatest\" before knowing, then become greatest through action.",
+      "theme": "seed"
+    },
+    {
+      "id": 311,
+      "content": "earth not belong to grug. earth belong to small grugs who come after. grug just cave-sitter. leave cave better than found.",
+      "theme": "earth"
+    },
+    {
+      "id": 312,
+      "content": "share food = share life. no glowing rectangle at meal time. family strong when eat together daily.",
+      "theme": "cave"
+    },
+    {
+      "id": 313,
+      "content": "good thing like fire - must feed every day or die. be little better today than yesterday.",
+      "theme": "fire"
+    },
+    {
+      "id": 314,
+      "content": "listen body before body scream. eat ground food not wrapper food. move every sun, sleep when dark.",
+      "theme": "fire"
+    },
+    {
+      "id": 315,
+      "content": "do good thing, walk away. no wait for proof. ripple happen when grug not watching.",
+      "theme": "seed"
+    },
+    {
+      "id": 316,
+      "content": "mess up = teacher. no fall down, no learn get up. grug promise this true.",
+      "theme": "stone"
+    },
+    {
+      "id": 317,
+      "content": "grug say: make small mess today. mess up = learn. no mess = no grow. try thing that might break.",
+      "theme": "fire"
+    },
+    {
+      "id": 318,
+      "content": "abundance not thing grug find. abundance how grug tune grug eyes to see what already here.",
+      "theme": "fire"
+    },
+    {
+      "id": 319,
+      "content": "grug no wait for sorry that never come. grug make own peace with hurt. healing happen inside grug cave, not from other mouth.",
+      "theme": "tree"
+    },
+    {
+      "id": 320,
+      "content": "grug squeeze tight = thing run faster. grug open hands slow when change come. pain less when no fight river.",
+      "theme": "river"
+    },
+    {
+      "id": 321,
+      "content": "grug learn: ask other grug \"where grug weak?\" pain of knowing better than pain of not knowing.",
+      "theme": "cave"
+    },
+    {
+      "id": 322,
+      "content": "master simple before try complex. foundation weak = everything fall down. practice basic until feel like breathing.",
+      "theme": "fire"
+    },
+    {
+      "id": 323,
+      "content": "small good thing today make big change tomorrow. grug no need fix world, just be kind to one human.",
+      "theme": "stone"
+    },
+    {
+      "id": 324,
+      "content": "grug learn: try catch all knowledge = brain break. pick three thing today, let rest be mystery. mystery good friend.",
+      "theme": "river"
+    },
+    {
+      "id": 325,
+      "content": "grug think seven season ahead. before take, ask: this help small grug not born yet? leave some berry for tomorrow bush.",
+      "theme": "tree"
+    },
+    {
+      "id": 326,
+      "content": "busy without direction = digging hole to fill again. grug pick one path, walk steady, rest when tired.",
+      "theme": "river"
+    },
+    {
+      "id": 327,
+      "content": "not trying = always fail. trying = maybe fail maybe good. fear of pain worse than actual pain. just start.",
+      "theme": "fire"
+    },
+    {
+      "id": 328,
+      "content": "grug learn: real different not mean copy tribe or do opposite. real different mean use own brain-rock to think what work for grug.",
+      "theme": "stone"
+    },
+    {
+      "id": 329,
+      "content": "own mistake before other grug find mistake. laugh at self first, no one can hurt grug with truth.",
+      "theme": "cave"
+    },
+    {
+      "id": 330,
+      "content": "real strong like water - soft with flower, move boulder when need. strong grug cry with friend, gentle with small creature.",
+      "theme": "water"
+    },
+    {
+      "id": 331,
+      "content": "grug wake up, tell grug-self \"grug handle today\" before brain start screaming. confidence like fire - need daily wood or die.",
+      "theme": "fire"
+    },
+    {
+      "id": 332,
+      "content": "when stuck, step back. look from different place. new eyes see what old eyes miss.",
+      "theme": "cave"
+    },
+    {
+      "id": 333,
+      "content": "jealous grug stay hungry. happy-for-others grug learn and grow. celebrate tribe success = more wisdom for all.",
+      "theme": "fire"
+    },
+    {
+      "id": 334,
+      "content": "fair not mean same. fair mean give each grug what brain need to grow strong.",
+      "theme": "seed"
+    },
+    {
+      "id": 335,
+      "content": "fail just rock in path. keep fire burning inside, walk around rock, keep going.",
+      "theme": "fire"
+    },
+    {
+      "id": 336,
+      "content": "ask small question about thing in front of grug. big question make brain smoke, no action happen.",
+      "theme": "sky"
+    },
+    {
+      "id": 337,
+      "content": "future belong to grug who poke scary thing with stick. sit in cave = hungry. walk outside = maybe find berry.",
+      "theme": "tree"
+    },
+    {
+      "id": 338,
+      "content": "mistake already happen. choose shame or joy. joy turn stumble into connection with other grug.",
+      "theme": "stone"
+    },
+    {
+      "id": 339,
+      "content": "same cave, different grug eye. grug choose see good or bad. change eye, change world.",
+      "theme": "cave"
+    },
+    {
+      "id": 340,
+      "content": "count good thing before sleep, not bad thing. what grug build matter more than what grug break.",
+      "theme": "cave"
+    },
+    {
+      "id": 341,
+      "content": "when world get heavy, grug breathe slow and smile soft. rush make more problem. steady like turtle win.",
+      "theme": "wind"
+    },
+    {
+      "id": 342,
+      "content": "choose fire cave. feed small flame daily or freeze. no choose still choosing cold.",
+      "theme": "fire"
+    },
+    {
+      "id": 343,
+      "content": "ask why before copy. understand deep thing, not just shiny surface. copy without think make wobbly tower that fall.",
+      "theme": "stone"
+    },
+    {
+      "id": 344,
+      "content": "practice scary thing in head make real scary thing less scary. brain get strong like muscle when grug think problem before problem come.",
+      "theme": "cave"
+    },
+    {
+      "id": 345,
+      "content": "big problem need many grug. small problem maybe alone. when unsure, ask anyway. asking free, pride expensive.",
+      "theme": "stone"
+    },
+    {
+      "id": 346,
+      "content": "half-effort create twice pain. full effort create half pain. whatever grug hands touch today, grug touch with full grug.",
+      "theme": "fire"
+    },
+    {
+      "id": 347,
+      "content": "angry grug make bad choice. calm grug see true path. breathe slow when conflict come.",
+      "theme": "wind"
+    },
+    {
+      "id": 348,
+      "content": "brave not mean no fear. brave mean feel fear but do right thing anyway. fear good warning, but grug still choose.",
+      "theme": "cave"
+    },
+    {
+      "id": 349,
+      "content": "love = daily small action. feed relationship like feed fire - consistent care, not big gesture.",
+      "theme": "fire"
+    },
+    {
+      "id": 350,
+      "content": "grug learn: no wait for other grug make fire in belly. grug blow own spark gentle. own fire = own power.",
+      "theme": "fire"
+    },
+    {
+      "id": 351,
+      "content": "grug mind paint meaning on world. grug choose paint color. same thing = problem or gift, grug decide.",
+      "theme": "sky"
+    },
+    {
+      "id": 352,
+      "content": "genes = starting cave. daily choice = destination. grug build strength with what grug do today.",
+      "theme": "cave"
+    },
+    {
+      "id": 353,
+      "content": "cracks let light in. broken things still work. grug no hide damage, grug use damage.",
+      "theme": "cave"
+    },
+    {
+      "id": 354,
+      "content": "mistake happen, grug clean fast. hiding mistake make bigger mess. own mistake, fix mistake, learn wisdom.",
+      "theme": "cave"
+    },
+    {
+      "id": 355,
+      "content": "most obstacle need patience, not fight. grug go around problem like river around rock. save energy for real battle.",
+      "theme": "river"
+    },
+    {
+      "id": 356,
+      "content": "no human too broken for new growth. just need water, sun, time. grug help light small fire, show path.",
+      "theme": "cave"
+    },
+    {
+      "id": 357,
+      "content": "words like seed. plant truth, watch world grow. speak simple, change happen.",
+      "theme": "seed"
+    },
+    {
+      "id": 358,
+      "content": "we no own earth. we just keep warm for small grug who come next.",
+      "theme": "earth"
+    },
+    {
+      "id": 359,
+      "content": "use what have now for current need. not hoard for maybe-future that never come.",
+      "theme": "cave"
+    },
+    {
+      "id": 360,
+      "content": "death make each day precious like rare shiny rock. grug ask: if only one season left, would grug do this thing?",
+      "theme": "sun"
+    },
+    {
+      "id": 361,
+      "content": "anger like hot coal - burn grug hand, not enemy. grug drop coal, hand heal, heart free.",
+      "theme": "fire"
+    },
+    {
+      "id": 362,
+      "content": "you here = you matter. no need prove anything to anyone, even self.",
+      "theme": "tree"
+    },
+    {
+      "id": 363,
+      "content": "customer pain = grug pain. make easy for customer give shiny rock. customer remember easy, come back.",
+      "theme": "cave"
+    },
+    {
+      "id": 364,
+      "content": "grug learn: slow walk see more than fast run. journey make grug strong, destination just moment.",
+      "theme": "stone"
+    },
+    {
+      "id": 365,
+      "content": "grug ask: \"grug have enough today?\" if yes, stop hunting. if no, get only what missing. enough = peace.",
+      "theme": "cave"
+    },
+    {
+      "id": 366,
+      "content": "time like river - grug no control flow, only where grug stand. ask each morning: what one good thing grug do today?",
+      "theme": "river"
+    },
+    {
+      "id": 367,
+      "content": "grateful heart worth more than full cave. count three good thing each morning, say \"this enough.\"",
+      "theme": "cave"
+    },
+    {
+      "id": 368,
+      "content": "when grug breathe, grug can do one small thing. small thing lead to next thing. start with rock at grug feet.",
+      "theme": "seed"
+    },
+    {
+      "id": 369,
+      "content": "empty grug cannot fill other grug. fill own cup first, then share naturally flows.",
+      "theme": "fire"
+    },
+    {
+      "id": 370,
+      "content": "brain hunt what grug tell it hunt. grug tell brain hunt good thing, world become better place.",
+      "theme": "sun"
+    },
+    {
+      "id": 371,
+      "content": "when world push, grug bend like grass. stubborn tree break, flexible tree survive storm.",
+      "theme": "tree"
+    },
+    {
+      "id": 372,
+      "content": "true understanding = explain to small grug. if need big words, grug still learning. simple words mean grug finally know deep.",
+      "theme": "fire"
+    },
+    {
+      "id": 373,
+      "content": "grug exist because other grug exist. help other grug, they help you. repeat until death. meaning come from tribe, not from being alone.",
+      "theme": "fire"
+    },
+    {
+      "id": 374,
+      "content": "when grug want quit, that when breakthrough come. pain mean grug almost through mountain. wait one more sun.",
+      "theme": "sun"
+    },
+    {
+      "id": 375,
+      "content": "grug focus one rock at time. many rock make grug head hurt and all rock fall.",
+      "theme": "stone"
+    },
+    {
+      "id": 376,
+      "content": "actions teach louder than words. small grug copy what big grug do, not what big grug say.",
+      "theme": "seed"
+    },
+    {
+      "id": 377,
+      "content": "help other grug = help own spirit. each sun do one small thing make other grug better. spirit grow strong when useful.",
+      "theme": "fire"
+    },
+    {
+      "id": 378,
+      "content": "hold gentle or thing break. tight grip = pain. open hand catch new good thing.",
+      "theme": "water"
+    },
+    {
+      "id": 379,
+      "content": "grug learn: stop trying catch all raindrop. let storm be storm. real strong come from bending, not breaking.",
+      "theme": "wind"
+    },
+    {
+      "id": 380,
+      "content": "teaching = making brain hungry, not filling brain with food. hungry brain find own food, remember where grow.",
+      "theme": "fire"
+    },
+    {
+      "id": 381,
+      "content": "cannot force wisdom into other grug head. can only ask good question, show path. let other grug walk own way and discover.",
+      "theme": "fire"
+    },
+    {
+      "id": 382,
+      "content": "rest = sharpening axe. lazy = using dull axe and complaining tree too hard.",
+      "theme": "tree"
+    },
+    {
+      "id": 383,
+      "content": "when chaos spin around grug, grug be rock in river. pick one thing that matter, let rest flow past.",
+      "theme": "stone"
+    },
+    {
+      "id": 384,
+      "content": "real grug with flaws better than fake perfect grug. drop mask, find tribe.",
+      "theme": "stone"
+    },
+    {
+      "id": 385,
+      "content": "brain and heart work together like fire and wood. when grug see beauty, ask \"how work?\" when solve problem, ask \"how feel?\"",
+      "theme": "fire"
+    },
+    {
+      "id": 386,
+      "content": "broken thing can heal with small daily choice. grug start tiny - clean one corner, take one step. many small fix become big change.",
+      "theme": "river"
+    },
+    {
+      "id": 387,
+      "content": "first step not need be perfect. just need be step. body remember how to move once grug start moving.",
+      "theme": "cave"
+    },
+    {
+      "id": 388,
+      "content": "grug see thing in head first, then make real. brain like practice cave - walk path there before walk outside.",
+      "theme": "cave"
+    },
+    {
+      "id": 389,
+      "content": "grug say: double doing = double smart. pick small thing, do today. brain get strong from action, not thinking.",
+      "theme": "fire"
+    },
+    {
+      "id": 390,
+      "content": "grug want help other grug? grug show by doing. other grug copy what see, not what hear. be fire in dark cave.",
+      "theme": "fire"
+    },
+    {
+      "id": 391,
+      "content": "grug choose see miracle in normal thing. stop waiting for amazing, make boring amazing with attention.",
+      "theme": "sun"
+    },
+    {
+      "id": 392,
+      "content": "scared feeling normal. wet feet dry, hungry stay hungry. grug step in water anyway.",
+      "theme": "river"
+    },
+    {
+      "id": 393,
+      "content": "grug choose one good thought, hold tight. bad thoughts fade like smoke from dying fire.",
+      "theme": "fire"
+    },
+    {
+      "id": 394,
+      "content": "grug carry ghost rock of yesterday and tomorrow. now grug only carry today rock. today rock real and manageable.",
+      "theme": "cave"
+    },
+    {
+      "id": 395,
+      "content": "grug no need other grug eyes to be real. see grug self first, invisible feeling go away.",
+      "theme": "water"
+    },
+    {
+      "id": 396,
+      "content": "human learn by doing not sitting. give real problem to solve. brain wake up when must think and try.",
+      "theme": "cave"
+    },
+    {
+      "id": 397,
+      "content": "journey = destination. grug walk slow, pick berries, drink water. arrive happy already.",
+      "theme": "water"
+    },
+    {
+      "id": 398,
+      "content": "treat self like good friend who stumble. effort good thing even when result not perfect. you keep trying = you good human.",
+      "theme": "seed"
+    },
+    {
+      "id": 399,
+      "content": "grug not tiny bug in big world. grug IS big world wearing grug costume. universe already inside grug bones.",
+      "theme": "stone"
+    },
+    {
+      "id": 400,
+      "content": "grug pick tool like pick berry - only take what grug can eat. tool serve grug, not boss grug around.",
+      "theme": "fire"
+    },
+    {
+      "id": 401,
+      "content": "grug learn: be like water. bend around problem, not break against it. soft thing last longer than hard thing.",
+      "theme": "water"
+    },
+    {
+      "id": 402,
+      "content": "when grug hurt earth, earth hurt grug back. treat dirt water animals like family because they are family.",
+      "theme": "earth"
+    },
+    {
+      "id": 403,
+      "content": "excellence live where other grug fear go. when task make stomach hurt, that exact task grug must do. comfort = slow death.",
+      "theme": "stone"
+    },
+    {
+      "id": 404,
+      "content": "success = grug compare only to yesterday grug. today grug kinder? work harder? face fear? then grug win.",
+      "theme": "water"
+    },
+    {
+      "id": 405,
+      "content": "find small thing that make you feel alive. do tomorrow when sun come up. excitement grow like fire when fed regular.",
+      "theme": "stone"
+    },
+    {
+      "id": 406,
+      "content": "pain not destroy fire inside. just cover with ash. blow on ember, fire grow again.",
+      "theme": "fire"
+    },
+    {
+      "id": 407,
+      "content": "you not tiny bug in big world. you whole world squeezed into grug-sized body. stop looking outside for bigness.",
+      "theme": "stone"
+    },
+    {
+      "id": 408,
+      "content": "mistake just step on path to knowing. grug who never make mistake never learn anything. fear of mistake = staying in cold cave forever.",
+      "theme": "fire"
+    },
+    {
+      "id": 409,
+      "content": "want thing easy. do thing hard. small action every sun = bridge from want to have.",
+      "theme": "sun"
+    },
+    {
+      "id": 410,
+      "content": "every grug matter like stick in fire. you have thing only you can do. help one grug today.",
+      "theme": "fire"
+    },
+    {
+      "id": 411,
+      "content": "learning not kill magic. learning show deeper magic. grug hands make what look impossible.",
+      "theme": "fire"
+    },
+    {
+      "id": 412,
+      "content": "comfort zone = slow death. grug pick one small scary thing today. awkward feeling mean grug growing stronger.",
+      "theme": "cave"
+    },
+    {
+      "id": 413,
+      "content": "grug learn: hold tight = lose fast. open hands gentle, let good flow through. change come anyway, better flow with than fight.",
+      "theme": "water"
+    },
+    {
+      "id": 414,
+      "content": "only grug know what make grug feel right in bones. listen to heart-fire, not wind-opinion of others.",
+      "theme": "cave"
+    },
+    {
+      "id": 415,
+      "content": "pain live in yesterday-thinking and tomorrow-thinking. when bad feeling come, grug ask: what actually happening right now? usually grug okay.",
+      "theme": "stone"
+    },
+    {
+      "id": 416,
+      "content": "grug do bad thing not make grug bad thing. action like mud on foot - wash off, keep walking.",
+      "theme": "stone"
+    },
+    {
+      "id": 417,
+      "content": "cannot have comfort and courage same time. pick one. drop comfort-thing, walk toward scary-thing.",
+      "theme": "cave"
+    },
+    {
+      "id": 418,
+      "content": "aim high, miss high, still land above those who aim low. grug always reach for star.",
+      "theme": "tree"
+    },
+    {
+      "id": 419,
+      "content": "fear make mountain from pebble. grug just touch scary thing with one finger. most time pebble stay pebble.",
+      "theme": "stone"
+    },
+    {
+      "id": 420,
+      "content": "fear-choice make more fear. grug choose from warm heart instead of scared place. love fire better than fear ice.",
+      "theme": "fire"
+    },
+    {
+      "id": 421,
+      "content": "life no get easier. grug get stronger. stop wait for world change, start change grug.",
+      "theme": "cave"
+    },
+    {
+      "id": 422,
+      "content": "beautiful = being real grug, not fake grug. stop trying please all grug, become no grug. real grug with scars better than perfect pretend grug.",
+      "theme": "cave"
+    },
+    {
+      "id": 423,
+      "content": "different path not lost path. maybe other grug find better way you no see yet.",
+      "theme": "cave"
+    },
+    {
+      "id": 424,
+      "content": "feel feeling, choose action. feeling like weather - come and go. action like footprint - stay forever.",
+      "theme": "fire"
+    },
+    {
+      "id": 425,
+      "content": "running from scary thing make scary thing bigger. grug stop running, face scary thing. scary thing become small smoke.",
+      "theme": "river"
+    },
+    {
+      "id": 426,
+      "content": "protect young grug from cliff, not from small fall. small hurt teach big wisdom.",
+      "theme": "tree"
+    },
+    {
+      "id": 427,
+      "content": "safe cave make brave little grug. be steady rock, little grug explore world.",
+      "theme": "cave"
+    },
+    {
+      "id": 428,
+      "content": "happy not come from shiny thing. happy already inside grug heart, just need stop looking outside for it.",
+      "theme": "fire"
+    },
+    {
+      "id": 429,
+      "content": "bad thing just dark cave on long journey. grug keep walking, always find light other side.",
+      "theme": "cave"
+    },
+    {
+      "id": 430,
+      "content": "you already complete rock. stop trying be different rock. be you rock.",
+      "theme": "stone"
+    },
+    {
+      "id": 431,
+      "content": "when pain come, grug breathe slow like sleeping bear. ask \"what happening now?\" not story about pain.",
+      "theme": "stone"
+    },
+    {
+      "id": 432,
+      "content": "nature always teaching. grug put down shiny rectangle, watch simple thing daily. learn patience from rock, flow from water.",
+      "theme": "sky"
+    },
+    {
+      "id": 433,
+      "content": "grug ask before act: \"this help or hurt?\" then choose help. small ripple become big wave.",
+      "theme": "stone"
+    },
+    {
+      "id": 434,
+      "content": "grug carry one worry-rock per day. new worry come, grug ask \"this help today?\" if no, throw away. light bag = happy grug.",
+      "theme": "stone"
+    },
+    {
+      "id": 435,
+      "content": "grug learn: happiness not wait for perfect day. even in storm, small fire warm hands. look for tiny light always there.",
+      "theme": "cave"
+    },
+    {
+      "id": 436,
+      "content": "you braver than you think. worry-voice lie. prove wrong with small action. brave feeling come after brave doing.",
+      "theme": "stone"
+    },
+    {
+      "id": 437,
+      "content": "wanting = pain. grug count good thing before sleep. peace come when stop looking other cave.",
+      "theme": "cave"
+    },
+    {
+      "id": 438,
+      "content": "brain and heart like two hand - one hand weak, two hand strong. grug ask both before big choice.",
+      "theme": "stone"
+    },
+    {
+      "id": 439,
+      "content": "push through tired today, tomorrow less tired. small effort now make big difference later. grug promise true.",
+      "theme": "fire"
+    },
+    {
+      "id": 440,
+      "content": "treat self like good friend. mistake = learning, not failing. be gentle with self like tend small fire.",
+      "theme": "fire"
+    },
+    {
+      "id": 441,
+      "content": "human not meant walk alone. few close grug better than many far grug. share food, share pain, make life worth.",
+      "theme": "fire"
+    },
+    {
+      "id": 442,
+      "content": "build trust first, then make rule. friendship strong rope, rule without friendship weak grass that break.",
+      "theme": "cave"
+    },
+    {
+      "id": 443,
+      "content": "grug learn: when world make you small, grow so big box break. be so truly you that fake world must notice. real self = rebellion.",
+      "theme": "river"
+    },
+    {
+      "id": 444,
+      "content": "too many worry-thought make brain cave messy. grug ask \"what one thing matter most?\" throw out noise-thought. clear path come when remove dead branch.",
+      "theme": "cave"
+    },
+    {
+      "id": 445,
+      "content": "grug stop trying prove worth to other grug. grug already enough. use energy for good thing instead of showing off.",
+      "theme": "stone"
+    },
+    {
+      "id": 446,
+      "content": "grug see problem? grug be human who fix. pick up rock, throw at problem. waiting = slow death, doing = maybe good.",
+      "theme": "stone"
+    },
+    {
+      "id": 447,
+      "content": "grug no think about mess up. mess up = learning. better try and fail than no try at all.",
+      "theme": "cave"
+    },
+    {
+      "id": 448,
+      "content": "slow eating = paying attention to life. put stick down between bites, breathe, notice. food teach focus for everything else.",
+      "theme": "wind"
+    },
+    {
+      "id": 449,
+      "content": "enemy live in grug head first. when grug make peace inside, outside rock just bounce off.",
+      "theme": "cave"
+    },
+    {
+      "id": 450,
+      "content": "grug fix own patch of dirt. many grug fix many patch. whole world get better. start where grug feet touch ground.",
+      "theme": "earth"
+    },
+    {
+      "id": 451,
+      "content": "stop wearing mask that not fit. ask each morning: what make grug feel like real grug today? do that thing.",
+      "theme": "river"
+    },
+    {
+      "id": 452,
+      "content": "grug job is be grug, not fake grug. when grug love real grug, grug become strong like old tree.",
+      "theme": "cave"
+    },
+    {
+      "id": 453,
+      "content": "courage not thing you find in cave. courage = thing you build, one small brave thing at time.",
+      "theme": "cave"
+    },
+    {
+      "id": 454,
+      "content": "grug choose see miracle in normal thing. stop waiting for amazing, make boring amazing with attention.",
+      "theme": "sun"
+    },
+    {
+      "id": 455,
+      "content": "freedom not fall from sky. grug make freedom with small choice every day. practice choosing, freedom muscle grow strong.",
+      "theme": "fire"
+    },
+    {
+      "id": 456,
+      "content": "silence = helping bully. when grug see unfair, grug speak. small word help weak grug. no neutral exist.",
+      "theme": "stone"
+    },
+    {
+      "id": 457,
+      "content": "when brain spin like whirlpool, grug ask \"what one thing now?\" do that thing. thinking too much = paralysis, doing = peace.",
+      "theme": "water"
+    },
+    {
+      "id": 458,
+      "content": "grug already carry heavy rock up mountain. dropping rock near top = waste all carry-pain for nothing. grug finish what grug start.",
+      "theme": "cave"
+    },
+    {
+      "id": 459,
+      "content": "caring simple. listen, help, be honest with all grug. same good heart for everyone.",
+      "theme": "sun"
+    },
+    {
+      "id": 460,
+      "content": "grug no let fear choose. small brave step toward scary thing better than hiding from all good thing.",
+      "theme": "cave"
+    },
+    {
+      "id": 461,
+      "content": "earth not store, earth home. treat home good, home treat grug good. take only need, give back when can.",
+      "theme": "earth"
+    },
+    {
+      "id": 462,
+      "content": "survive not enough. grug add one small good thing daily. small good stack into big good life.",
+      "theme": "stone"
+    },
+    {
+      "id": 463,
+      "content": "feel fear, do thing anyway. fear-beast get smaller with doing, not hiding.",
+      "theme": "cave"
+    },
+    {
+      "id": 464,
+      "content": "grug not thoughts, grug one watching thoughts. when brain make noise, ask \"who watching?\" real grug always there, never broken.",
+      "theme": "river"
+    },
+    {
+      "id": 465,
+      "content": "focus one wisdom-branch deep, not grab whole tree. share small truth you know, better than fake big wisdom.",
+      "theme": "tree"
+    },
+    {
+      "id": 466,
+      "content": "small action create big ripple. other grug watching. do tiny brave thing today.",
+      "theme": "water"
+    },
+    {
+      "id": 467,
+      "content": "good question show thinking heart. bad question show showing off brain. grug watch what other grug curious about.",
+      "theme": "wind"
+    },
+    {
+      "id": 468,
+      "content": "when body say \"no more,\" grug stop. rest not lazy, rest gather strength. empty cup pour nothing.",
+      "theme": "cave"
+    },
+    {
+      "id": 469,
+      "content": "best teaching happen when teacher become invisible. student no need grug anymore mean grug did job right.",
+      "theme": "cave"
+    },
+    {
+      "id": 470,
+      "content": "caring simple: when grug hurt, look around. other grug hurt same way. shared pain make connection, not special snowflake thinking.",
+      "theme": "fire"
+    },
+    {
+      "id": 471,
+      "content": "wanting make poor. grateful make rich. stop chase, see enough already.",
+      "theme": "cave"
+    },
+    {
+      "id": 472,
+      "content": "grug no control tomorrow weather. grug only control if bring warm fur today. worry = pain with no purpose.",
+      "theme": "tree"
+    },
+    {
+      "id": 473,
+      "content": "grug put down heavy rock of past and future worry. focus on fire inside chest, help other grug today.",
+      "theme": "fire"
+    },
+    {
+      "id": 474,
+      "content": "simple truth no need fancy word. if need many word to explain, probably not truth. real wisdom fit on one rock.",
+      "theme": "fire"
+    },
+    {
+      "id": 475,
+      "content": "grug learn: push river = tired grug, same river. wait for ripe fruit = sweet taste. trust timing, stop forcing.",
+      "theme": "fire"
+    },
+    {
+      "id": 476,
+      "content": "relationship like fire. need kindness and respect to stay warm. contempt kill fire fast.",
+      "theme": "fire"
+    },
+    {
+      "id": 477,
+      "content": "grug know: belonging start inside cave of self. make peace with grug first, then any fire feel warm.",
+      "theme": "cave"
+    },
+    {
+      "id": 478,
+      "content": "want thing easy. do thing when no want to do thing = bridge to having thing.",
+      "theme": "sun"
+    },
+    {
+      "id": 479,
+      "content": "big work need many grug. alone grug = broken cave. together grug = strong build.",
+      "theme": "cave"
+    },
+    {
+      "id": 480,
+      "content": "brain-magic for worry = pain. brain-magic for create = strength. grug ask: thought help or hurt? throw away rotten, keep sharp.",
+      "theme": "cave"
+    },
+    {
+      "id": 481,
+      "content": "aim big mammoth, miss = still get deer. aim small rabbit, miss = get nothing. always throw spear at biggest thing grug see.",
+      "theme": "cave"
+    },
+    {
+      "id": 482,
+      "content": "read book = grow brain. grow brain = see new path. no read = stay stuck in same cave forever.",
+      "theme": "fire"
+    },
+    {
+      "id": 483,
+      "content": "you already complete. stop trying be different you. you breathe = you matter. simple.",
+      "theme": "stone"
+    },
+    {
+      "id": 484,
+      "content": "facts like nuts in winter - useful but limited. imagination like fire - lights new paths where none exist before.",
+      "theme": "fire"
+    },
+    {
+      "id": 485,
+      "content": "power show who grug really is inside. watch how human treat small thing when no one looking.",
+      "theme": "fire"
+    },
+    {
+      "id": 486,
+      "content": "still brain = clear brain. when problem come, grug sit on rock, breathe, wait for mud settle in head-water.",
+      "theme": "stone"
+    },
+    {
+      "id": 487,
+      "content": "pain like weather - come anyway. grug no fight rain, grug find cave. save energy for what grug can change.",
+      "theme": "cave"
+    },
+    {
+      "id": 488,
+      "content": "value not in price. value in how much thing help grug when grug need help.",
+      "theme": "water"
+    },
+    {
+      "id": 489,
+      "content": "grug no push human up mountain. grug help human find mountain they already want climb, then move rocks from path.",
+      "theme": "fire"
+    },
+    {
+      "id": 490,
+      "content": "big dream = many small touch. grug no move mountain today. grug pick up one stone.",
+      "theme": "water"
+    },
+    {
+      "id": 491,
+      "content": "small problem now = no big problem later. grug fix crack before wall fall on head.",
+      "theme": "cave"
+    },
+    {
+      "id": 492,
+      "content": "love not about perfect. love about see broken thing and say \"grug okay with broken thing.\" find grug who see mess and still sit by fire.",
+      "theme": "fire"
+    },
+    {
+      "id": 493,
+      "content": "hardest part = decide to start. after decide, just keep moving like water around rock.",
+      "theme": "river"
+    },
+    {
+      "id": 494,
+      "content": "cave safe but cave = slow death. pick one small scary thing today. grug choose river over swamp.",
+      "theme": "river"
+    },
+    {
+      "id": 495,
+      "content": "keep small-grug brain in big-grug body. ask why about everything. wonder-eyes find new good thing always.",
+      "theme": "cave"
+    },
+    {
+      "id": 496,
+      "content": "human need tribe like tree need forest. find few grug who understand heart. serve something bigger than self daily.",
+      "theme": "tree"
+    },
+    {
+      "id": 497,
+      "content": "you already enough like good rock. stop covering fire with wet leaves of \"should be different.\"",
+      "theme": "fire"
+    },
+    {
+      "id": 498,
+      "content": "before help other grug, must sit in other grug cave. feel other grug pain first. then words land soft, not hard like rock.",
+      "theme": "cave"
+    },
+    {
+      "id": 499,
+      "content": "artist-grug never arrive. always more mountain behind mountain. when feel proud, learn new thing next day.",
+      "theme": "river"
+    },
+    {
+      "id": 500,
+      "content": "pain = teacher. grug ask \"what this teach?\" not \"why grug hurt?\" make broken bone useful for next hunt.",
+      "theme": "stone"
+    },
+    {
+      "id": 501,
+      "content": "sit together, try together, learn together. no teacher-student, only learning grug helping learning grug.",
+      "theme": "fire"
+    },
+    {
+      "id": 502,
+      "content": "work with energy wave, not against. rest when fire small, hunt when fire big. body tell truth.",
+      "theme": "fire"
+    },
+    {
+      "id": 503,
+      "content": "grug chase money, hands always empty. grug give first, good things come back. help one grug daily before help self.",
+      "theme": "stone"
+    },
+    {
+      "id": 504,
+      "content": "grug learn: asking help not weak, staying stuck alone is weak. share big rock with other grug, rock become small.",
+      "theme": "stone"
+    },
+    {
+      "id": 505,
+      "content": "mind just cave, heart just fire. no need perfect temple to share warmth with other grug.",
+      "theme": "cave"
+    },
+    {
+      "id": 506,
+      "content": "other grug success show path exist, not grug failure. use success as map, not stick for beating self.",
+      "theme": "cave"
+    },
+    {
+      "id": 507,
+      "content": "grug choose every day who grug become. talent just rock - choice make rock into tool or weapon.",
+      "theme": "cave"
+    },
+    {
+      "id": 508,
+      "content": "small grug teach parent: wonder better than worry, play better than plan, love better than lecture.",
+      "theme": "cave"
+    },
+    {
+      "id": 509,
+      "content": "pick mate who good friend first. pretty fade, kind heart stay strong like old tree.",
+      "theme": "tree"
+    },
+    {
+      "id": 510,
+      "content": "voice carry feeling more than word carry meaning. make voice match heart for other grug feel good.",
+      "theme": "cave"
+    },
+    {
+      "id": 511,
+      "content": "fear just thinking about maybe-bad. grug move one foot, fear disappear. action cure fear-sickness.",
+      "theme": "cave"
+    },
+    {
+      "id": 512,
+      "content": "quiet time make heart soft. soft heart speak gentle words. tribe feel peace when grug sit silent first.",
+      "theme": "fire"
+    },
+    {
+      "id": 513,
+      "content": "teacher-grug must fill own cup first. empty grug cannot pour wisdom into small grug. tend self, then teach others.",
+      "theme": "fire"
+    },
+    {
+      "id": 514,
+      "content": "information overload = filter failure. grug pick three important thing each day, ignore rest. brain peaceful when grug choose what matter.",
+      "theme": "water"
+    },
+    {
+      "id": 515,
+      "content": "when grug confused what do, look up. when grug confused how act, look inside. sky show perspective, heart show path.",
+      "theme": "sky"
+    },
+    {
+      "id": 516,
+      "content": "grug no become amazing first. grug do thing well, amazing follow behind like shadow.",
+      "theme": "fire"
+    },
+    {
+      "id": 517,
+      "content": "be real grug from start. fake grug = tired grug. real tribe stay anyway.",
+      "theme": "cave"
+    },
+    {
+      "id": 518,
+      "content": "grug ask before big choice: \"this help little grug seven generation from now?\" if no, grug no do. plant seed for future grug.",
+      "theme": "seed"
+    },
+    {
+      "id": 519,
+      "content": "hungry human need food, not show. grug share what grug have = grug share heart. simple food with care better than fancy food with stress.",
+      "theme": "fire"
+    },
+    {
+      "id": 520,
+      "content": "small grug need safe cave, patient ear, space to try. when small grug feel safe, small grug become strong grug who help others.",
+      "theme": "seed"
+    },
+    {
+      "id": 521,
+      "content": "mud real, star real too. grug choose look up sometimes - find small light each day, remember stuck not forever.",
+      "theme": "sky"
+    },
+    {
+      "id": 522,
+      "content": "eyes only work forward. past = teacher not home. when grug catch self looking back, grug pick up rock to remember now.",
+      "theme": "stone"
+    },
+    {
+      "id": 523,
+      "content": "grug carry only what grug need today. extra thing = heavy back, slow move. keep small buffer for survival, throw rest away.",
+      "theme": "cave"
+    },
+    {
+      "id": 524,
+      "content": "daily work beat natural gift every time. grug weak but grug consistent like sunrise. weakness become strength when you feed with work.",
+      "theme": "sun"
+    },
+    {
+      "id": 525,
+      "content": "grug fire inside only grug fire. copy other grug fire make both fire weak. tend own fire make strong.",
+      "theme": "fire"
+    },
+    {
+      "id": 526,
+      "content": "find thing that make you forget eat. feed that fire every day. ignore shiny distractions.",
+      "theme": "fire"
+    },
+    {
+      "id": 527,
+      "content": "gentle heart make other grug feel safe. share food, listen more than talk. soft heart stronger than hard fist.",
+      "theme": "fire"
+    },
+    {
+      "id": 528,
+      "content": "true skill make hard look easy. grug respect who suffer so others no suffer. simple = hardest make.",
+      "theme": "cave"
+    },
+    {
+      "id": 529,
+      "content": "compassion not looking down from high rock. compassion knowing all grug same inside. help because same, not different.",
+      "theme": "cave"
+    },
+    {
+      "id": 530,
+      "content": "grug learn: holding okay-thing stop grug from getting great-thing. must drop okay-rock to catch better-rock.",
+      "theme": "cave"
+    },
+    {
+      "id": 531,
+      "content": "grug protect weird spark like protect fire in storm. spark make grug different, spark make grug strong. feed spark daily or spark die.",
+      "theme": "fire"
+    },
+    {
+      "id": 532,
+      "content": "grug cave small, world big. ask \"what grug not see?\" before big choice. listen more than speak.",
+      "theme": "cave"
+    },
+    {
+      "id": 533,
+      "content": "when other grug say impossible, grug think: good, less competition. scared grug stay cold cave, brave grug make warm home.",
+      "theme": "cave"
+    },
+    {
+      "id": 534,
+      "content": "work good when work match what grug heart want deep inside. no need save world, just save grug world.",
+      "theme": "tree"
+    },
+    {
+      "id": 535,
+      "content": "when mean grug push, grug no push back. grug give warm instead. kindness break mean grug brain, put out angry fire.",
+      "theme": "water"
+    },
+    {
+      "id": 536,
+      "content": "grug stuck with grug forever. better make peace with ugly face in water.",
+      "theme": "fire"
+    },
+    {
+      "id": 537,
+      "content": "young grug learn best when talk with other young grug, not just listen to big grug.",
+      "theme": "fire"
+    },
+    {
+      "id": 538,
+      "content": "memory warm grug heart but grug no live in yesterday cave. grug thank past, walk toward today sun.",
+      "theme": "fire"
+    },
+    {
+      "id": 539,
+      "content": "grug wake up, choose make day good instead of wait for day prove itself. grug bring good energy, morning give back.",
+      "theme": "sky"
+    },
+    {
+      "id": 540,
+      "content": "sadness not enemy to fight. sadness like scar - mark of love that was real. grug carry scar and keep walking.",
+      "theme": "cave"
+    },
+    {
+      "id": 541,
+      "content": "bad thing like cloud - always move. grug survive other season, grug survive this one too.",
+      "theme": "river"
+    },
+    {
+      "id": 542,
+      "content": "when path get rocky, grug keep walking. sitting in storm = wet forever. moving feet = eventually find dry cave.",
+      "theme": "cave"
+    },
+    {
+      "id": 543,
+      "content": "breakthrough hide behind next rock. only walking grug find breakthrough. sitting grug find nothing.",
+      "theme": "cave"
+    },
+    {
+      "id": 544,
+      "content": "when bad thing happen, ask \"what this teach grug?\" write lesson on cave wall. knowledge make grug free to choose good path.",
+      "theme": "cave"
+    },
+    {
+      "id": 545,
+      "content": "brain good for choose next step only. feet do walking. grug use brain like sharp stick - one job at time.",
+      "theme": "fire"
+    },
+    {
+      "id": 546,
+      "content": "grug learn: only taking make heart empty cave. start giving small thing today - teach, share, help. giving make grug matter to tribe.",
+      "theme": "fire"
+    },
+    {
+      "id": 547,
+      "content": "connect first, then correct. warm heart before fix problem. trust = change possible.",
+      "theme": "cave"
+    },
+    {
+      "id": 548,
+      "content": "embrace mystery better than fake knowing. uncertainty = freedom from heavy burden of always being right.",
+      "theme": "stone"
+    },
+    {
+      "id": 549,
+      "content": "grug feed small grug, keep safe, then just sit with feelings like sitting with storm. presence better than fixing.",
+      "theme": "cave"
+    },
+    {
+      "id": 550,
+      "content": "hold gentle or lose everything. tight grip kill thing you love. loose hand keep bird alive.",
+      "theme": "water"
+    },
+    {
+      "id": 551,
+      "content": "let wild brain run first, judge second. stupid idea often hide smart idea inside.",
+      "theme": "fire"
+    },
+    {
+      "id": 552,
+      "content": "pain like storm - pass quick. quit like scar - stay forever. when want stop, grug take one more step.",
+      "theme": "wind"
+    },
+    {
+      "id": 553,
+      "content": "trust like fire - need constant feeding or die. grug only promise what grug can give. show up every time like sun.",
+      "theme": "tree"
+    },
+    {
+      "id": 554,
+      "content": "open hand catch more than closed fist. grug give berry, get many berry back. sharing make tribe strong.",
+      "theme": "cave"
+    },
+    {
+      "id": 555,
+      "content": "body whisper truth, grug listen now. body say rest, grug rest. body say hungry, grug eat good food. grug feel strong again.",
+      "theme": "water"
+    },
+    {
+      "id": 556,
+      "content": "grug learn: strong thing need strong bottom. check foundation before build high. solid base = less crying later.",
+      "theme": "stone"
+    },
+    {
+      "id": 557,
+      "content": "find thing that make eyes bright. play with thing like cave-child. no care what other grug think.",
+      "theme": "fire"
+    },
+    {
+      "id": 558,
+      "content": "grug know: mind-cave sick = everything sick. check mind-cave first like check fire each morning. fix inside before chase outside things.",
+      "theme": "cave"
+    },
+    {
+      "id": 559,
+      "content": "grug no watch other tribe hunt. grug ask own tribe what tribe need. work backward from need to action.",
+      "theme": "stone"
+    },
+    {
+      "id": 560,
+      "content": "when good happen, grug just enjoy. when bad happen, grug find tiny good hiding inside. flip thinking make life lighter.",
+      "theme": "fire"
+    },
+    {
+      "id": 561,
+      "content": "help other grug get what they want, universe help you get what you want. give first, receive second always.",
+      "theme": "seed"
+    },
+    {
+      "id": 562,
+      "content": "let thing be what thing is. taste apple-ness, not fake orange. grug learn: accept truth first, then change what can change.",
+      "theme": "fire"
+    },
+    {
+      "id": 563,
+      "content": "fail fast = learn fast. mistake grab face, make grug pay attention. success whisper quiet, maybe no hear.",
+      "theme": "fire"
+    },
+    {
+      "id": 564,
+      "content": "life like rock on chest. rock never leave but grug get stronger. take small step when heavy, another when ready.",
+      "theme": "stone"
+    },
+    {
+      "id": 565,
+      "content": "flow with change, no fight change. world like water, always moving. grug dance with next moment, stay happy.",
+      "theme": "river"
+    },
+    {
+      "id": 566,
+      "content": "grug learn: brain like fire, feed small stick steady or fire die. make one small thing each sun better than collect many fact rock.",
+      "theme": "fire"
+    },
+    {
+      "id": 567,
+      "content": "grug already good grug. drop heavy rock of \"not enough\" thoughts. walk light, grow without pain.",
+      "theme": "stone"
+    },
+    {
+      "id": 568,
+      "content": "injustice spread like poison water. grug speak when see wrong, even small wrong. silence make grug weak too.",
+      "theme": "cave"
+    },
+    {
+      "id": 569,
+      "content": "change only thing that no change. when sad, remember cloud pass. when happy, enjoy fire while burn.",
+      "theme": "water"
+    },
+    {
+      "id": 570,
+      "content": "you are sky, feelings are weather. weather pass, you stay. when storm come, say \"storm visiting\" not \"i am storm.\"",
+      "theme": "sky"
+    },
+    {
+      "id": 571,
+      "content": "when problem feel big, grug look at sky first. problem still there but grug see world bigger than trouble.",
+      "theme": "sky"
+    },
+    {
+      "id": 572,
+      "content": "mess up = best teacher. perfect day teach nothing, broken day teach everything. no fear mistake, fear staying same.",
+      "theme": "fire"
+    },
+    {
+      "id": 573,
+      "content": "easy path make grug weak. struggle make grug strong like storm tree. find small hard thing daily.",
+      "theme": "tree"
+    },
+    {
+      "id": 574,
+      "content": "easy goal make grug weak. hard goal make grug strong. choose pain that grow you.",
+      "theme": "stone"
+    },
+    {
+      "id": 575,
+      "content": "if grug not want thing when hair gray, grug not take thing now. taking create bond, letting go create pain.",
+      "theme": "cave"
+    },
+    {
+      "id": 576,
+      "content": "grug learn: rich mean need few thing, not have many thing. when grug happy with just fire and friend, no one can steal grug wealth.",
+      "theme": "fire"
+    },
+    {
+      "id": 577,
+      "content": "being loved = strength. loving other = courage. love make grug better grug, not weaker grug.",
+      "theme": "tree"
+    },
+    {
+      "id": 578,
+      "content": "only your belly know when belly full. listen to own feeling, not other grug mouth.",
+      "theme": "cave"
+    },
+    {
+      "id": 579,
+      "content": "good day not fall from sky. grug make good day with own hands and choice.",
+      "theme": "fire"
+    },
+    {
+      "id": 580,
+      "content": "want be best? do boring thing when other grug avoid. practice when rain fall, work when body hurt.",
+      "theme": "cave"
+    },
+    {
+      "id": 581,
+      "content": "fear grow when grug wait. fear shrink when grug do. scary thing in head always bigger than real scary thing.",
+      "theme": "river"
+    },
+    {
+      "id": 582,
+      "content": "grug no be island. find one good grug, share food, share silence. human-grug only real with other grug.",
+      "theme": "stone"
+    },
+    {
+      "id": 583,
+      "content": "brave not mean no fear. brave mean do right thing while scared. fear normal, action anyway = strong.",
+      "theme": "wind"
+    },
+    {
+      "id": 584,
+      "content": "escape bad cave easy. escape cave-thinking in head much harder. grug ask: what would deserve-good-grug do? then do that thing.",
+      "theme": "cave"
+    },
+    {
+      "id": 585,
+      "content": "bad thing happen = chance to get stronger. grug no fight pain, grug use pain like sharp rock to survive.",
+      "theme": "stone"
+    },
+    {
+      "id": 586,
+      "content": "scared grug starve. brave grug maybe fail but maybe eat. no throw stick = no meat for sure.",
+      "theme": "cave"
+    },
+    {
+      "id": 587,
+      "content": "skills cheap, passion priceless. find what make heart burn bright, then skills grow easy like fire spread dry wood.",
+      "theme": "fire"
+    },
+    {
+      "id": 588,
+      "content": "old skin must shed for new skin grow. ask \"this still serve grug?\" if no, drop like heavy rock.",
+      "theme": "tree"
+    },
+    {
+      "id": 589,
+      "content": "you see other grug best moments only. grug focus on own fire instead of staring at other cave.",
+      "theme": "fire"
+    },
+    {
+      "id": 590,
+      "content": "grug say: look at three good thing each sun-time. grateful heart pull more good thing like magnet pull rock.",
+      "theme": "fire"
+    },
+    {
+      "id": 591,
+      "content": "grug learn: kind grug get invited to mammoth feast. mean grug eat alone in cold cave. be kind always.",
+      "theme": "cave"
+    },
+    {
+      "id": 592,
+      "content": "when storm come, grug keep small fire burning in heart. find one good thing each morning. hope alive = grug keep walking.",
+      "theme": "fire"
+    },
+    {
+      "id": 593,
+      "content": "when tribe sick, grug sick too. help other grug = help self. share food, listen, teach. tribe strong make grug strong.",
+      "theme": "cave"
+    },
+    {
+      "id": 594,
+      "content": "grug say: pick one thing heart love. ask other grug teach. understand deep make caring easy.",
+      "theme": "cave"
+    },
+    {
+      "id": 595,
+      "content": "grug eyes on other cave make own cave feel small. stop looking other place. appreciate what grug have now.",
+      "theme": "cave"
+    },
+    {
+      "id": 596,
+      "content": "good thing always wear work clothes. easy thing usually trap, hard thing usually door to better place.",
+      "theme": "stone"
+    },
+    {
+      "id": 597,
+      "content": "shiny thing fool grug eye. useful thing feed belly. grug ask: this make life better or just feel fancy?",
+      "theme": "stone"
+    },
+    {
+      "id": 598,
+      "content": "time fly but grug choose direction. ask each morning: what one good thing grug do today? then do that thing.",
+      "theme": "river"
+    },
+    {
+      "id": 599,
+      "content": "eyes on goal, feet find path. eyes on problem, feet find hole.",
+      "theme": "cave"
+    },
+    {
+      "id": 600,
+      "content": "messy fire better than no fire. fear of mess up keep grug cold and hungry. make messy start today.",
+      "theme": "seed"
+    },
+    {
+      "id": 601,
+      "content": "when worry-storm come, grug stop fighting. grug bend like tree in wind. storm always pass, grug still standing.",
+      "theme": "tree"
+    },
+    {
+      "id": 602,
+      "content": "everything have one place. when grug use thing, grug put back same place. simple = peace.",
+      "theme": "cave"
+    },
+    {
+      "id": 603,
+      "content": "expect smart small grug, get smart small grug. expect nothing, get nothing. what grug expect from world, world give back.",
+      "theme": "stone"
+    },
+    {
+      "id": 604,
+      "content": "grug train eye find three good thing daily. beauty always there, grug brain just lazy hunter. practice make grug happier.",
+      "theme": "cave"
+    },
+    {
+      "id": 605,
+      "content": "mess up = teacher, not monster. do thing badly better than not do thing at all.",
+      "theme": "cave"
+    },
+    {
+      "id": 606,
+      "content": "belly know before brain know. when thing pull grug like river pull stick, grug follow. usually lead to good place.",
+      "theme": "cave"
+    },
+    {
+      "id": 607,
+      "content": "be like plant, not jewel. bend when life push, grow toward good thing, change but stay alive.",
+      "theme": "tree"
+    },
+    {
+      "id": 608,
+      "content": "mystery not enemy. mystery show grug what missing. feed curiosity small stick, not whole tree.",
+      "theme": "fire"
+    },
+    {
+      "id": 609,
+      "content": "find grug who let you be weird. real closeness happen when you stop hiding strange parts.",
+      "theme": "cave"
+    },
+    {
+      "id": 610,
+      "content": "see thing in mind first, then build. no mind-picture = broken spear and mammoth chase grug.",
+      "theme": "fire"
+    },
+    {
+      "id": 611,
+      "content": "grug know: stop copying other grug. world need your special gift. be only grug you can be.",
+      "theme": "cave"
+    },
+    {
+      "id": 612,
+      "content": "body trapped, mind still free. when bad thing happen, ask \"what part of grug still choose right now?\" always something.",
+      "theme": "fire"
+    },
+    {
+      "id": 613,
+      "content": "grug learn: weak kindness = poison inside. must build strength first like tree roots. strong grug give kindness from full heart, not fear.",
+      "theme": "tree"
+    },
+    {
+      "id": 614,
+      "content": "real self not hidden under pile of stuff. real self what left when grug remove fake stuff.",
+      "theme": "cave"
+    },
+    {
+      "id": 615,
+      "content": "life like walking dark cave with small torch. past show where grug been, not where grug going. take one step, learn, repeat.",
+      "theme": "cave"
+    },
+    {
+      "id": 616,
+      "content": "only this moment real. past smoke, future mountain. when mind wander, ask: what grug see now? life happen here.",
+      "theme": "wind"
+    },
+    {
+      "id": 617,
+      "content": "brain like fire. feed angry stick, get angry flame. feed calm stick, get calm flame. grug choose stick, grug choose world.",
+      "theme": "fire"
+    },
+    {
+      "id": 618,
+      "content": "tears = body wisdom. when hurt come, let water flow. no shame in mountain crying when snow melt.",
+      "theme": "water"
+    },
+    {
+      "id": 619,
+      "content": "teach young grug for tomorrow world, not yesterday world. old ways make young grug lost bird with broken wing.",
+      "theme": "water"
+    },
+    {
+      "id": 620,
+      "content": "good leader eat last. group strong make leader strong. ask what group need before what grug want.",
+      "theme": "cave"
+    },
+    {
+      "id": 621,
+      "content": "better feel everything strong than feel nothing at all. choose fire that burn bright over cold ash.",
+      "theme": "fire"
+    },
+    {
+      "id": 622,
+      "content": "learning come when brain ready, not when grug force. make mind comfortable place, wisdom visit naturally.",
+      "theme": "fire"
+    },
+    {
+      "id": 623,
+      "content": "grug talent mean nothing without tribe. stop being star, start being pack. ask \"how grug help?\" magic happen when work together.",
+      "theme": "fire"
+    },
+    {
+      "id": 624,
+      "content": "make thing work first, pretty second. good tool feel right in hand, do job without grug think too much.",
+      "theme": "stone"
+    },
+    {
+      "id": 625,
+      "content": "stop chasing love. let love find real grug. being loved beats loving someone who runs away.",
+      "theme": "cave"
+    },
+    {
+      "id": 626,
+      "content": "brain like hungry animal. feed worry, find worry. feed good, find good. choose think-food wisely.",
+      "theme": "cave"
+    },
+    {
+      "id": 627,
+      "content": "space not problem. stuff problem. one thing in, two thing out.",
+      "theme": "cave"
+    },
+    {
+      "id": 628,
+      "content": "grug learn: when cannot reach cookie jar, stop stretching in all direction. accept small cave, simple food. limitation = teacher that make grug wise.",
+      "theme": "cave"
+    },
+    {
+      "id": 629,
+      "content": "logic get grug from cave to water. imagination help grug see new path through mountain.",
+      "theme": "stone"
+    },
+    {
+      "id": 630,
+      "content": "you exist first, make meaning after. no wait for permission from universe, choose what matter to you today.",
+      "theme": "cave"
+    },
+    {
+      "id": 631,
+      "content": "incredible not far away. incredible right here when grug stop rushing and really look at normal thing.",
+      "theme": "sky"
+    },
+    {
+      "id": 632,
+      "content": "when grug see good thing, grug take good thing. big brain make simple joy into worry mountain. think like small human: see berry, eat berry, smile.",
+      "theme": "sun"
+    },
+    {
+      "id": 633,
+      "content": "when storm come, grug breathe deep and become mountain. storm pass, mountain stay.",
+      "theme": "stone"
+    },
+    {
+      "id": 634,
+      "content": "marriage not project to fix. marriage like fire - need daily wood, daily care. grug ask: \"how be good cave-mate today?\"",
+      "theme": "fire"
+    },
+    {
+      "id": 635,
+      "content": "before trade life-energy, grug ask: \"this worth piece of grug soul?\" most time answer no. each coin = sunrise never see again.",
+      "theme": "cave"
+    },
+    {
+      "id": 636,
+      "content": "meditation not about becoming different grug. just sit with grug that already here. you complete already.",
+      "theme": "fire"
+    },
+    {
+      "id": 637,
+      "content": "doubt make rock heavy. belief make rock light. grug say \"grug will do\" not \"maybe grug can.\"",
+      "theme": "cave"
+    },
+    {
+      "id": 638,
+      "content": "focus one thing. make excellent. better known for one great fire than many weak spark.",
+      "theme": "fire"
+    },
+    {
+      "id": 639,
+      "content": "no cave given? grab rock. stack rock. build own cave. cave you build stronger than cave you get.",
+      "theme": "cave"
+    },
+    {
+      "id": 640,
+      "content": "hope make grug move feet when cave feel dark. moving grug find solution, sitting grug find only worry.",
+      "theme": "fire"
+    },
+    {
+      "id": 641,
+      "content": "other grug = center of everything. each day choose one grug make happy. kindness last longer than busy-work.",
+      "theme": "fire"
+    },
+    {
+      "id": 642,
+      "content": "when mouth stop moving, ears start working. big problem just many small rock - move one at time.",
+      "theme": "stone"
+    },
+    {
+      "id": 643,
+      "content": "walls keep pain out but also keep love out. grug tear down walls, build bridges instead. caring = belonging.",
+      "theme": "stone"
+    },
+    {
+      "id": 644,
+      "content": "grug know: safe cave become prison cave. take small step outside each season. world bigger than dark cave show.",
+      "theme": "river"
+    },
+    {
+      "id": 645,
+      "content": "grug stop wait for permission. pick up stick, make own fire. destiny what grug do with hands today.",
+      "theme": "fire"
+    },
+    {
+      "id": 646,
+      "content": "grug no fight time river. grug swim with flow. when life push, grug look for gift in that direction.",
+      "theme": "river"
+    },
+    {
+      "id": 647,
+      "content": "grug become grug through other grug. alone grug = half grug. together grug = whole grug.",
+      "theme": "cave"
+    },
+    {
+      "id": 648,
+      "content": "heart big enough hold opposite feeling. stop fighting own emotions, start accepting both exist together.",
+      "theme": "cave"
+    },
+    {
+      "id": 649,
+      "content": "choose first thing before world choose for grug. morning time = grug time. when grug control beginning, grug control whole day.",
+      "theme": "river"
+    },
+    {
+      "id": 650,
+      "content": "when thing break, grug sit quiet and watch. breaking = beginning hiding underneath. patience let good emerge from broken place.",
+      "theme": "seed"
+    },
+    {
+      "id": 651,
+      "content": "fear always there. make want-thing bigger than scared-thing. brave mean do anyway when hands shake.",
+      "theme": "fire"
+    },
+    {
+      "id": 652,
+      "content": "when brain say stop, body still strong. count ten, breathe three, try one more step.",
+      "theme": "cave"
+    },
+    {
+      "id": 653,
+      "content": "grug not sponge for bad thing. grug plant seed of change instead. small seed grow, sponge just get heavy.",
+      "theme": "seed"
+    },
+    {
+      "id": 654,
+      "content": "grug water good thoughts, good thoughts grow big. poison thoughts get small fire, die quick. choose which plant to water.",
+      "theme": "fire"
+    },
+    {
+      "id": 655,
+      "content": "when have little, think like have much. brain more powerful than belly. small situation + big thinking = big life.",
+      "theme": "cave"
+    },
+    {
+      "id": 656,
+      "content": "grug watch thought like watch fire. bad thought come? grug no feed. good thought come? grug add stick. plant good seed in head, grow good feeling.",
+      "theme": "seed"
+    },
+    {
+      "id": 657,
+      "content": "when world shake, old way break. grug throw out broken map, make new path while walking. be water, not rock.",
+      "theme": "water"
+    },
+    {
+      "id": 658,
+      "content": "laugh at own mistake = become own friend instead of enemy. grug keep silly journal, turn pain into joy.",
+      "theme": "stone"
+    },
+    {
+      "id": 659,
+      "content": "nothing disappear, just change costume. fear shrink when see big picture of endless changing.",
+      "theme": "water"
+    },
+    {
+      "id": 660,
+      "content": "stop chasing time like scared rabbit. sit with now moment. breathe three time, notice one good thing happening right here.",
+      "theme": "fire"
+    },
+    {
+      "id": 661,
+      "content": "life not big mountain. life many small rock. focus on rock under feet today.",
+      "theme": "stone"
+    },
+    {
+      "id": 662,
+      "content": "pick mountain, walk toward mountain. wrong mountain better than no mountain.",
+      "theme": "river"
+    },
+    {
+      "id": 663,
+      "content": "pain = teacher with sharp stick. when hurt come, grug ask \"what this teach grug?\" then listen. crack where light enter.",
+      "theme": "stone"
+    },
+    {
+      "id": 664,
+      "content": "broken not problem to fix. broken is door where light enter. show crack, help other grug see theirs too.",
+      "theme": "cave"
+    },
+    {
+      "id": 665,
+      "content": "grug no fight change, grug flow with change. mind like water, take shape of new container. change = chance learn.",
+      "theme": "wind"
+    },
+    {
+      "id": 666,
+      "content": "customer wanting = customer caring. dead customer want nothing. grug happy when customer complain - mean they still alive inside.",
+      "theme": "river"
+    },
+    {
+      "id": 667,
+      "content": "money = tool, not treasure. use shiny rock get what grug need, not pile in corner making worry.",
+      "theme": "stone"
+    },
+    {
+      "id": 668,
+      "content": "each small grug different tree. watch what make eyes bright. adapt teaching like good hunter adapt to prey.",
+      "theme": "tree"
+    },
+    {
+      "id": 669,
+      "content": "know price of everything, value of nothing. grug ask: this make life better or just cost more shiny rock?",
+      "theme": "stone"
+    },
+    {
+      "id": 670,
+      "content": "first look fool grug many time. grug poke thing, ask other grug before decide. truth hide behind shiny surface.",
+      "theme": "cave"
+    },
+    {
+      "id": 671,
+      "content": "all grug walking same path home. help other grug carry heavy rock, other grug help when grug stumble. journey better together.",
+      "theme": "cave"
+    },
+    {
+      "id": 672,
+      "content": "grug learn: we not own big rock, big rock own us. take only what need, say thank you, be good guest.",
+      "theme": "earth"
+    },
+    {
+      "id": 673,
+      "content": "more word = more world. no word for feeling = brain stuck in cave. collect word like sharp stone for thinking.",
+      "theme": "cave"
+    },
+    {
+      "id": 674,
+      "content": "dark time show who have real fire inside. grug build inner flame before storm come. when others need warmth, grug ready to share.",
+      "theme": "fire"
+    },
+    {
+      "id": 675,
+      "content": "function beat pretty. grug make thing work, not impress. broken fancy tool = hungry grug.",
+      "theme": "fire"
+    },
+    {
+      "id": 676,
+      "content": "grug carry only what feed body or warm heart. if need more than two hands for life, life too heavy.",
+      "theme": "stone"
+    },
+    {
+      "id": 677,
+      "content": "chief treat worker bad = worker treat customer bad. be kind water flowing down mountain.",
+      "theme": "water"
+    },
+    {
+      "id": 678,
+      "content": "one step toward different cave change everything. human must move feet, not just think about moving.",
+      "theme": "cave"
+    },
+    {
+      "id": 679,
+      "content": "other grug words = their weather. grug no control weather, but grug choose what clothes wear.",
+      "theme": "cave"
+    },
+    {
+      "id": 680,
+      "content": "dreams easy, doing hard. grug say: pick one thing, move feet today. fear stay but feet move anyway.",
+      "theme": "cave"
+    },
+    {
+      "id": 681,
+      "content": "when bad thing happen, ask \"what this teach grug?\" pain become teacher when grug stop fighting and start listening.",
+      "theme": "sky"
+    },
+    {
+      "id": 682,
+      "content": "change like river - always moving. grug no fight river, grug swim with river. accept what is, prepare for what comes.",
+      "theme": "river"
+    },
+    {
+      "id": 683,
+      "content": "hard time make grug stronger. pain teach what matter. scars show grug survive and help other grug find way.",
+      "theme": "fire"
+    },
+    {
+      "id": 684,
+      "content": "dormant not dead. rest now, trust spring come. honor winter season of soul.",
+      "theme": "seed"
+    },
+    {
+      "id": 685,
+      "content": "making own thing fill grug heart. taking thing make grug empty. build = strong spirit.",
+      "theme": "fire"
+    },
+    {
+      "id": 686,
+      "content": "smart not one thing. find your strong-thing, make stronger. world need your special gift.",
+      "theme": "water"
+    },
+    {
+      "id": 687,
+      "content": "grug no own anything. grug just take care of thing for short time. when grug stop grabbing, grug finally free to enjoy.",
+      "theme": "cave"
+    },
+    {
+      "id": 688,
+      "content": "motivation like fire - need daily wood or cave get cold. grug feed small stick each morning, stay warm all season.",
+      "theme": "fire"
+    },
+    {
+      "id": 689,
+      "content": "health not just \"no sick.\" health = inner fire burning bright. tend fire daily: move, eat good, sleep deep.",
+      "theme": "fire"
+    },
+    {
+      "id": 690,
+      "content": "body and mind like two leg - fix both or grug still fall down. each day do one thing for body, one thing for mind.",
+      "theme": "sun"
+    },
+    {
+      "id": 691,
+      "content": "earth not broken toy. earth living friend. treat earth gentle, earth treat grug gentle back.",
+      "theme": "earth"
+    },
+    {
+      "id": 692,
+      "content": "grug know: thing you want still there when you fall. only disappear when you walk away.",
+      "theme": "stone"
+    },
+    {
+      "id": 693,
+      "content": "when other grug hurt, grug hurt too. be kind = feel good, be mean = feel bad. heart know before brain complicate.",
+      "theme": "stone"
+    },
+    {
+      "id": 694,
+      "content": "big rock no move when grug push hard. grug chip small piece every day. rock always break before grug spirit break.",
+      "theme": "stone"
+    },
+    {
+      "id": 695,
+      "content": "pain = teacher. when grug make art from hurt, heavy rock become beautiful thing. sit with pain, ask what it teach, then create.",
+      "theme": "stone"
+    },
+    {
+      "id": 696,
+      "content": "truth like water - no hold with open hand. grug point moon but moon teach better than grug words.",
+      "theme": "water"
+    },
+    {
+      "id": 697,
+      "content": "trust grug belly fire, not other grug words. grug bones know truth when idea good.",
+      "theme": "fire"
+    },
+    {
+      "id": 698,
+      "content": "grug follow heart-voice, not crowd-noise. rocks get thrown anyway. better walk own path than twist into pretzel for others.",
+      "theme": "stone"
+    },
+    {
+      "id": 699,
+      "content": "pain = teacher. walk through hard time, no run. scars show strength, not weakness.",
+      "theme": "tree"
+    },
+    {
+      "id": 700,
+      "content": "loss not gone, just move inside. what you lose become what you carry. pain make wisdom.",
+      "theme": "stone"
+    },
+    {
+      "id": 701,
+      "content": "find one thing that make grug heart warm. purpose give strength when body want quit. small purpose better than no purpose.",
+      "theme": "fire"
+    },
+    {
+      "id": 702,
+      "content": "grug know: self-worth make real wealth, not shiny thing pile. fix heart first, then everything else just bonus rock.",
+      "theme": "cave"
+    }
+  ]
+}

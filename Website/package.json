@@ -1,6 +1,7 @@
 {
   "name": "handdrawn-software",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "description": "Website for the HandDrawnFont Swift package.",
   "scripts": {
@@ -17,6 +18,8 @@
     "node": ">=20"
   },
   "dependencies": {
+    "@fontsource/inter": "5.3.0",
+    "clipper2-ts": "2.0.1-18",
     "fonteditor-core": "2.6.3"
   }
 }

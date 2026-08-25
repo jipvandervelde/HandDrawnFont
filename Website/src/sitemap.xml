@@ -4,6 +4,9 @@
     <loc>https://handdrawn.software/</loc>
   </url>
   <url>
-    <loc>https://handdrawn.software/forge/</loc>
+    <loc>https://handdrawn.software/create/</loc>
+  </url>
+  <url>
+    <loc>https://handdrawn.software/grug/</loc>
   </url>
 </urlset>

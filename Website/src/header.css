@@ -1,0 +1,155 @@
+.site-header,
+.forge-header {
+  position: sticky;
+  z-index: var(--z-header);
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 84px;
+  min-height: 84px;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(28px, 4vw, 64px);
+  margin-inline: 0;
+  padding-inline: var(--page-gutter);
+  background: var(--paper);
+  isolation: isolate;
+}
+
+.forge-header--editor {
+  padding-inline: calc(12px + clamp(20px, 2.5vw, 34px));
+}
+
+.wordmark,
+.header-link {
+  text-decoration: none;
+}
+
+.wordmark {
+  font-family: "Grug Hand", ui-rounded, system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.wordmark span {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.header-nav,
+.header-links {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  min-width: 0;
+  gap: clamp(20px, 2.4vw, 36px);
+  margin-left: auto;
+}
+
+.header-links {
+  gap: clamp(24px, 3vw, 44px);
+}
+
+.header-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  white-space: nowrap;
+}
+
+.theme-toggle {
+  display: inline-grid;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform 150ms ease;
+}
+
+.theme-glyph {
+  display: block;
+  font-family: "Grug Hand", ui-rounded, system-ui, sans-serif;
+  font-size: 31px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.theme-toggle:active {
+  transform: scale(0.97);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .header-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+
+  .theme-toggle:hover {
+    transform: scale(1.08);
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header,
+  .forge-header {
+    display: grid;
+    height: 112px;
+    min-height: 112px;
+    grid-template-rows: 30px 44px;
+    align-content: center;
+    gap: 6px;
+    padding-block: 8px;
+  }
+
+  .site-header .wordmark,
+  .site-header .header-nav,
+  .forge-header .wordmark,
+  .forge-header .header-nav {
+    width: 100%;
+  }
+
+  .site-header .wordmark,
+  .forge-header .wordmark {
+    display: inline-flex;
+    min-height: 30px;
+    align-items: center;
+    font-size: 21px;
+  }
+
+  .site-header .header-nav,
+  .forge-header .header-nav {
+    justify-content: flex-start;
+    gap: 8px;
+    overflow: hidden;
+  }
+
+  .site-header .header-links,
+  .forge-header .header-links {
+    min-width: 0;
+    flex: 1;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .site-header .header-links::-webkit-scrollbar,
+  .forge-header .header-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .header-link {
+    font-size: 14px;
+  }
+}

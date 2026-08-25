@@ -5,9 +5,9 @@ handwritten pen strokes. Glyphs are drawn in their original stroke order with
 `Canvas` and a single shared `TimelineView` per text view.
 
 See it at [handdrawn.software](https://handdrawn.software), or use the
-[browser font forge](https://handdrawn.software/forge/) to download the Grug
+[browser font creator](https://handdrawn.software/create/) to download the Grug
 Hand TTF family, draw characters or named icons, and export editable JSON plus
-an installable TrueType font.
+an installable TrueType font—or one ZIP containing the complete font project.
 
 Created by Jip van der Velde and Michel Elings, creators of
 [`grug`](https://developer.apple.com/design/awards/) at Ocho. `grug` won the
