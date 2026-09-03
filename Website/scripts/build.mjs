@@ -21,6 +21,8 @@ await rm(outputDirectory, { force: true, recursive: true });
 await mkdir(outputDirectory, { recursive: true });
 await cp(sourceDirectory, outputDirectory, { recursive: true });
 await cp(join(repositoryDirectory, "README.md"), join(outputDirectory, "llms-full.txt"));
+await cp(join(repositoryDirectory, "LICENSE"), join(outputDirectory, "license.txt"));
+await cp(join(repositoryDirectory, "NOTICE"), join(outputDirectory, "NOTICE.txt"));
 await cp(interFontSource, join(outputDirectory, "fonts", "Inter-Regular.woff2"));
 
 await build({

@@ -54,3 +54,11 @@ The font creator's editable project JSON uses the schema accepted by `HandDrawnT
 - [GitHub repository](https://github.com/jipvandervelde/HandDrawnFont)
 - [Grug Hand downloads](https://handdrawn.software/grug/)
 - [Font creator](https://handdrawn.software/create/)
+- [License and required attribution](https://handdrawn.software/license/)
+
+## License
+
+- Personal and commercial use inside a larger product is allowed.
+- Do not resell or repackage HandDrawnFont or Grug Hand as a product whose value comes entirely or substantially from the package or font itself.
+- Keep the license and add this notice to acknowledgements, credits, documentation, or a website: `Uses HandDrawnFont by Jip van der Velde and Michel Elings — https://handdrawn.software`
+- Custom fonts and project files made from a user's own drawings in the font creator belong to that user and are excluded from the repository license.

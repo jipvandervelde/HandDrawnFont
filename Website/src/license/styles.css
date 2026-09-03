@@ -1,0 +1,192 @@
+.license-main,
+.site-footer {
+  width: min(100%, calc(var(--max-width) + (2 * var(--page-gutter))));
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+}
+
+.license-main {
+  padding-block: clamp(64px, 10vw, 128px) clamp(88px, 12vw, 150px);
+}
+
+.license-hero {
+  max-width: 940px;
+}
+
+.license-kicker {
+  margin: 0 0 16px;
+  font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.license-hero h1,
+.license-credit h2,
+.license-details h2,
+.license-card h2 {
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.005em;
+  line-height: 0.98;
+  text-wrap: balance;
+}
+
+.license-hero h1 {
+  font-size: clamp(58px, 9vw, 116px);
+}
+
+.license-lede {
+  max-width: 780px;
+  margin: clamp(30px, 5vw, 54px) 0 0;
+  font-size: clamp(23px, 3vw, 34px);
+  line-height: 1.28;
+}
+
+.license-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: clamp(64px, 9vw, 110px);
+}
+
+.license-card {
+  min-height: 330px;
+  padding: clamp(28px, 4vw, 48px);
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  --rough-edge-intensity: 1.6;
+}
+
+.license-card h2,
+.license-credit h2,
+.license-details h2 {
+  font-size: clamp(40px, 5.5vw, 70px);
+}
+
+.license-card ul {
+  display: grid;
+  gap: 14px;
+  padding: 0;
+  margin: 34px 0 0;
+  list-style: none;
+}
+
+.license-card li {
+  position: relative;
+  padding-left: 26px;
+}
+
+.license-card li::before {
+  position: absolute;
+  left: 0;
+  content: "—";
+}
+
+.license-credit {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(36px, 7vw, 90px);
+  align-items: center;
+  padding: clamp(34px, 5vw, 58px);
+  margin-top: 12px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+  --rough-edge-color: var(--ink);
+  --rough-edge-intensity: 1.6;
+}
+
+.license-credit p:not(.license-kicker) {
+  margin: 24px 0 0;
+}
+
+.license-notice {
+  padding: clamp(24px, 4vw, 40px);
+  border: 1px solid var(--paper);
+}
+
+.license-credit blockquote {
+  padding: 0;
+  margin: 0;
+  font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: clamp(14px, 1.8vw, 18px);
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+.license-copy {
+  min-height: 44px;
+  padding: 8px 14px;
+  margin-top: 24px;
+  border: 1px solid var(--paper);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas,
+    monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.license-copy:active {
+  transform: scale(0.97);
+}
+
+.license-details {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(36px, 7vw, 90px);
+  padding-top: clamp(72px, 10vw, 128px);
+}
+
+.license-details__copy > p:first-child {
+  margin-top: 0;
+}
+
+.license-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+}
+
+.license-small {
+  max-width: 62ch;
+  margin-top: 34px;
+  font-size: 15px;
+}
+
+@media (max-width: 760px) {
+  .license-main {
+    padding-block: 48px 80px;
+  }
+
+  .license-grid,
+  .license-credit,
+  .license-details {
+    grid-template-columns: 1fr;
+  }
+
+  .license-card {
+    min-height: 0;
+  }
+
+  .license-credit {
+    gap: 28px;
+  }
+
+  .license-credit blockquote {
+    font-size: 13px;
+  }
+
+  .license-actions .button {
+    width: 100%;
+  }
+}

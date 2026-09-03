@@ -773,7 +773,7 @@ function exportProjectJSON() {
 }
 
 function packageReadme(stem) {
-  return `${state.project.familyName}\n${"=".repeat(state.project.familyName.length)}\n\nThis package was created locally at handdrawn.software.\n\nFILES\n- ${stem}-Regular.ttf — installable TrueType font\n- ${stem}-project.json — editable strokes, variations, guides, and settings\n- ${stem}-codepoints.json — character and private-use codepoint assignments\n\nKEEP THE PROJECT JSON\nThe TTF is the compiled font. The project JSON is the editable source used to continue drawing and export a fresh font later. Import it at https://handdrawn.software/create/.\n\nNothing was uploaded while this package was built.\n`;
+  return `${state.project.familyName}\n${"=".repeat(state.project.familyName.length)}\n\nThis package was created locally at handdrawn.software.\n\nFILES\n- ${stem}-Regular.ttf — installable TrueType font\n- ${stem}-project.json — editable strokes, variations, guides, and settings\n- ${stem}-codepoints.json — character and private-use codepoint assignments\n\nKEEP THE PROJECT JSON\nThe TTF is the compiled font. The project JSON is the editable source used to continue drawing and export a fresh font later. Import it at https://handdrawn.software/create/.\n\nYOUR DRAWINGS, YOUR FONT\nFonts and project files made entirely from your own drawings are yours. If your project still includes bundled Grug Hand artwork, the HandDrawnFont license applies: https://handdrawn.software/license/.\n\nNothing was uploaded while this package was built.\n`;
 }
 
 function scheduleLivePreview(delay = 180) {

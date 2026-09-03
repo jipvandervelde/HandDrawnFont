@@ -39,6 +39,8 @@
     ".export-action",
     ".project-file-actions button",
     ".file-button",
+    ".license-card",
+    ".license-credit",
     ".rough-control-host",
   ].join(",");
   const CONTROL_SELECTOR = [

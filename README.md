@@ -394,6 +394,30 @@ Repository-specific instructions for agents are also available in
   stroke as an accessibility element.
 - Missing characters remain visible by default.
 
+## License
+
+Use HandDrawnFont and the bundled Grug Hand artwork in personal or commercial
+apps, modify them, and ship them as part of a larger product. Do not resell,
+repackage, or offer the package, artwork, or font files as a product whose
+value comes entirely or substantially from those materials.
+
+Distributed products must keep the license and include this attribution in an
+acknowledgements screen, credits, documentation, website, or another place
+where third-party notices normally appear:
+
+```text
+Uses HandDrawnFont by Jip van der Velde and Michel Elings — https://handdrawn.software
+```
+
+The repository uses the [Apache License 2.0 with the Commons Clause](LICENSE).
+Because the Commons Clause restricts standalone resale, this is a
+source-available license rather than an OSI-approved open-source license. See
+[`NOTICE`](NOTICE) for the required attribution.
+
+Fonts and project files made from your own drawings in the
+[font creator](https://handdrawn.software/create/) are yours and are not covered
+by this repository license.
+
 ## Development
 
 ```bash
@@ -406,7 +430,7 @@ metrics, stroke data, deterministic selection, and JSON round-tripping.
 
 ## Release checklist
 
-- Choose and add the license appropriate for both the source code and artwork.
+- Confirm `LICENSE` and `NOTICE` ship with package and bundled font downloads.
 - Run `swift test`.
 - Build one iOS consumer in Xcode.
 - Tag a semantic version such as `1.0.0`.

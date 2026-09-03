@@ -53,8 +53,12 @@ const requiredFiles = [
   "header.css",
   "home-intro.js",
   "index.html",
+  "license/index.html",
+  "license/styles.css",
+  "license.txt",
   "llms-full.txt",
   "llms.txt",
+  "NOTICE.txt",
   "og-image.png",
   "robots.txt",
   "rough-edges.css",
@@ -78,6 +82,8 @@ for (const value of [
   "https://handdrawn.software/create/",
   "HandDrawnTypeface(data:)",
   "## Rules for coding agents",
+  "## License",
+  "Uses HandDrawnFont by Jip van der Velde and Michel Elings",
 ]) {
   if (!llms.includes(value)) {
     throw new Error(`llms.txt is missing required guidance: ${value}`);
@@ -94,7 +100,12 @@ for (const value of [
   }
 }
 
-for (const file of ["index.html", "create/index.html", "grug/index.html"]) {
+for (const file of [
+  "index.html",
+  "create/index.html",
+  "grug/index.html",
+  "license/index.html",
+]) {
   const source = await readFile(join(outputDirectory, file), "utf8");
   for (const value of [
     'rel="describedby"',
@@ -105,6 +116,27 @@ for (const file of ["index.html", "create/index.html", "grug/index.html"]) {
       throw new Error(`${file} is missing LLM discovery markup: ${value}`);
     }
   }
+}
+
+const license = await readFile(join(outputDirectory, "license.txt"), "utf8");
+for (const value of [
+  "Apache License",
+  '"Commons Clause" License Condition v1.0',
+  "Software: HandDrawnFont",
+  "fonts or project files created from a user's own drawings",
+]) {
+  if (!license.includes(value)) {
+    throw new Error(`license.txt is missing required terms: ${value}`);
+  }
+}
+
+const notice = await readFile(join(outputDirectory, "NOTICE.txt"), "utf8");
+if (
+  !notice.includes(
+    "Uses HandDrawnFont by Jip van der Velde and Michel Elings — https://handdrawn.software",
+  )
+) {
+  throw new Error("NOTICE.txt is missing the required attribution");
 }
 
 const thirdPartyNotices = await readFile(
@@ -201,12 +233,47 @@ for (const [file, source] of [
   ["index.html", html],
   ["create/index.html", await readFile(join(outputDirectory, "create", "index.html"), "utf8")],
   ["grug/index.html", await readFile(join(outputDirectory, "grug", "index.html"), "utf8")],
+  ["license/index.html", await readFile(join(outputDirectory, "license", "index.html"), "utf8")],
 ]) {
   for (const value of socialImageMarkup) {
     if (!source.includes(value)) {
       throw new Error(`${file} is missing social image metadata: ${value}`);
     }
   }
+}
+
+const licenseHTML = await readFile(join(outputDirectory, "license", "index.html"), "utf8");
+for (const value of [
+  "Use it. Credit it.",
+  "Do not resell it.",
+  "Apache 2.0 + Commons Clause.",
+  "source-available, not OSI-approved open source",
+  "Fonts and project files made from your own drawings",
+  'href="/license.txt"',
+  'href="/NOTICE.txt"',
+  "data-license-attribution",
+  "data-copy-attribution",
+  "data-copy-attribution-status",
+  'href="/license/" aria-current="page"',
+]) {
+  if (!licenseHTML.includes(value)) {
+    throw new Error(`license/index.html is missing required content: ${value}`);
+  }
+}
+assertAttributionLinks(licenseHTML, "license/index.html");
+assertBlackAndWhiteOnly(licenseHTML, "license/index.html");
+
+const licenseCSS = await readFile(join(outputDirectory, "license", "styles.css"), "utf8");
+for (const value of [".license-grid", ".license-credit", ".license-details"]) {
+  if (!licenseCSS.includes(value)) {
+    throw new Error(`license/styles.css is missing required rule: ${value}`);
+  }
+}
+assertBlackAndWhiteOnly(licenseCSS, "license/styles.css");
+
+const sitemap = await readFile(join(outputDirectory, "sitemap.xml"), "utf8");
+if (!sitemap.includes("https://handdrawn.software/license/")) {
+  throw new Error("sitemap.xml is missing the license page");
 }
 
 const homeHeader = html.match(/<header\b[\s\S]*?<\/header>/)?.[0];
@@ -1081,6 +1148,12 @@ if (
 const zip = await readFile(join(outputDirectory, "fonts", "GrugHand-Family.zip"));
 if (zip.subarray(0, 4).toString("hex") !== "504b0304") {
   throw new Error("Grug Hand family download is not a ZIP archive");
+}
+const zipText = new TextDecoder().decode(zip);
+for (const filename of ["LICENSE", "NOTICE", "GrugHand-README.txt"]) {
+  if (!zipText.includes(filename)) {
+    throw new Error(`Grug Hand family download is missing ${filename}`);
+  }
 }
 
 const packageZip = buildStoredZip([
